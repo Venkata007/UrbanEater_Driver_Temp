@@ -8,6 +8,8 @@
 
 import UIKit
 
+import GoogleMaps
+import GooglePlaces
 
 
 extension String {
@@ -27,9 +29,17 @@ extension String {
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let googleApiKey = "AIzaSyAufQUMZP7qdjtOcGIuNFRSL-8uU6uuvGY"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        GMSPlacesClient.provideAPIKey(googleApiKey)
+        GMSServices.provideAPIKey(googleApiKey)
+        
+        UITabBar.appearance().tintColor = #colorLiteral(red: 0.117657356, green: 0.6729614139, blue: 0.08485577255, alpha: 1)
+        UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        UITabBar.appearance().isTranslucent = false
         
         self.setInitialViewController(from: "")
         

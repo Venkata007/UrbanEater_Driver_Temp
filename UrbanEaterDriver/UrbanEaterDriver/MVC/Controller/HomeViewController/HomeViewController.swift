@@ -57,9 +57,6 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
         
         isOnline = true
         
-        UITabBar.appearance().unselectedItemTintColor = UIColor.white
-        UITabBar.appearance().selectionIndicatorImage = UIImage().makeImageWithColorAndSize(color:#colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1), size: CGSize(width: self.view.frame.width/4, height: 49.0))
-        
         UIView.hr_setToastThemeColor(color: UIColor(red: 199/255, green: 17/255, blue: 34/255, alpha: 1.0))
         presentWindow = UIApplication.shared.keyWindow
 

@@ -40,6 +40,24 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         
     }
     
+    @IBAction func bankInfoBtnClicked(_ sender: Any) {
+        if iSbankInfoEnabled {
+            scrollviewHeightConstraint.constant = 530
+            iSbankInfoEnabled = false
+            self.arrow.transform = CGAffineTransform.identity
+        }else{
+            scrollviewHeightConstraint.constant = 850//930 //1044
+            iSbankInfoEnabled = true
+            _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.goNext(timer:)), userInfo: nil, repeats: false)
+        }
+    }
+    
+    @objc func goNext(timer:Timer){
+        self.arrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
+        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+        scrollView.setContentOffset(bottomOffset, animated: true)
+    }
+    
     @IBAction func editProfileImgBtn_Action(_ sender: UIButton)
     {
         
