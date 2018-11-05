@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class YourEarningsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
@@ -19,6 +20,9 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var blurView: UIView!
     
+    @IBOutlet weak var totalOrdersLbl: UILabel!
+    @IBOutlet weak var totalEarningsLbl: UILabel!
+    
     var dateSelectedString : String!
     var isFromDateSelected = false
     let dateFormatter = DateFormatter()
@@ -26,6 +30,7 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.DummyData()
         fromDateView.layer.borderWidth = 1.0
         fromDateView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
@@ -38,6 +43,58 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
         datePicker.datePickerMode = UIDatePickerMode.date
          datePicker.addTarget(self, action: #selector(self.datePickerValueChanged), for: UIControlEvents.valueChanged)
         dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        totalOrdersLbl.text = GlobalClass.earningModel.totalOrders
+        totalEarningsLbl.text = GlobalClass.earningModel.totalEarnings
+    }
+    
+    func DummyData(){
+        
+        let dictionary = [
+            "error":false,
+            "message":"success",
+            "totalOrders":"32",
+            "totalEarnings":"₹ 3456",
+            "orders":[[
+                "orderId" : "ODD3333",
+                "orderAmount" : "₹ 369",
+                "orderStatus" : "Picked Up",
+                "rest_name" : "Annapurna",
+                "items":[["item_name":"Biryani",
+                          "item_cost":"200"],
+                         ["item_name":"Roti",
+                          "item_cost":"30"]],
+                ],
+                      [
+                        "orderId" : "ODD2222",
+                        "orderAmount" : "₹ 234",
+                        "orderStatus" : "Picked Up",
+                        "rest_name" : "Kruthunga",
+                        "items":[["item_name":"Biryani",
+                                  "item_cost":"200"],
+                                 ["item_name":"Roti",
+                                  "item_cost":"30"],
+                                 ["item_name":"Roti",
+                                  "item_cost":"30"]],
+                        ],
+                      [
+                        "orderId" : "ODD111",
+                        "orderAmount" : "₹ 436",
+                        "orderStatus" : "Picked Up",
+                        "rest_name" : "Annapurna Mess",
+                        "items":[["item_name":"Biryani",
+                                  "item_cost":"200"],
+                                 ["item_name":"Roti",
+                                  "item_cost":"30"],
+                                 ["item_name":"Roti",
+                                  "item_cost":"30"],
+                                 ["item_name":"Roti",
+                                  "item_cost":"30"]],
+                        ]]
+            ] as [String:Any]
+        
+        let response = JSON(dictionary)
+        GlobalClass.earningModel = EarningModel(response)
     }
     
     @IBAction func fromDateBtnClicked(_ sender: Any) {
@@ -83,20 +140,22 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
         
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int
-    {
-        return 1;
-    }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 6;//listMenu.count
+        return GlobalClass.earningModel.Orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell : EarningsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EarningsTableViewCell") as! EarningsTableViewCell
-        //cell.orderID_Lbl.text =
+        let order = GlobalClass.earningModel.Orders[indexPath.row]
+        
+        cell.orderID_Lbl.text = order.orderId
+        cell.restaurantname_Lbl.text = order.rest_name
+        cell.amount_Lbl.text = order.orderAmount
+        cell.orederStatus_Lbl.text = order.orderStatus
+        
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
         

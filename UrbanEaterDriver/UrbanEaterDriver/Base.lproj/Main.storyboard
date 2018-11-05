@@ -2181,6 +2181,8 @@
                         <outlet property="fromDateView" destination="0dS-Qu-2XK" id="06l-DQ-r1t"/>
                         <outlet property="toDateLbl" destination="8c8-LB-0xQ" id="6KI-Z0-tg3"/>
                         <outlet property="toDateView" destination="Crt-eH-Rkt" id="3d8-Go-dOJ"/>
+                        <outlet property="totalEarningsLbl" destination="HJa-pb-iok" id="bOb-BP-2BA"/>
+                        <outlet property="totalOrdersLbl" destination="9ph-2G-0Op" id="owL-Sn-um6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUB-2J-wrY" userLabel="First Responder" sceneMemberID="firstResponder"/>

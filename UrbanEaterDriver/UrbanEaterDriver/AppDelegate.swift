@@ -10,7 +10,7 @@ import UIKit
 
 import GoogleMaps
 import GooglePlaces
-
+import Reachability
 
 extension String {
     struct NumFormatter {
@@ -30,8 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let googleApiKey = "AIzaSyAufQUMZP7qdjtOcGIuNFRSL-8uU6uuvGY"
+    var IsInternetconnected:Bool=Bool()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+         self.ReachabilityListener()
         
         GMSPlacesClient.provideAPIKey(googleApiKey)
         GMSServices.provideAPIKey(googleApiKey)
@@ -97,6 +100,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func ReachabilityListener()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged),name: Notification.Name.reachabilityChanged,object: Reachability())
+        do{
+            let reachability = Reachability()!
+            
+            try reachability.startNotifier()
+        }catch{
+            print("could not start reachability notifier")
+        }
+    }
+    
+    @objc func reachabilityChanged(note: NSNotification)
+    {
+        let reachability = note.object as! Reachability
+        
+        if reachability.connection != .none //reachability.isReachable
+        {
+            IsInternetconnected=true
+            
+            if reachability.connection == .wifi //reachability.isReachableViaWiFi
+            {
+                print("Reachable via WiFi")
+            } else {
+                print("Reachable via Cellular")
+            }
+        }
+        else
+        {
+            IsInternetconnected=false
+            print("Network not reachable")
+        }
+    }
 
 }
 

@@ -60,7 +60,7 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
         UIView.hr_setToastThemeColor(color: UIColor(red: 199/255, green: 17/255, blue: 34/255, alpha: 1.0))
         presentWindow = UIApplication.shared.keyWindow
 
-        
+        //print("login mobileId ---->>> \(GlobalClass.driverModel.data.mobileId)")
     }
     
     override func viewDidAppear(_ animated: Bool)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate
 {
@@ -49,11 +50,7 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         }
 
         print(" self.commonUtlity.appDelegate.deviceToken : ",  deviceToken)
-
-//        self.emailID.text = "Parthasarathi.y@gmail.com"
-//        self.password.text = "Sudheer1"
-        
-        self.emailID.text = "nagaraju@exadots.in"
+        self.emailID.text = "9032363049"
         self.password.text = "Raju1234"
 
     }
@@ -68,53 +65,66 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         self.navigationController?.pushViewController(signVC, animated: true)
     }
     
-
-
     @IBAction func ActionLogin(_ sender: Any)
     {
-        
         print("ActionLogin")
-        Theme.sharedInstance.activityView(View: self.view)
-        
-         _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.movoToHome(timer:)), userInfo: nil, repeats: false)
-        
-      //  let passwordString = self.commonUtlity.trimString(string: self.password.text!)
-        
-        if self.commonUtlity.trimString(string: self.emailID.text!)  == ""
-        {
-            //self.presentWindow?.makeToast(message: "Email can't be empty", duration: 3.0, position: HRToastPositionCenter as AnyObject, title: Themes.sharedInstance.GetAppname())
-            Theme.sharedInstance.showErrorpopup(Msg: "Email can't be empty")
-            //self.view.makeToast("Email can't be empty", duration: 3.0, position: .center)
-          
-        }
-        else if !isValidEmail(testStr: emailID.text!)
-        {
-            //self.presentWindow?.makeToast(message: "Enter a Valid email id", duration: 3.0, position: HRToastPositionCenter as AnyObject, title: Themes.sharedInstance.GetAppname())
-            Theme.sharedInstance.showErrorpopup(Msg: "Enter a Valid email id")
-            //self.view.makeToast("Enter a Valid email id", duration: 3.0, position: .center)
-            
+        if self.commonUtlity.trimString(string: self.emailID.text!) == "" {
+            Theme.sharedInstance.showErrorpopup(Msg: "Mobile number can't be empty")
         }
         else if self.commonUtlity.trimString(string: self.password.text!) == ""
         {
-            //self.presentWindow?.makeToast(message: "Password can't be empty", duration: 3.0, position: HRToastPositionCenter as AnyObject, title: Themes.sharedInstance.GetAppname())
             Theme.sharedInstance.showErrorpopup(Msg: "Password can't be empty")
-            //self.view.makeToast("Password can't be empty", duration: 3.0, position: .center)
-          
         }
-//        else if passwordString.count < 6
-//        {
-//            self.view.makeToast("Password minimum 6 characters", duration: 3.0, position: .center)
-//        }
+
         else
         {
-            
+            LoginWebHit()
         }
-       // buttonLogin.backgroundColor = Themes.sharedInstance.returnButtonBackgroundColor()
     }
+    
+    func LoginWebHit()
+    {
+        self.view.endEditing(true)
+        Theme.sharedInstance.activityView(View: self.view)
+        
+        let email = self.emailID.text!
+        let password = self.password.text!
+//
+//        var deviceToken = ""
+//
+//        if UserDefaults.standard.string(forKey: "deviceToken") != nil
+//        {
+//            deviceToken = UserDefaults.standard.string(forKey: "deviceToken")!
+//        }
+        
+        let param = [
+            "mobileId": email,
+            "password": password,
+            "through": "WEB"
+        ]
+        
+        print("loginURL ----->>> ", Constants.urls.loginURL)
+        
+        print("param login ----->>> ", param)
+        
+        URLhandler.postUrlSession(urlString: Constants.urls.loginURL, params: param as [String : AnyObject], header: [:]) { (dataResponse) in
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                 print("Response login ----->>> ", dataResponse.json)
+                UserDefaults.standard.set(dataResponse.dictionaryFromJson, forKey: "driverInfo")
+                GlobalClass.driverModel = DriverModel(fromJson: dataResponse.json)
+                
+                _ = Timer.scheduledTimer(timeInterval:1.0, target: self, selector: #selector(self.movoToHome(timer:)), userInfo: nil, repeats: false)
+              
+            }
+        }
+        
+ 
+    }
+    
     
     @objc func movoToHome(timer:Timer) {
         Theme.sharedInstance.removeActivityView(View: self.view)
-        UserDefaults.standard.setValue("Nagaraju", forKey: "driverInfo")
         (UIApplication.shared.delegate as! AppDelegate).setInitialViewController(from: "")
     }
     
@@ -145,7 +155,6 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let controller : ForgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewControllerID") as! ForgotPasswordViewController
-        
         self.navigationController?.pushViewController(controller, animated: true)
 
     }

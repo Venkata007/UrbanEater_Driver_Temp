@@ -26,7 +26,6 @@
 		A3BEF5DD218AE90500192E7E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5DC218AE90500192E7E /* HomeViewController.swift */; };
 		A3BEF5E0218AE90F00192E7E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5DF218AE90F00192E7E /* OrdersViewController.swift */; };
 		A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF617218DA89400192E7E /* DirectionViewController.swift */; };
-		A3BEF61B218DA90300192E7E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF61A218DA90300192E7E /* NotificationViewController.swift */; };
 		A3BEF64C218DA96500192E7E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF642218DA96500192E7E /* EditProfileViewController.swift */; };
 		A3BEF64D218DA96500192E7E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF644218DA96500192E7E /* AccountViewController.swift */; };
 		A3BEF64E218DA96500192E7E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF646218DA96500192E7E /* ChangePasswordViewController.swift */; };
@@ -57,6 +56,14 @@
 		A3BEF692218DB20E00192E7E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF690218DB20E00192E7E /* LocationService.swift */; };
 		A3BEF693218DB20E00192E7E /* LocManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF691218DB20E00192E7E /* LocManager.swift */; };
 		A3BEF6B8218DCA4900192E7E /* LocationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6B7218DCA4900192E7E /* LocationRecord.swift */; };
+		A3BEF6BA2190276200192E7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6B92190276200192E7E /* Constants.swift */; };
+		A3BEF6BC219027B700192E7E /* URLhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6BB219027B700192E7E /* URLhandler.swift */; };
+		A3BEF6BF21902CB800192E7E /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6BE21902CB800192E7E /* DriverModel.swift */; };
+		A3BEF6C221902CF000192E7E /* EarningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C021902CEF00192E7E /* EarningModel.swift */; };
+		A3BEF6C321902CF000192E7E /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C121902CF000192E7E /* GlobalModel.swift */; };
+		A3BEF6C521902E1E00192E7E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C421902E1E00192E7E /* ShadowView.swift */; };
+		A3BEF6CA2190697200192E7E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C92190697200192E7E /* NotificationViewController.swift */; };
+		A3BEF6CC219069EE00192E7E /* NotofocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +89,6 @@
 		A3BEF5DC218AE90500192E7E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3BEF5DF218AE90F00192E7E /* OrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		A3BEF617218DA89400192E7E /* DirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewController.swift; sourceTree = "<group>"; };
-		A3BEF61A218DA90300192E7E /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		A3BEF642218DA96500192E7E /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A3BEF644218DA96500192E7E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A3BEF646218DA96500192E7E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,14 @@
 		A3BEF690218DB20E00192E7E /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A3BEF691218DB20E00192E7E /* LocManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocManager.swift; sourceTree = "<group>"; };
 		A3BEF6B7218DCA4900192E7E /* LocationRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRecord.swift; sourceTree = "<group>"; };
+		A3BEF6B92190276200192E7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A3BEF6BB219027B700192E7E /* URLhandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLhandler.swift; sourceTree = "<group>"; };
+		A3BEF6BE21902CB800192E7E /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
+		A3BEF6C021902CEF00192E7E /* EarningModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningModel.swift; sourceTree = "<group>"; };
+		A3BEF6C121902CF000192E7E /* GlobalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
+		A3BEF6C421902E1E00192E7E /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		A3BEF6C92190697200192E7E /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotofocationModel.swift; sourceTree = "<group>"; };
 		C43C6A73EBA83729D01849AE /* Pods_UrbanEaterDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanEaterDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,6 +191,7 @@
 		A3BEF5BA218AE00900192E7E /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				A3BEF6BD21902C6B00192E7E /* Model */,
 				A3BEF5BC218AE02200192E7E /* Controller */,
 				A3BEF5BB218AE01600192E7E /* View */,
 			);
@@ -200,8 +215,8 @@
 		A3BEF5BC218AE02200192E7E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A3BEF6C82190696B00192E7E /* NotificationsViewController */,
 				A3BEF640218DA96500192E7E /* PROFILE */,
-				A3BEF619218DA90300192E7E /* NotificationsViewController */,
 				A3BEF616218DA89400192E7E /* DirectionViewController */,
 				A3BEF615218DA78700192E7E /* LOGIN */,
 				A3BEF5DE218AE90F00192E7E /* OrdersViewController */,
@@ -213,6 +228,7 @@
 		A3BEF5BD218AE03800192E7E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				A3BEF6B92190276200192E7E /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -225,6 +241,7 @@
 				A3BEF691218DB20E00192E7E /* LocManager.swift */,
 				A3BEF5C0218AE06D00192E7E /* Theme.swift */,
 				A3BEF5D5218AE31600192E7E /* Utilities.swift */,
+				A3BEF6BB219027B700192E7E /* URLhandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -232,6 +249,7 @@
 		A3BEF5BF218AE05200192E7E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A3BEF6C421902E1E00192E7E /* ShadowView.swift */,
 				A3BEF5D7218AE3C600192E7E /* Toast */,
 			);
 			path = ThirdParty;
@@ -327,15 +345,6 @@
 				A3BEF617218DA89400192E7E /* DirectionViewController.swift */,
 			);
 			path = DirectionViewController;
-			sourceTree = "<group>";
-		};
-		A3BEF619218DA90300192E7E /* NotificationsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A3BEF61A218DA90300192E7E /* NotificationViewController.swift */,
-			);
-			name = NotificationsViewController;
-			path = "../../../../../../MealOnCall Driver DUMMY/DriverReadyToEat/Controller/Controllers/NotificationsViewController";
 			sourceTree = "<group>";
 		};
 		A3BEF640218DA96500192E7E /* PROFILE */ = {
@@ -467,6 +476,25 @@
 				A3BEF682218DADE000192E7E /* MoreTableViewCell.swift */,
 			);
 			path = MoreTableViewCell;
+			sourceTree = "<group>";
+		};
+		A3BEF6BD21902C6B00192E7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3BEF6BE21902CB800192E7E /* DriverModel.swift */,
+				A3BEF6C021902CEF00192E7E /* EarningModel.swift */,
+				A3BEF6C121902CF000192E7E /* GlobalModel.swift */,
+				A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A3BEF6C82190696B00192E7E /* NotificationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3BEF6C92190697200192E7E /* NotificationViewController.swift */,
+			);
+			path = NotificationsViewController;
 			sourceTree = "<group>";
 		};
 		DED2C211EC2A786806F4BCE9 /* Frameworks */ = {
@@ -648,6 +676,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BEF65C218DAC9100192E7E /* NotificationTableViewCell.swift in Sources */,
+				A3BEF6BA2190276200192E7E /* Constants.swift in Sources */,
 				A3BEF64C218DA96500192E7E /* EditProfileViewController.swift in Sources */,
 				A3BEF5DA218AE3C700192E7E /* HRToast+UIView.swift in Sources */,
 				A3BEF67B218DACD300192E7E /* OrderCollectionViewCell.swift in Sources */,
@@ -659,14 +688,16 @@
 				A3BEF650218DA96500192E7E /* OrderInfoViewController.swift in Sources */,
 				A3BEF64E218DA96500192E7E /* ChangePasswordViewController.swift in Sources */,
 				A3BEF5D2218AE1A900192E7E /* SignUpViewController.swift in Sources */,
-				A3BEF61B218DA90300192E7E /* NotificationViewController.swift in Sources */,
 				A3BEF664218DACA200192E7E /* AcceptedTableViewCell.swift in Sources */,
 				A3BEF673218DACBF00192E7E /* OrderInfoTableViewCell4.swift in Sources */,
 				A3BEF5C4218AE15400192E7E /* LoginViewController.swift in Sources */,
 				A3BEF651218DA96500192E7E /* YourEarningsViewController.swift in Sources */,
+				A3BEF6C221902CF000192E7E /* EarningModel.swift in Sources */,
 				A3BEF675218DACBF00192E7E /* OrderInfoTableViewCell3.swift in Sources */,
 				A3BEF683218DADE000192E7E /* MoreTableViewCell.swift in Sources */,
 				A3BEF659218DAC7300192E7E /* HelpSupportTableViewCell.swift in Sources */,
+				A3BEF6C321902CF000192E7E /* GlobalModel.swift in Sources */,
+				A3BEF6BF21902CB800192E7E /* DriverModel.swift in Sources */,
 				A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */,
 				A3BEF663218DACA200192E7E /* OngoingTableViewCell.swift in Sources */,
 				A3BEF680218DACE600192E7E /* MultiOrderTableViewCell.swift in Sources */,
@@ -678,7 +709,11 @@
 				A3BEF5C1218AE06D00192E7E /* Theme.swift in Sources */,
 				A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */,
 				A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */,
+				A3BEF6BC219027B700192E7E /* URLhandler.swift in Sources */,
+				A3BEF6CA2190697200192E7E /* NotificationViewController.swift in Sources */,
+				A3BEF6C521902E1E00192E7E /* ShadowView.swift in Sources */,
 				A3BEF64F218DA96500192E7E /* HelpSupportViewController.swift in Sources */,
+				A3BEF6CC219069EE00192E7E /* NotofocationModel.swift in Sources */,
 				A3BEF692218DB20E00192E7E /* LocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
