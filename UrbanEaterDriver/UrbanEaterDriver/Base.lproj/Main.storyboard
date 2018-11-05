@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -32,7 +31,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="rfe-nE-jeY">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewControllerID" id="2oa-tt-6X6" customClass="SignUpViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewControllerID" id="2oa-tt-6X6" customClass="SignUpViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R7f-Qg-ZRI"/>
                         <viewControllerLayoutGuide type="bottom" id="gSa-6o-gTf"/>
@@ -363,7 +362,7 @@
         <!--Forgot Password View Controller-->
         <scene sceneID="yb2-bI-zx9">
             <objects>
-                <viewController storyboardIdentifier="ForgotPasswordViewControllerID" id="hI2-Rq-J9P" customClass="ForgotPasswordViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordViewControllerID" id="hI2-Rq-J9P" customClass="ForgotPasswordViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pDm-Zc-xp5"/>
                         <viewControllerLayoutGuide type="bottom" id="KpX-Cu-g47"/>
@@ -372,7 +371,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsQ-qz-Zq3" customClass="TopShadowView" customModule="DriverReadyToEat" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsQ-qz-Zq3" customClass="TopShadowView" customModule="UrbanEaterDriver" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-OP-z7g">
@@ -386,7 +385,7 @@
                                             <action selector="ActionBack:" destination="hI2-Rq-J9P" eventType="touchUpInside" id="ylh-Ag-Qg4"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faJ-vB-wJb" customClass="CustomLbl" customModule="DriverReadyToEat" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faJ-vB-wJb" customClass="CustomLbl" customModule="UrbanEaterDriver" customModuleProvider="target">
                                         <rect key="frame" x="48" y="0.0" width="317" height="44"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -533,7 +532,7 @@
         <!--Login View Controller-->
         <scene sceneID="v5v-hZ-7iP">
             <objects>
-                <viewController storyboardIdentifier="LoginVCID" id="RT0-wf-Vbi" customClass="LoginViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVCID" id="RT0-wf-Vbi" customClass="LoginViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8t8-J0-1hf"/>
                         <viewControllerLayoutGuide type="bottom" id="jBB-Q0-1z7"/>
@@ -765,7 +764,7 @@
         <!--Custom Login Navigation View Controller-->
         <scene sceneID="ahb-4n-HgE">
             <objects>
-                <navigationController storyboardIdentifier="CustomLoginNavigationVCID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Hdi-lG-phL" customClass="CustomLoginNavigationViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CustomLoginNavigationVCID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Hdi-lG-phL" customClass="CustomLoginNavigationViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3qi-aM-lW4">
                         <autoresizingMask key="autoresizingMask"/>
@@ -782,7 +781,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="NUl-F6-lEI">
             <objects>
-                <viewController storyboardIdentifier="EditProfileVCID" id="3jp-wO-pJd" customClass="EditProfileViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileVCID" id="3jp-wO-pJd" customClass="EditProfileViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7ek-r3-ymP"/>
                         <viewControllerLayoutGuide type="bottom" id="riC-ng-Xhb"/>
@@ -1190,7 +1189,7 @@
         <!--Home Navigation View Controller-->
         <scene sceneID="vWn-d2-K3e">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationID" navigationBarHidden="YES" id="y5t-FK-Osl" customClass="HomeNavigationViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationID" navigationBarHidden="YES" id="y5t-FK-Osl" customClass="HomeNavigationViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u5b-aM-FDi">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1205,7 +1204,7 @@
         <!--Home-->
         <scene sceneID="DCq-Lz-bko">
             <objects>
-                <viewController storyboardIdentifier="HomeVCID" id="I6e-l2-kKG" customClass="HomeViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVCID" id="I6e-l2-kKG" customClass="HomeViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IIe-uX-2jW"/>
                         <viewControllerLayoutGuide type="bottom" id="ge1-Zc-BiB"/>
@@ -1415,7 +1414,7 @@
         <!--Orders-->
         <scene sceneID="HFT-hH-uUP">
             <objects>
-                <viewController storyboardIdentifier="OrdersViewControllerID" id="Lkg-fj-ll7" customClass="OrdersViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrdersViewControllerID" id="Lkg-fj-ll7" customClass="OrdersViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JGS-OZ-3gr"/>
                         <viewControllerLayoutGuide type="bottom" id="lcm-RO-X6b"/>
@@ -1499,7 +1498,7 @@
         <!--Change Password View Controller-->
         <scene sceneID="zPe-pV-JyP">
             <objects>
-                <viewController storyboardIdentifier="ChangePasswordViewControllerID" id="9IK-jr-8IE" customClass="ChangePasswordViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordViewControllerID" id="9IK-jr-8IE" customClass="ChangePasswordViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="udJ-Be-hSn"/>
                         <viewControllerLayoutGuide type="bottom" id="kwV-ex-QCM"/>
@@ -1715,7 +1714,7 @@
         <!--Profile-->
         <scene sceneID="M4M-Xh-qPb">
             <objects>
-                <viewController storyboardIdentifier="AccountVCID" hidesBottomBarWhenPushed="YES" id="zgM-tu-Fjk" customClass="AccountViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountVCID" hidesBottomBarWhenPushed="YES" id="zgM-tu-Fjk" customClass="AccountViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hod-he-ZfS"/>
                         <viewControllerLayoutGuide type="bottom" id="dGq-qg-i0P"/>
@@ -1776,7 +1775,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="396"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellMore" id="XE8-BX-jaQ" customClass="MoreTableViewCell" customModule="DriverReadyToEat" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellMore" id="XE8-BX-jaQ" customClass="MoreTableViewCell" customModule="UrbanEaterDriver" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="373" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XE8-BX-jaQ" id="WwP-un-qo2">
@@ -1882,7 +1881,7 @@
         <!--Your Earnings View Controller-->
         <scene sceneID="3WO-9S-f6s">
             <objects>
-                <viewController storyboardIdentifier="YourEarningsViewControllerID" id="sRS-Ug-CjY" customClass="YourEarningsViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YourEarningsViewControllerID" id="sRS-Ug-CjY" customClass="YourEarningsViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="00S-gY-dWB"/>
                         <viewControllerLayoutGuide type="bottom" id="AaD-Xu-ENA"/>
@@ -1922,7 +1921,7 @@
                                     <constraint firstAttribute="trailing" secondItem="vKc-Rf-EBW" secondAttribute="trailing" constant="33" id="xvz-8a-2Rb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyE-GA-y8f" userLabel="HeaderView" customClass="ShadowView" customModule="DriverReadyToEat" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyE-GA-y8f" userLabel="HeaderView" customClass="ShadowView" customModule="UrbanEaterDriver" customModuleProvider="target">
                                 <rect key="frame" x="3" y="64" width="369" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlR-ue-ugJ" userLabel="DatesView">
@@ -2191,7 +2190,7 @@
         <!--Order Info View Controller-->
         <scene sceneID="Thj-35-7ga">
             <objects>
-                <viewController storyboardIdentifier="OrderInfoViewControllerID" id="pcu-es-YC7" customClass="OrderInfoViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderInfoViewControllerID" id="pcu-es-YC7" customClass="OrderInfoViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xvp-wC-zum"/>
                         <viewControllerLayoutGuide type="bottom" id="phi-7o-6sx"/>
@@ -2286,7 +2285,7 @@
         <!--Help Support View Controller-->
         <scene sceneID="TSF-Kh-qgA">
             <objects>
-                <viewController storyboardIdentifier="HelpSupportViewControllerID" id="s4k-SB-1OQ" customClass="HelpSupportViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpSupportViewControllerID" id="s4k-SB-1OQ" customClass="HelpSupportViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nGH-QA-POT"/>
                         <viewControllerLayoutGuide type="bottom" id="Oy9-CN-ABe"/>
@@ -2334,7 +2333,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellHelpSupport" id="dqz-6I-5B8" customClass="HelpSupportTableViewCell" customModule="DriverReadyToEat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellHelpSupport" id="dqz-6I-5B8" customClass="HelpSupportTableViewCell" customModule="UrbanEaterDriver" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dqz-6I-5B8" id="GS2-uf-632">
@@ -2410,7 +2409,7 @@
         <!--Direction View Controller-->
         <scene sceneID="soe-aN-6gc">
             <objects>
-                <viewController storyboardIdentifier="DirectionViewControllerID" id="f9s-gR-qlo" customClass="DirectionViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DirectionViewControllerID" id="f9s-gR-qlo" customClass="DirectionViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A0g-2l-C6q"/>
                         <viewControllerLayoutGuide type="bottom" id="5cd-Wi-acM"/>
@@ -2577,7 +2576,7 @@
         <!--Notification-->
         <scene sceneID="BoQ-e3-Qmp">
             <objects>
-                <viewController storyboardIdentifier="NotificationViewControllerID" id="sR3-Ii-Qig" customClass="NotificationViewController" customModule="DriverReadyToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationViewControllerID" id="sR3-Ii-Qig" customClass="NotificationViewController" customModule="UrbanEaterDriver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="giV-g6-GSi"/>
                         <viewControllerLayoutGuide type="bottom" id="yrK-KQ-GYM"/>
@@ -2618,7 +2617,7 @@
                                 <rect key="frame" x="8" y="64" width="359" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationCell" rowHeight="85" id="UIm-fp-OA6" customClass="NotificationTableViewCell" customModule="DriverReadyToEat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationCell" rowHeight="85" id="UIm-fp-OA6" customClass="NotificationTableViewCell" customModule="UrbanEaterDriver" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="359" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UIm-fp-OA6" id="cak-0A-YSk">
@@ -2713,14 +2712,14 @@
         <image name="ProfileSelect" width="28" height="28"/>
         <image name="arrowRight" width="32" height="32"/>
         <image name="backButton" width="36" height="36"/>
-        <image name="backIcon" width="16" height="16"/>
+        <image name="backIcon" width="100" height="100"/>
         <image name="calendar" width="18" height="18"/>
         <image name="earnings" width="38" height="38"/>
-        <image name="editImage" width="16" height="16"/>
+        <image name="editImage" width="100" height="100"/>
         <image name="homeSelect" width="28" height="28"/>
         <image name="iconBackWhite" width="16" height="16"/>
-        <image name="iconCall" width="16" height="16"/>
-        <image name="iconProfile" width="16" height="16"/>
+        <image name="iconCall" width="64" height="64"/>
+        <image name="iconProfile" width="100" height="100"/>
         <image name="notificationSelect" width="28" height="28"/>
         <image name="ordersSelect" width="28" height="28"/>
         <image name="support" width="48" height="48"/>
