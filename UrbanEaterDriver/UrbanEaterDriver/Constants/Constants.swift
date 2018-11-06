@@ -23,6 +23,8 @@ class Constants: NSObject {
     
     public struct urls {
         static let loginURL = "\(BaseUrl)customer/login"
+        static let notificationsURL = ""
+        static let earningsURL = ""
     }
 
 }

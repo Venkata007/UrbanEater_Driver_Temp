@@ -12,6 +12,8 @@ class ForgotPasswordViewController: UIViewController
 {
     @IBOutlet weak var emailID: UITextField!
     @IBOutlet weak var send_btn: UIButton!
+    @IBOutlet weak var inputView: HDInputView!
+    // @property (weak, nonatomic) IBOutlet HDInputView *inputView;
     var presentWindow : UIWindow?
     var otp:String = String()
     

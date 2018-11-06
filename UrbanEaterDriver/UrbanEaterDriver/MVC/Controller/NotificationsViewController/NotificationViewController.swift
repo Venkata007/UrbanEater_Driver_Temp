@@ -13,7 +13,6 @@ class NotificationViewController: UIViewController,UITableViewDataSource,UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         dummyData()
     }
     
@@ -34,6 +33,22 @@ class NotificationViewController: UIViewController,UITableViewDataSource,UITable
         let response = JSON(dictinary)
         GlobalClass.notificationModel = NotofocationModel(fromJson: response)
     }
+    
+    func getNotificationsAPIcall(){
+        Theme.sharedInstance.activityView(View: self.view)
+
+        print("urlStr ----->>> ", Constants.urls.notificationsURL)
+
+        URLhandler.getUrlSession(urlString: Constants.urls.notificationsURL, params: [:], header: [:]) { (dataResponse) in
+            print("Response ----->>> ", dataResponse.json)
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                GlobalClass.earningModel = EarningModel(dataResponse.json)
+                
+            }
+        }
+    }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {

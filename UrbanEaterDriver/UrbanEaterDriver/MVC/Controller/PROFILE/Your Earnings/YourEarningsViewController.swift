@@ -48,6 +48,7 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
         totalEarningsLbl.text = GlobalClass.earningModel.totalEarnings
     }
     
+    
     func DummyData(){
         
         let dictionary = [
@@ -96,6 +97,27 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
         let response = JSON(dictionary)
         GlobalClass.earningModel = EarningModel(response)
     }
+    
+    func getEarningsAPIcall(){
+        Theme.sharedInstance.activityView(View: self.view)
+        let param = [
+            "from": fromDateLbl.text,
+            "to": toDateLbl.text,
+            "through": "WEB"
+        ]
+        
+        print("urlStr ----->>> ", Constants.urls.loginURL)
+        print("param request ----->>> ", param)
+        
+        URLhandler.postUrlSession(urlString: Constants.urls.earningsURL, params: param as [String : AnyObject], header: [:]) { (dataResponse) in
+            print("Response login ----->>> ", dataResponse.json)
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                GlobalClass.earningModel = EarningModel(dataResponse.json)
+            }
+        }
+    }
+    
     
     @IBAction func fromDateBtnClicked(_ sender: Any) {
         dateContainerView.isHidden = false

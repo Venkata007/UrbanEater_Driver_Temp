@@ -11,27 +11,18 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate
 {
-    @IBOutlet weak var emailID: UITextField!
+    @IBOutlet weak var mobileNoTxt: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
     
-    @IBOutlet weak var forgot_btn: UIButton!
     let commonUtlity : Utilities = Utilities();
    
     var presentWindow : UIWindow?
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
-    @IBOutlet weak var buttonLogin: UIButton!
-    
     override func viewWillAppear(_ animated: Bool)
     {
-       // buttonLogin.setTitleColor(Themes.sharedInstance.returnButtomFontColor(), for: .normal)
-       // buttonLogin.normalBackgroundColor = Themes.sharedInstance.returnButtonBackgroundColor()
-        
-        buttonLogin.layer.cornerRadius = 5.0
-        buttonLogin.layer.masksToBounds = true
-        
-       
+
     }
     
     override func viewDidLoad()
@@ -50,8 +41,8 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         }
 
         print(" self.commonUtlity.appDelegate.deviceToken : ",  deviceToken)
-        self.emailID.text = "9032363049"
-        self.password.text = "Raju1234"
+        self.mobileNoTxt.text = "9032363049"
+        self.passwordTxt.text = "Raju1234"
 
     }
     
@@ -68,10 +59,10 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
     @IBAction func ActionLogin(_ sender: Any)
     {
         print("ActionLogin")
-        if self.commonUtlity.trimString(string: self.emailID.text!) == "" {
+        if self.commonUtlity.trimString(string: self.mobileNoTxt.text!) == "" {
             Theme.sharedInstance.showErrorpopup(Msg: "Mobile number can't be empty")
         }
-        else if self.commonUtlity.trimString(string: self.password.text!) == ""
+        else if self.commonUtlity.trimString(string: self.passwordTxt.text!) == ""
         {
             Theme.sharedInstance.showErrorpopup(Msg: "Password can't be empty")
         }
@@ -87,8 +78,8 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         self.view.endEditing(true)
         Theme.sharedInstance.activityView(View: self.view)
         
-        let email = self.emailID.text!
-        let password = self.password.text!
+        let email = self.mobileNoTxt.text!
+        let password = self.passwordTxt.text!
 //
 //        var deviceToken = ""
 //
@@ -108,9 +99,10 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         print("param login ----->>> ", param)
         
         URLhandler.postUrlSession(urlString: Constants.urls.loginURL, params: param as [String : AnyObject], header: [:]) { (dataResponse) in
+            print("Response login ----->>> ", dataResponse.json)
             Theme.sharedInstance.removeActivityView(View: self.view)
             if dataResponse.json.exists(){
-                 print("Response login ----->>> ", dataResponse.json)
+                 //print("Response login ----->>> ", dataResponse.json)
                 UserDefaults.standard.set(dataResponse.dictionaryFromJson, forKey: "driverInfo")
                 GlobalClass.driverModel = DriverModel(fromJson: dataResponse.json)
                 
@@ -150,7 +142,7 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func ActionForgotPassword(_ sender: Any)
+    @IBAction func loginWithOTPAction(_ sender: Any)
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         

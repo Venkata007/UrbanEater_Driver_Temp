@@ -68,6 +68,21 @@ class OrdersViewController: UIViewController,UITableViewDataSource,UITableViewDe
         self.ordersTable.reloadData()
     }
     
+    func getOrdersAPIcall(){
+        Theme.sharedInstance.activityView(View: self.view)
+        
+        print("urlStr ----->>> ", Constants.urls.notificationsURL)
+        
+        URLhandler.getUrlSession(urlString: Constants.urls.notificationsURL, params: [:], header: [:]) { (dataResponse) in
+            print("Response ----->>> ", dataResponse.json)
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                GlobalClass.earningModel = EarningModel(dataResponse.json)
+                
+            }
+        }
+    }
+    
     @IBAction func segmentclicked(_ sender: UISegmentedControl) {
         self.ordersTable.reloadData()
     }

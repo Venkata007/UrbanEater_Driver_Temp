@@ -11,7 +11,6 @@
 		A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */; };
 		A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5AA218ADE5E00192E7E /* ViewController.swift */; };
 		A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5AC218ADE5E00192E7E /* Main.storyboard */; };
-		A3BEF5B0218ADE5F00192E7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5AF218ADE5F00192E7E /* Assets.xcassets */; };
 		A3BEF5B3218ADE5F00192E7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5B1218ADE5F00192E7E /* LaunchScreen.storyboard */; };
 		A3BEF5C1218AE06D00192E7E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5C0218AE06D00192E7E /* Theme.swift */; };
 		A3BEF5C4218AE15400192E7E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5C3218AE15300192E7E /* LoginViewController.swift */; };
@@ -64,6 +63,9 @@
 		A3BEF6C521902E1E00192E7E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C421902E1E00192E7E /* ShadowView.swift */; };
 		A3BEF6CA2190697200192E7E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C92190697200192E7E /* NotificationViewController.swift */; };
 		A3BEF6CC219069EE00192E7E /* NotofocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */; };
+		A3BEF6CE2191786100192E7E /* NewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF6CD2191786100192E7E /* NewAssets.xcassets */; };
+		A3BEF6D421919D8E00192E7E /* HDInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF6D121919D8E00192E7E /* HDInputView.xib */; };
+		A3BEF6D521919D8E00192E7E /* HDInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6D321919D8E00192E7E /* HDInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +75,6 @@
 		A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BEF5AA218ADE5E00192E7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3BEF5AD218ADE5E00192E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A3BEF5AF218ADE5F00192E7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3BEF5B2218ADE5F00192E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3BEF5B4218ADE5F00192E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3BEF5C0218AE06D00192E7E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -127,6 +128,11 @@
 		A3BEF6C421902E1E00192E7E /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A3BEF6C92190697200192E7E /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotofocationModel.swift; sourceTree = "<group>"; };
+		A3BEF6CD2191786100192E7E /* NewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NewAssets.xcassets; sourceTree = "<group>"; };
+		A3BEF6D021919D8C00192E7E /* UrbanEaterDriver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UrbanEaterDriver-Bridging-Header.h"; sourceTree = "<group>"; };
+		A3BEF6D121919D8E00192E7E /* HDInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDInputView.xib; sourceTree = "<group>"; };
+		A3BEF6D221919D8E00192E7E /* HDInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDInputView.h; sourceTree = "<group>"; };
+		A3BEF6D321919D8E00192E7E /* HDInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDInputView.m; sourceTree = "<group>"; };
 		C43C6A73EBA83729D01849AE /* Pods_UrbanEaterDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanEaterDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,8 +186,8 @@
 				A3BEF5BD218AE03800192E7E /* Constants */,
 				A3BEF5BA218AE00900192E7E /* MVC */,
 				A3BEF5AC218ADE5E00192E7E /* Main.storyboard */,
-				A3BEF5AF218ADE5F00192E7E /* Assets.xcassets */,
 				A3BEF5D3218AE1FE00192E7E /* Media.xcassets */,
+				A3BEF6CD2191786100192E7E /* NewAssets.xcassets */,
 				A3BEF5B1218ADE5F00192E7E /* LaunchScreen.storyboard */,
 				A3BEF5B4218ADE5F00192E7E /* Info.plist */,
 			);
@@ -249,6 +255,7 @@
 		A3BEF5BF218AE05200192E7E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A3BEF6CF21919D7F00192E7E /* OTPview */,
 				A3BEF6C421902E1E00192E7E /* ShadowView.swift */,
 				A3BEF5D7218AE3C600192E7E /* Toast */,
 			);
@@ -497,6 +504,17 @@
 			path = NotificationsViewController;
 			sourceTree = "<group>";
 		};
+		A3BEF6CF21919D7F00192E7E /* OTPview */ = {
+			isa = PBXGroup;
+			children = (
+				A3BEF6D221919D8E00192E7E /* HDInputView.h */,
+				A3BEF6D321919D8E00192E7E /* HDInputView.m */,
+				A3BEF6D121919D8E00192E7E /* HDInputView.xib */,
+				A3BEF6D021919D8C00192E7E /* UrbanEaterDriver-Bridging-Header.h */,
+			);
+			path = OTPview;
+			sourceTree = "<group>";
+		};
 		DED2C211EC2A786806F4BCE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +558,7 @@
 				TargetAttributes = {
 					A3BEF5A4218ADE5E00192E7E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -573,11 +592,12 @@
 				A3BEF5D4218AE1FF00192E7E /* Media.xcassets in Resources */,
 				A3BEF5CC218AE17A00192E7E /* Roboto-Light.ttf in Resources */,
 				A3BEF67F218DACE600192E7E /* MultiOrderTableViewCell.xib in Resources */,
+				A3BEF6D421919D8E00192E7E /* HDInputView.xib in Resources */,
 				A3BEF655218DAC5800192E7E /* EarningsTableViewCell.xib in Resources */,
 				A3BEF662218DACA200192E7E /* AcceptedTableViewCell.xib in Resources */,
 				A3BEF5CB218AE17A00192E7E /* Roboto-Regular.ttf in Resources */,
 				A3BEF672218DACBF00192E7E /* OrderInfoTableViewCell1.xib in Resources */,
-				A3BEF5B0218ADE5F00192E7E /* Assets.xcassets in Resources */,
+				A3BEF6CE2191786100192E7E /* NewAssets.xcassets in Resources */,
 				A3BEF66F218DACBF00192E7E /* OrderInfoTableViewCell4.xib in Resources */,
 				A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */,
 				A3BEF674218DACBF00192E7E /* OrderInfoTableViewCell2.xib in Resources */,
@@ -697,6 +717,7 @@
 				A3BEF683218DADE000192E7E /* MoreTableViewCell.swift in Sources */,
 				A3BEF659218DAC7300192E7E /* HelpSupportTableViewCell.swift in Sources */,
 				A3BEF6C321902CF000192E7E /* GlobalModel.swift in Sources */,
+				A3BEF6D521919D8E00192E7E /* HDInputView.m in Sources */,
 				A3BEF6BF21902CB800192E7E /* DriverModel.swift in Sources */,
 				A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */,
 				A3BEF663218DACA200192E7E /* OngoingTableViewCell.swift in Sources */,
@@ -859,6 +880,7 @@
 			baseConfigurationReference = 37FC2D7AE19638D58E69C0D1 /* Pods-UrbanEaterDriver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTL7D867WK;
 				INFOPLIST_FILE = UrbanEaterDriver/Info.plist;
@@ -869,6 +891,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UrbanEaterDriver/ThirdParty/OTPview/UrbanEaterDriver-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -879,6 +903,7 @@
 			baseConfigurationReference = 4993143DF2CBA5904E9FEBF2 /* Pods-UrbanEaterDriver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTL7D867WK;
 				INFOPLIST_FILE = UrbanEaterDriver/Info.plist;
@@ -889,6 +914,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UrbanEaterDriver/ThirdParty/OTPview/UrbanEaterDriver-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
