@@ -41,13 +41,17 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         }
 
         print(" self.commonUtlity.appDelegate.deviceToken : ",  deviceToken)
-        self.mobileNoTxt.text = "9032363049"
-        self.passwordTxt.text = "Raju1234"
+//        self.mobileNoTxt.text = "9032363049"
+//        self.passwordTxt.text = "Raju1234"
+        
+        updateUI()
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
+    
+    func updateUI(){
+        mobileNoTxt.placeholderColor("Mobile", color: .placeholderColor)
+        passwordTxt.placeholderColor("Password", color: .placeholderColor)
     }
     
     
@@ -60,11 +64,11 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
     {
         print("ActionLogin")
         if self.commonUtlity.trimString(string: self.mobileNoTxt.text!) == "" {
-            Theme.sharedInstance.showErrorpopup(Msg: "Mobile number can't be empty")
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.mobile_number_empty)
         }
         else if self.commonUtlity.trimString(string: self.passwordTxt.text!) == ""
         {
-            Theme.sharedInstance.showErrorpopup(Msg: "Password can't be empty")
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.password_empty)
         }
 
         else
@@ -78,15 +82,8 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         self.view.endEditing(true)
         Theme.sharedInstance.activityView(View: self.view)
         
-        let email = self.mobileNoTxt.text!
-        let password = self.passwordTxt.text!
-//
-//        var deviceToken = ""
-//
-//        if UserDefaults.standard.string(forKey: "deviceToken") != nil
-//        {
-//            deviceToken = UserDefaults.standard.string(forKey: "deviceToken")!
-//        }
+        let email = "9876543210" //self.newPasswordTxt.text!
+        let password =  "testing123"//self.confirmPasswordTxt.text!
         
         let param = [
             "mobileId": email,
@@ -102,20 +99,19 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
             print("Response login ----->>> ", dataResponse.json)
             Theme.sharedInstance.removeActivityView(View: self.view)
             if dataResponse.json.exists(){
-                 //print("Response login ----->>> ", dataResponse.json)
+                 //print("Response login ----->>> ", dataResponse.json) 6369
                 UserDefaults.standard.set(dataResponse.dictionaryFromJson, forKey: "driverInfo")
                 GlobalClass.driverModel = DriverModel(fromJson: dataResponse.json)
                 
-                _ = Timer.scheduledTimer(timeInterval:1.0, target: self, selector: #selector(self.movoToHome(timer:)), userInfo: nil, repeats: false)
+//                _ = Timer.scheduledTimer(timeInterval:1.0, target: self, selector: #selector(self.movoToHome(timer:)), userInfo: nil, repeats: false)
+                self.movoToHome()
               
             }
         }
-        
- 
     }
     
     
-    @objc func movoToHome(timer:Timer) {
+    @objc func movoToHome() {
         Theme.sharedInstance.removeActivityView(View: self.view)
         (UIApplication.shared.delegate as! AppDelegate).setInitialViewController(from: "")
     }

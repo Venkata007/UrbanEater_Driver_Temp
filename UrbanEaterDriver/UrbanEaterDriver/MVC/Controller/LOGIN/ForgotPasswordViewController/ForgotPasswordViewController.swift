@@ -34,8 +34,10 @@ class ForgotPasswordViewController: UIViewController,OTPTextFieldDelegate
     }
     
     func updateUI(){
-       // self.mobileNoTxt.placeholderRect("Mobile", color: .placeholderColor)
-        //self.mobileNumberTF.leftViewImage(#imageLiteral(resourceName: "Mobile"))
+        mobileNoTxt.placeholderColor("Mobile", color: .placeholderColor)
+        newPasswordTxt.placeholderColor("New Password", color: .placeholderColor)
+        confirmPasswordTxt.placeholderColor("Confirm Password", color: .placeholderColor)
+        
         self.mobileNoTxt.delegate = self
 
         
@@ -50,6 +52,7 @@ class ForgotPasswordViewController: UIViewController,OTPTextFieldDelegate
         OTP4.addTarget(self, action: #selector(ForgotPasswordViewController.textFieldDidChange(_:)), for: .editingChanged)
     }
 
+    
     
     @IBAction func sendOTPbtnAction(_ sender: UIButton) {
         if !self.validate(true){
@@ -79,14 +82,34 @@ class ForgotPasswordViewController: UIViewController,OTPTextFieldDelegate
 
     }
     
-    func isValidEmail(testStr:String) -> Bool
-    {
-        print("validate emailId: \(testStr)")
+    func forgotPasswordWebHit(){
+        self.view.endEditing(true)
+        Theme.sharedInstance.activityView(View: self.view)
         
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        let result = emailTest.evaluate(with: testStr)
-        return result
+        let email = "9876543210" //self.newPasswordTxt.text!
+        let password =  "testing123"//self.confirmPasswordTxt.text!
+        
+        let param = [
+            "mobileId": email,
+            "password": password,
+            "through": "WEB"
+        ]
+  
+        
+        print("loginURL ----->>> ", Constants.urls.loginURL)
+        
+        print("param login ----->>> ", param)
+        
+        URLhandler.postUrlSession(urlString: Constants.urls.loginURL, params: param as [String : AnyObject], header: [:]) { (dataResponse) in
+            print("Response login ----->>> ", dataResponse.json)
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                print("Response login ----->>> ", dataResponse.json)
+                //                UserDefaults.standard.set(dataResponse.dictionaryFromJson, forKey: "restaurantInfo")
+                //                GlobalClass.restModel = RestaurantModel(dataResponse.json)
+                //                self.movoToHome()
+            }
+        }
     }
     
 
@@ -94,8 +117,6 @@ class ForgotPasswordViewController: UIViewController,OTPTextFieldDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     @IBAction func ActionBack(_ sender: Any)
     {

@@ -32,7 +32,14 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        // Do any additional setup after loading the view.
+        updateUI()
+    }
+    
+    func updateUI(){
+        nameTxt.placeholderColor("Name", color: .placeholderColor)
+        emailTxt.placeholderColor("Mail", color: .placeholderColor)
+        mobileNumberTxt.placeholderColor("Mobile", color: .placeholderColor)
+        passwordTxt.placeholderColor("Password", color: .placeholderColor)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -64,31 +71,36 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         
         if self.commonUtlity.trimString(string: self.nameTxt.text!)  == ""
         {
-            Theme.sharedInstance.showErrorpopup(Msg: "Enter your name")
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.Invalid_FirstName)
+        }
+        else if self.commonUtlity.trimString(string: mobileNumberTxt.text!) == ""
+        {
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.Invalid_Number)
         }
         else if self.commonUtlity.trimString(string: emailTxt.text!) == ""
         {
-            Theme.sharedInstance.showErrorpopup(Msg: "Enter your email")
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.Invalid_Email)
         }
         else if !isValidEmail(testStr: emailTxt.text!)
         {
-            Theme.sharedInstance.showErrorpopup(Msg: "Enter a Valid email id")
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.Invalid_Email)
         }
 
         else if self.commonUtlity.trimString(string: passwordTxt.text!) == ""
         {
-            Theme.sharedInstance.showErrorpopup(Msg: "Enter your Password")
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.Invalid_Strong_Password)
         }
         else if !self.isStrongPassword(password: passwordTxt.text!) || !isvalidPassword(passwordTxt.text!)
         {
-            Theme.sharedInstance.showErrorpopup(Msg: "Password should be at least 6 characters, which Contain At least One uppercase, One lower case, One Numeric digit.")
+            Theme.sharedInstance.showErrorpopup(Msg: ToastMessages.Invalid_Strong_Password)
         }
         else
         {
            // GetRegisterData()
+            
             blurView.isHidden = false
             let mobileNumber = mobileNumberTxt.text
-            let lastDigits3:String = String(mobileNumber!.characters.suffix(3))
+            let lastDigits3:String = String(mobileNumber!.suffix(3))
             verifyLbl.text = "A text message with verification code was sent to(***) **** " + lastDigits3
         }
     }
@@ -103,6 +115,11 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
             Theme.sharedInstance.showErrorpopup(Msg: "Enter the otp")
         }
         
+    }
+    
+    @IBAction func backBtnClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func loginBtnClicked(_ sender: Any) {

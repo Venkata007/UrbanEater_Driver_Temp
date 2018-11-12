@@ -34,11 +34,13 @@ class URLhandler: NSObject {
                         completionHandler(response)
                     }else{
                         URLhandler.sharedInstance.topMostVC()?.view.makeToast(message:message)
+                        Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                     }
                 }
                 break
             case .failure(_):
                 URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: (response.result.error?.localizedDescription)!)
+                Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                 break
             }
         }
@@ -60,11 +62,13 @@ class URLhandler: NSObject {
                         completionHandler(response)
                     }else{
                         URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: message)
+                        Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                     }
                 }
                 break
             case .failure(_):
                 URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: (response.result.error?.localizedDescription)!)
+                Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                 break
             }
         }
@@ -82,11 +86,13 @@ class URLhandler: NSObject {
                         completionHandler(response)
                     }else{
                         URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: message)
+                        Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                     }
                 }
                 break
             case .failure(_):
                 URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: (response.result.error?.localizedDescription)!)
+                Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                 break
             }
         }
@@ -103,12 +109,14 @@ class URLhandler: NSObject {
                     if stautsCode.toInt == 200{
                         completionHandler(response)
                     }else{
-                        URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: (response.result.error?.localizedDescription)!)
+                        URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: message)
+                        Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                     }
                 }
                 break
             case .failure(_):
                 URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: (response.result.error?.localizedDescription)!)
+                Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
                 break
             }
         }

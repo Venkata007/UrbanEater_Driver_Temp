@@ -99,7 +99,7 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
         
         var message = "Are you sure you want to go"
         message = "\(message) online ?"
-        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1))
+        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1))
         alertview.addAction{
             
            // self.switchOffline.setOn(false, animated: false)
@@ -118,7 +118,7 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
     func onlineBtnStateChange(){
         print("onlineBtnStateChange -------->>>")
         self.driverImgView.alpha = 1.0
-        self.onlineBtn.backgroundColor = #colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1)
+        self.onlineBtn.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1)
         self.onlineBtn.layer.borderWidth = 0.0
         self.onlineBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         
@@ -139,7 +139,7 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
         var message = "Are you sure you want to go"
         message = "\(message) offline ?"
         
-        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1))
+        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1))
         
         alertview.addAction{
             print("offline no -------->>>")

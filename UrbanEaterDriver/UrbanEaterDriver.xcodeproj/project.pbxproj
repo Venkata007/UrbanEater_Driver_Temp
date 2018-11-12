@@ -66,6 +66,7 @@
 		A3BEF6CE2191786100192E7E /* NewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF6CD2191786100192E7E /* NewAssets.xcassets */; };
 		A3BEF6D421919D8E00192E7E /* HDInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF6D121919D8E00192E7E /* HDInputView.xib */; };
 		A3BEF6D521919D8E00192E7E /* HDInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6D321919D8E00192E7E /* HDInputView.m */; };
+		A3BEF6DB21996D1D00192E7E /* ExtensionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6DA21996D1D00192E7E /* ExtensionClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,7 @@
 		A3BEF6D121919D8E00192E7E /* HDInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDInputView.xib; sourceTree = "<group>"; };
 		A3BEF6D221919D8E00192E7E /* HDInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDInputView.h; sourceTree = "<group>"; };
 		A3BEF6D321919D8E00192E7E /* HDInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDInputView.m; sourceTree = "<group>"; };
+		A3BEF6DA21996D1D00192E7E /* ExtensionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionClass.swift; sourceTree = "<group>"; };
 		C43C6A73EBA83729D01849AE /* Pods_UrbanEaterDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanEaterDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -248,6 +250,7 @@
 				A3BEF5C0218AE06D00192E7E /* Theme.swift */,
 				A3BEF5D5218AE31600192E7E /* Utilities.swift */,
 				A3BEF6BB219027B700192E7E /* URLhandler.swift */,
+				A3BEF6DA21996D1D00192E7E /* ExtensionClass.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				A3BEF6C321902CF000192E7E /* GlobalModel.swift in Sources */,
 				A3BEF6D521919D8E00192E7E /* HDInputView.m in Sources */,
 				A3BEF6BF21902CB800192E7E /* DriverModel.swift in Sources */,
+				A3BEF6DB21996D1D00192E7E /* ExtensionClass.swift in Sources */,
 				A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */,
 				A3BEF663218DACA200192E7E /* OngoingTableViewCell.swift in Sources */,
 				A3BEF680218DACE600192E7E /* MultiOrderTableViewCell.swift in Sources */,

@@ -14,10 +14,17 @@ import MMMaterialDesignSpinner
 
 class Theme: NSObject {
     
-    static let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-    
-    
     static let sharedInstance = Theme()
+    
+    func topMostVC() -> UIViewController?{
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            return topController
+        }
+        return nil
+    }
     
     let screenSize:CGRect = UIScreen.main.bounds
     var spinnerView:MMMaterialDesignSpinner=MMMaterialDesignSpinner()
@@ -43,18 +50,18 @@ class Theme: NSObject {
     
     func activityView(View:UIView)
     {
-        View.isUserInteractionEnabled = false;
+        Theme.sharedInstance.topMostVC()?.view.isUserInteractionEnabled = false;
         spinnerView.frame=CGRect(x: View.center.x-25, y: View.center.y, width: 50, height: 50)
         spinnerView.lineWidth = 3.0;
         spinnerView.tintColor = #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1)
         //spinnerView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2040881849)
-        View.addSubview(spinnerView)
+        Theme.sharedInstance.topMostVC()?.view.addSubview(spinnerView)
         spinnerView.startAnimating()
     }
     
     func removeActivityView(View:UIView)
     {
-        View.isUserInteractionEnabled = true;
+        Theme.sharedInstance.topMostVC()?.view.isUserInteractionEnabled = true;
         spinnerView.stopAnimating()
         spinnerView.removeFromSuperview()
     }

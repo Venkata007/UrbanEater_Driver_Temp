@@ -223,7 +223,8 @@ public extension UIView {
         activityView.layer.cornerRadius = config.HRToastCornerRadius
         
         activityView.center = self.centerPointForPosition(pos, toast: activityView, withConfiguration: config)
-        activityView.backgroundColor = UIView.hr_toastThemeColor().withAlphaComponent(config.HRToastOpacity)
+        activityView.backgroundColor = .whiteColor
+            //UIView.hr_toastThemeColor().withAlphaComponent(config.HRToastOpacity)
         activityView.alpha = 0.0
         activityView.autoresizingMask = ([.flexibleLeftMargin, .flexibleTopMargin, .flexibleRightMargin, .flexibleBottomMargin])
         
@@ -378,10 +379,11 @@ public extension UIView {
         let initialView = UIView()
         initialView.translatesAutoresizingMaskIntoConstraints = false
         initialView.layer.cornerRadius = config.HRToastCornerRadius
-        initialView.backgroundColor = UIView.hr_toastThemeColor().withAlphaComponent(config.HRToastOpacity)
+        initialView.backgroundColor = .blackColor
+         //   UIView.hr_toastThemeColor().withAlphaComponent(config.HRToastOpacity)
         
         if config.HRToastDisplayShadow {
-            initialView.layer.shadowColor = UIView.hr_toastThemeColor().cgColor
+            initialView.layer.shadowColor = UIColor.clear.cgColor
             initialView.layer.shadowOpacity = Float(config.HRToastShadowOpacity)
             initialView.layer.shadowRadius = config.HRToastShadowRadius
             initialView.layer.shadowOffset = config.HRToastShadowOffset
