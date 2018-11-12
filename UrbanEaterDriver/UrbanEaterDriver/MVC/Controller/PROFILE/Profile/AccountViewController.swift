@@ -68,7 +68,7 @@ class AccountViewController:UIViewController, UIAlertViewDelegate, UITableViewDe
 //        })
         
         let alertView = JSSAlertView().show(self,title: "URBAN EATER" ,text:"Are you sure you want to logout ?",buttonText: "Cancel",cancelButtonText:"OK"
-            ,color: #colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1))
+            ,color: #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1))
         
         alertView.addAction{
             print("no logout --->>>")

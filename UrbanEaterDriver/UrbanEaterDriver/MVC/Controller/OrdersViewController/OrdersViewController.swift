@@ -246,7 +246,7 @@ class OrdersViewController: UIViewController,UITableViewDataSource,UITableViewDe
          print("multiple orders accept btn clicked --->> \(sender.tag)")
         
         let message = "Are you sure you want to accept the order : ODD653"
-        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1))
+        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1))
         alertview.addAction {
 
             // self.switchOffline.setOn(false, animated: false)
@@ -263,7 +263,7 @@ class OrdersViewController: UIViewController,UITableViewDataSource,UITableViewDe
     @objc func pressSingleOrderAcceptButton(_ sender: UIButton) {
         print("Single order accept btn clicked --->> \(sender.tag)")
         let message = "Are you sure you want to accept the order : ODD653"
-        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1))
+        let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1))
         alertview.addAction{
             
             // self.switchOffline.setOn(false, animated: false)

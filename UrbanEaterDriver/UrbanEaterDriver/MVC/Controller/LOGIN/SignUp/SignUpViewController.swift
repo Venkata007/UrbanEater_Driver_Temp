@@ -119,7 +119,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func backBtnClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: false, completion: nil)
+        //self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func loginBtnClicked(_ sender: Any) {

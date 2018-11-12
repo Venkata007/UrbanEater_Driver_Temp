@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class OngoingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var directionBtnWidthContraint: NSLayoutConstraint!
@@ -28,7 +27,7 @@ class OngoingTableViewCell: UITableViewCell {
         rejectBtn.layer.cornerRadius = 5.0
         acceptBtn.layer.cornerRadius = 5.0
         rejectBtn.layer.borderWidth = 1.0
-        rejectBtn.layer.borderColor = #colorLiteral(red: 0, green: 0.7314415574, blue: 0.3181976676, alpha: 1)
+        rejectBtn.layer.borderColor = #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1)
         rejectBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 
