@@ -56,6 +56,7 @@
                                         <state key="normal" image="backButton"/>
                                         <connections>
                                             <action selector="ActionBack:" destination="hI2-Rq-J9P" eventType="touchUpInside" id="gyl-Uc-DvP"/>
+                                            <action selector="backBtnClicked:" destination="2oa-tt-6X6" eventType="touchUpInside" id="gSY-oO-JFa"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNc-01-1RJ" customClass="CustomLbl" customModule="UrbanEaterDriver" customModuleProvider="target">
@@ -149,7 +150,7 @@
                                     <constraint firstItem="o5q-2G-SNz" firstAttribute="centerX" secondItem="h5b-Ro-4YM" secondAttribute="centerX" id="y8K-b3-mUY"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5J-Px-ri6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5J-Px-ri6" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4V-nB-jcM">
