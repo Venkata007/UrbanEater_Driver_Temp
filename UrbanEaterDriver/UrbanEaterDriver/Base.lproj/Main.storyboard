@@ -1570,7 +1570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0DW-O9-0nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="1097"/>
+            <point key="canvasLocation" x="1158" y="1027"/>
         </scene>
         <!--Home Navigation View Controller-->
         <scene sceneID="vWn-d2-K3e">
@@ -1605,8 +1605,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryh-aE-yq5" userLabel="Topview">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="328"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="urbanEater" translatesAutoresizingMaskIntoConstraints="NO" id="WFT-y5-kKs">
-                                                <rect key="frame" x="107" y="40" width="160" height="58.333333333333343"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_reverse" translatesAutoresizingMaskIntoConstraints="NO" id="WFT-y5-kKs">
+                                                <rect key="frame" x="-1733" y="40" width="3840" height="58.333333333333343"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Driver" translatesAutoresizingMaskIntoConstraints="NO" id="z6T-f3-v73">
                                                 <rect key="frame" x="121.66666666666667" y="167" width="131.33333333333331" height="131"/>
@@ -1879,7 +1879,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9Z-R5-XSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-343" y="1727"/>
+            <point key="canvasLocation" x="-364" y="1727"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="zPe-pV-JyP">
@@ -2095,7 +2095,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFG-ww-aVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484" y="958"/>
+            <point key="canvasLocation" x="2646" y="957"/>
         </scene>
         <!--Profile-->
         <scene sceneID="M4M-Xh-qPb">
@@ -2262,7 +2262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKh-JD-9v4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="966"/>
+            <point key="canvasLocation" x="-364" y="965"/>
         </scene>
         <!--Your Earnings View Controller-->
         <scene sceneID="3WO-9S-f6s">
@@ -2646,7 +2646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdp-gj-fNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="958"/>
+            <point key="canvasLocation" x="1938" y="957"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M3G-5E-XX4">
@@ -2792,7 +2792,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmj-Y9-JGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145" y="958"/>
+            <point key="canvasLocation" x="3306" y="957"/>
         </scene>
         <!--Direction View Controller-->
         <scene sceneID="soe-aN-6gc">
@@ -3019,7 +3019,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="njF-IN-9yG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                                    <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.95294117649999999" green="0.75294117650000003" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipem is simply dummy text of the printing and typesetting industry. Lorem ipsum has" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2d-6C-gyF">
@@ -3090,7 +3090,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYD-Hc-T0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1100" y="1727"/>
+            <point key="canvasLocation" x="-1012" y="1727"/>
         </scene>
     </scenes>
     <resources>
@@ -3100,6 +3100,7 @@
         <image name="Driver" width="111" height="122"/>
         <image name="Launch_Screen" width="375" height="667"/>
         <image name="Logo" width="230" height="115"/>
+        <image name="Logo_reverse" width="3840" height="1920"/>
         <image name="ProfileSelect" width="28" height="28"/>
         <image name="arrowRight" width="32" height="32"/>
         <image name="backButton" width="36" height="36"/>
@@ -3118,6 +3119,5 @@
         <image name="notificationSelect" width="28" height="28"/>
         <image name="ordersSelect" width="28" height="28"/>
         <image name="support" width="48" height="48"/>
-        <image name="urbanEater" width="160" height="50"/>
     </resources>
 </document>

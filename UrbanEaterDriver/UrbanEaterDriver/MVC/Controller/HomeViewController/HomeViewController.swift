@@ -101,7 +101,7 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
         message = "\(message) online ?"
         let alertview = JSSAlertView().show(self,title: "URBAN EATER",text: message,buttonText: "NO",cancelButtonText:"YES",color: #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1))
         alertview.addAction{
-            
+             //self.isOnline = false
            // self.switchOffline.setOn(false, animated: false)
             print("online ---->>> no")
         }
@@ -110,7 +110,7 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
             print("online ---->>> yes")
             self.isOnline = true
 //            self.OfflineWebHit(status: "1")
-            
+            self.onlineBtnStateChange()
         }
         
     }
@@ -126,6 +126,8 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
         self.offlineBtn.setTitleColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), for: .normal)
         self.offlineBtn.layer.borderWidth = 1
         self.offlineBtn.layer.borderColor = #colorLiteral(red: 0.8871153236, green: 0.8871153236, blue: 0.8871153236, alpha: 1)
+        
+        self.isOnline = true
     }
     
     @IBAction func OfflineBtnClicked(_ sender: Any) {
@@ -149,6 +151,7 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
             print("offline yes -------->>>")
             self.isOnline = false
             //self.OfflineWebHit(status: "0")
+            self.offlineBtnStateChange()
         }
         
     }
@@ -164,6 +167,8 @@ class HomeViewController: UIViewController , UIViewControllerTransitioningDelega
         self.onlineBtn.setTitleColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), for: .normal)
         self.onlineBtn.layer.borderWidth = 1
         self.onlineBtn.layer.borderColor = #colorLiteral(red: 0.8871153236, green: 0.8871153236, blue: 0.8871153236, alpha: 1)
+        
+        self.isOnline = false
     }
     
 //    @IBAction func ActionSwitchOffline(_ sender: Any)
