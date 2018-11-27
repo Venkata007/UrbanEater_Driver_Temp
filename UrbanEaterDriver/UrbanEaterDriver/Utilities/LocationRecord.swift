@@ -12,14 +12,12 @@ class LocationRecord: NSObject {
 
     var lattitude = "" , longitude = ""
     
-    override init()
-    {
+    override init(){
         self.lattitude = ""
         self.longitude = ""
     }
     
-    init(lattitude : String , longitude : String)
-    {
+    init(lattitude : String , longitude : String){
         self.lattitude = lattitude
         self.longitude = longitude
     }

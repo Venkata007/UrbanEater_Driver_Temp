@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3695A456DEA031AA132678A7 /* Pods_UrbanEaterDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43C6A73EBA83729D01849AE /* Pods_UrbanEaterDriver.framework */; };
+		A31F687321AC01060054DF6D /* SliderToOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F687221AC01060054DF6D /* SliderToOpenView.swift */; };
 		A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */; };
 		A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5AA218ADE5E00192E7E /* ViewController.swift */; };
 		A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5AC218ADE5E00192E7E /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		37FC2D7AE19638D58E69C0D1 /* Pods-UrbanEaterDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanEaterDriver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanEaterDriver/Pods-UrbanEaterDriver.debug.xcconfig"; sourceTree = "<group>"; };
 		4993143DF2CBA5904E9FEBF2 /* Pods-UrbanEaterDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanEaterDriver.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanEaterDriver/Pods-UrbanEaterDriver.release.xcconfig"; sourceTree = "<group>"; };
+		A31F687221AC01060054DF6D /* SliderToOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderToOpenView.swift; sourceTree = "<group>"; };
 		A3BEF5A5218ADE5E00192E7E /* UrbanEaterDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanEaterDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BEF5AA218ADE5E00192E7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -200,8 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				A3BEF6BD21902C6B00192E7E /* Model */,
-				A3BEF5BC218AE02200192E7E /* Controller */,
 				A3BEF5BB218AE01600192E7E /* View */,
+				A3BEF5BC218AE02200192E7E /* Controller */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -260,6 +262,7 @@
 			children = (
 				A3BEF6CF21919D7F00192E7E /* OTPview */,
 				A3BEF6C421902E1E00192E7E /* ShadowView.swift */,
+				A31F687221AC01060054DF6D /* SliderToOpenView.swift */,
 				A3BEF5D7218AE3C600192E7E /* Toast */,
 			);
 			path = ThirdParty;
@@ -735,6 +738,7 @@
 				A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */,
 				A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */,
 				A3BEF6BC219027B700192E7E /* URLhandler.swift in Sources */,
+				A31F687321AC01060054DF6D /* SliderToOpenView.swift in Sources */,
 				A3BEF6CA2190697200192E7E /* NotificationViewController.swift in Sources */,
 				A3BEF6C521902E1E00192E7E /* ShadowView.swift in Sources */,
 				A3BEF64F218DA96500192E7E /* HelpSupportViewController.swift in Sources */,

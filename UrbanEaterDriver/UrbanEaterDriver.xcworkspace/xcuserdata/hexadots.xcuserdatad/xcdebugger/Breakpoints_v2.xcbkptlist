@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UrbanEaterDriver/AppDelegate.swift"
-            timestampString = "563717746.4147069"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "setInitialViewController(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "UrbanEaterDriver/Utilities/URLhandler.swift"
             timestampString = "563717746.414759"
             startingColumnNumber = "9223372036854775807"
@@ -105,13 +89,13 @@
                   symbolName = "static UrbanEaterDriver.URLhandler.postUrlSession(urlString: Swift.String, params: Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, header: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completion: (Alamofire.DataResponse&lt;Any&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "UrbanEaterDriver"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Nagaraju/%23Projects/UrbanEater_Driver/UrbanEaterDriver/UrbanEaterDriver/Utilities/URLhandler.swift"
-                  timestampString = "564312668.715755"
+                  urlString = "file:///Users/hexadots/projects/UrbanEater_Driver_Temp/UrbanEaterDriver/UrbanEaterDriver/Utilities/URLhandler.swift"
+                  timestampString = "564909776.614061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "49">
+                  offsetFromSymbolStart = "64">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -120,13 +104,13 @@
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in static UrbanEaterDriver.URLhandler.postUrlSession(urlString: Swift.String, params: Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, header: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completion: (Alamofire.DataResponse&lt;Any&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "UrbanEaterDriver"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Nagaraju/%23Projects/UrbanEater_Driver/UrbanEaterDriver/UrbanEaterDriver/Utilities/URLhandler.swift"
-                  timestampString = "564312668.7175519"
+                  urlString = "file:///Users/hexadots/projects/UrbanEater_Driver_Temp/UrbanEaterDriver/UrbanEaterDriver/Utilities/URLhandler.swift"
+                  timestampString = "564909776.616037"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
                   endingLineNumber = "53"
-                  offsetFromSymbolStart = "42">
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>

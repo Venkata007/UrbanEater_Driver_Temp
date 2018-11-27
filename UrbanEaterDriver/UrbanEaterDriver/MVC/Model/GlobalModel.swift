@@ -20,4 +20,9 @@ class GlobalModel:NSObject {
     override init() {
         super.init()
     }
+    
+    func cornerRadius(_ object:AnyObject, cornerRad:CGFloat){
+        object.layer.cornerRadius = cornerRad
+        object.layer.masksToBounds = true
+    }
 }
