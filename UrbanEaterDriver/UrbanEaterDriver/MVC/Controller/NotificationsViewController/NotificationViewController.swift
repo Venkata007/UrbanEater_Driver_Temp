@@ -31,7 +31,7 @@ class NotificationViewController: UIViewController,UITableViewDataSource,UITable
             ]] as [String:Any]
         
         let response = JSON(dictinary)
-        GlobalClass.notificationModel = NotofocationModel(fromJson: response)
+        TheGlobalPoolManager.notificationModel = NotofocationModel(fromJson: response)
     }
     
     func getNotificationsAPIcall(){
@@ -43,7 +43,7 @@ class NotificationViewController: UIViewController,UITableViewDataSource,UITable
             print("Response ----->>> ", dataResponse.json)
             Theme.sharedInstance.removeActivityView(View: self.view)
             if dataResponse.json.exists(){
-                GlobalClass.earningModel = EarningModel(dataResponse.json)
+                TheGlobalPoolManager.earningModel = EarningModel(dataResponse.json)
                 
             }
         }
@@ -52,14 +52,14 @@ class NotificationViewController: UIViewController,UITableViewDataSource,UITable
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return GlobalClass.notificationModel.data.Notifications.count
+        return TheGlobalPoolManager.notificationModel.data.Notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell : NotificationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell") as! NotificationTableViewCell
         
-        let notify = GlobalClass.notificationModel.data.Notifications[indexPath.row]
+        let notify = TheGlobalPoolManager.notificationModel.data.Notifications[indexPath.row]
         cell.titleLbl.text = notify.title
         cell.descLbl.text = notify.description
 

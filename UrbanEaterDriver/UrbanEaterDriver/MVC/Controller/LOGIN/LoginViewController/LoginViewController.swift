@@ -101,7 +101,7 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
             if dataResponse.json.exists(){
                  //print("Response login ----->>> ", dataResponse.json) 6369
                 UserDefaults.standard.set(dataResponse.dictionaryFromJson, forKey: "driverInfo")
-                GlobalClass.driverModel = DriverModel(fromJson: dataResponse.json)
+                TheGlobalPoolManager.driverModel = DriverModel(fromJson: dataResponse.json)
                 
 //                _ = Timer.scheduledTimer(timeInterval:1.0, target: self, selector: #selector(self.movoToHome(timer:)), userInfo: nil, repeats: false)
                 self.movoToHome()

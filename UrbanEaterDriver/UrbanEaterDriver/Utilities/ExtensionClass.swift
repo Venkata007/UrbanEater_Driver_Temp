@@ -84,31 +84,52 @@ extension UITextField{
 
 extension UIColor{
     static var themeColor:UIColor{
-        return #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1)
+        return #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1) //F3C02F
+    }
+    static var greenColor:UIColor{
+        return #colorLiteral(red: 0, green: 0.7333333333, blue: 0.3176470588, alpha: 1) //00BB51
     }
     static var themeDisableColor:UIColor{
-        return #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 0.5)
+        return #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 0.5) //F3C02F Opacity 50%
     }
     static var placeholderColor:UIColor{
-        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.7980789812)
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.7980789812) //FFFFFF Opacity 80%
     }
     static var textFieldTintColor:UIColor{
-        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) //FFFFFF
     }
     static var buttonBGColor:UIColor{
-        return #colorLiteral(red: 0.2509803922, green: 0.2901960784, blue: 0.4078431373, alpha: 0.2018942637)
+        return #colorLiteral(red: 0.2509803922, green: 0.2901960784, blue: 0.4078431373, alpha: 0.2018942637) //404A68 Opacity 20%
     }
     static var whiteColor:UIColor{
-        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) //FFFFFF
     }
     static var blackColor:UIColor{
-        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) //000000
     }
     static var greyColor:UIColor{
-        return #colorLiteral(red: 0.4987899065, green: 0.5029092431, blue: 0.5104134083, alpha: 1)
+        return #colorLiteral(red: 0.4980392157, green: 0.5019607843, blue: 0.5098039216, alpha: 1) //7F8082
     }
     static var redColor:UIColor{
-        return #colorLiteral(red: 1, green: 0.3607843137, blue: 0.4117647059, alpha: 1)
+        return #colorLiteral(red: 1, green: 0.3607843137, blue: 0.4117647059, alpha: 1) //FF5C69
+    }
+    static var strikeColor:UIColor{
+        return #colorLiteral(red: 0.3294117647, green: 0.3294117647, blue: 0.3294117647, alpha: 0.7992562072) //545454 Opacity 80%
+    }
+    static var restBGColor:UIColor{
+        return #colorLiteral(red: 0.9647058824, green: 0.9725490196, blue: 0.9960784314, alpha: 1) //F6F8FE
+    }
+    static var textColor:UIColor{
+        return #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1) //333333
+    }
+    static var secondaryTextColor:UIColor{
+        return #colorLiteral(red: 0.3294117647, green: 0.3294117647, blue: 0.3294117647, alpha: 1) //545454
+    }
+    static var secondaryBGColor:UIColor{
+        return #colorLiteral(red: 0.2509803922, green: 0.2901960784, blue: 0.4078431373, alpha: 1) //404A68
+    }
+    static var secondaryBGColorOpacity:UIColor{
+        return #colorLiteral(red: 0.2509803922, green: 0.2901960784, blue: 0.4078431373, alpha: 0.5) //404A68 Opacity 50%
     }
 }
 

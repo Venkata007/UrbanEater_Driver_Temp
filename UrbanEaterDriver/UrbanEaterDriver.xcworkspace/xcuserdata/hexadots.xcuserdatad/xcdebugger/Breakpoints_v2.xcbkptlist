@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UrbanEaterDriver/MVC/Controller/LOGIN/LoginViewController/LoginViewController.swift"
-            timestampString = "563717746.414636"
+            timestampString = "565016262.233665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
@@ -128,22 +128,6 @@
             startingLineNumber = "52"
             endingLineNumber = "52"
             landmarkName = "postUrlSession(urlString:params:header:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UrbanEaterDriver/MVC/Controller/HomeViewController/HomeViewController.swift"
-            timestampString = "564314357.332985"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "OfflineBtnClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

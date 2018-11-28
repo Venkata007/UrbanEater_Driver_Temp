@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3695A456DEA031AA132678A7 /* Pods_UrbanEaterDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43C6A73EBA83729D01849AE /* Pods_UrbanEaterDriver.framework */; };
+		A316A47E21AD5E6F004C30D2 /* SingleTonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A47D21AD5E6F004C30D2 /* SingleTonClass.swift */; };
+		A316A48B21AD8758004C30D2 /* EarningsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A48421AD8757004C30D2 /* EarningsCollectionViewCell.xib */; };
+		A316A48C21AD8758004C30D2 /* EarningsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A48521AD8757004C30D2 /* EarningsCollectionViewCell.swift */; };
+		A316A48D21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A48721AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.xib */; };
+		A316A48E21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A48821AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.swift */; };
+		A316A49421AD8899004C30D2 /* OngoingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A49221AD8899004C30D2 /* OngoingTableViewCell.swift */; };
+		A316A49521AD8899004C30D2 /* OngoingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A49321AD8899004C30D2 /* OngoingTableViewCell.xib */; };
 		A31F687321AC01060054DF6D /* SliderToOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F687221AC01060054DF6D /* SliderToOpenView.swift */; };
 		A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */; };
 		A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5AA218ADE5E00192E7E /* ViewController.swift */; };
@@ -36,10 +43,6 @@
 		A3BEF656218DAC5800192E7E /* EarningsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF654218DAC5800192E7E /* EarningsTableViewCell.swift */; };
 		A3BEF659218DAC7300192E7E /* HelpSupportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF658218DAC7300192E7E /* HelpSupportTableViewCell.swift */; };
 		A3BEF65C218DAC9100192E7E /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF65B218DAC9100192E7E /* NotificationTableViewCell.swift */; };
-		A3BEF662218DACA200192E7E /* AcceptedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF65E218DACA200192E7E /* AcceptedTableViewCell.xib */; };
-		A3BEF663218DACA200192E7E /* OngoingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF65F218DACA200192E7E /* OngoingTableViewCell.swift */; };
-		A3BEF664218DACA200192E7E /* AcceptedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF660218DACA200192E7E /* AcceptedTableViewCell.swift */; };
-		A3BEF665218DACA200192E7E /* OngoingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF661218DACA200192E7E /* OngoingTableViewCell.xib */; };
 		A3BEF66F218DACBF00192E7E /* OrderInfoTableViewCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF667218DACBF00192E7E /* OrderInfoTableViewCell4.xib */; };
 		A3BEF670218DACBF00192E7E /* OrderInfoTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF668218DACBF00192E7E /* OrderInfoTableViewCell2.swift */; };
 		A3BEF671218DACBF00192E7E /* OrderInfoTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF669218DACBF00192E7E /* OrderInfoTableViewCell1.swift */; };
@@ -50,8 +53,6 @@
 		A3BEF676218DACBF00192E7E /* OrderInfoTableViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF66E218DACBF00192E7E /* OrderInfoTableViewCell3.xib */; };
 		A3BEF67A218DACD300192E7E /* OrderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF678218DACD300192E7E /* OrderCollectionViewCell.xib */; };
 		A3BEF67B218DACD300192E7E /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF679218DACD300192E7E /* OrderCollectionViewCell.swift */; };
-		A3BEF67F218DACE600192E7E /* MultiOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF67D218DACE600192E7E /* MultiOrderTableViewCell.xib */; };
-		A3BEF680218DACE600192E7E /* MultiOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF67E218DACE600192E7E /* MultiOrderTableViewCell.swift */; };
 		A3BEF683218DADE000192E7E /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF682218DADE000192E7E /* MoreTableViewCell.swift */; };
 		A3BEF692218DB20E00192E7E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF690218DB20E00192E7E /* LocationService.swift */; };
 		A3BEF693218DB20E00192E7E /* LocManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF691218DB20E00192E7E /* LocManager.swift */; };
@@ -73,6 +74,13 @@
 /* Begin PBXFileReference section */
 		37FC2D7AE19638D58E69C0D1 /* Pods-UrbanEaterDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanEaterDriver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanEaterDriver/Pods-UrbanEaterDriver.debug.xcconfig"; sourceTree = "<group>"; };
 		4993143DF2CBA5904E9FEBF2 /* Pods-UrbanEaterDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanEaterDriver.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanEaterDriver/Pods-UrbanEaterDriver.release.xcconfig"; sourceTree = "<group>"; };
+		A316A47D21AD5E6F004C30D2 /* SingleTonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTonClass.swift; sourceTree = "<group>"; };
+		A316A48421AD8757004C30D2 /* EarningsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarningsCollectionViewCell.xib; sourceTree = "<group>"; };
+		A316A48521AD8757004C30D2 /* EarningsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A316A48721AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarningsSeeAllACollectionViewCell.xib; sourceTree = "<group>"; };
+		A316A48821AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsSeeAllACollectionViewCell.swift; sourceTree = "<group>"; };
+		A316A49221AD8899004C30D2 /* OngoingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingTableViewCell.swift; sourceTree = "<group>"; };
+		A316A49321AD8899004C30D2 /* OngoingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OngoingTableViewCell.xib; sourceTree = "<group>"; };
 		A31F687221AC01060054DF6D /* SliderToOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderToOpenView.swift; sourceTree = "<group>"; };
 		A3BEF5A5218ADE5E00192E7E /* UrbanEaterDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanEaterDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,10 +111,6 @@
 		A3BEF654218DAC5800192E7E /* EarningsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsTableViewCell.swift; sourceTree = "<group>"; };
 		A3BEF658218DAC7300192E7E /* HelpSupportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpSupportTableViewCell.swift; sourceTree = "<group>"; };
 		A3BEF65B218DAC9100192E7E /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
-		A3BEF65E218DACA200192E7E /* AcceptedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcceptedTableViewCell.xib; sourceTree = "<group>"; };
-		A3BEF65F218DACA200192E7E /* OngoingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OngoingTableViewCell.swift; sourceTree = "<group>"; };
-		A3BEF660218DACA200192E7E /* AcceptedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptedTableViewCell.swift; sourceTree = "<group>"; };
-		A3BEF661218DACA200192E7E /* OngoingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OngoingTableViewCell.xib; sourceTree = "<group>"; };
 		A3BEF667218DACBF00192E7E /* OrderInfoTableViewCell4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderInfoTableViewCell4.xib; sourceTree = "<group>"; };
 		A3BEF668218DACBF00192E7E /* OrderInfoTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInfoTableViewCell2.swift; sourceTree = "<group>"; };
 		A3BEF669218DACBF00192E7E /* OrderInfoTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInfoTableViewCell1.swift; sourceTree = "<group>"; };
@@ -117,8 +121,6 @@
 		A3BEF66E218DACBF00192E7E /* OrderInfoTableViewCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderInfoTableViewCell3.xib; sourceTree = "<group>"; };
 		A3BEF678218DACD300192E7E /* OrderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCollectionViewCell.xib; sourceTree = "<group>"; };
 		A3BEF679218DACD300192E7E /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
-		A3BEF67D218DACE600192E7E /* MultiOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiOrderTableViewCell.xib; sourceTree = "<group>"; };
-		A3BEF67E218DACE600192E7E /* MultiOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiOrderTableViewCell.swift; sourceTree = "<group>"; };
 		A3BEF682218DADE000192E7E /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		A3BEF690218DB20E00192E7E /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A3BEF691218DB20E00192E7E /* LocManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocManager.swift; sourceTree = "<group>"; };
@@ -159,6 +161,33 @@
 				4993143DF2CBA5904E9FEBF2 /* Pods-UrbanEaterDriver.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A316A48321AD8757004C30D2 /* EarningsCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A316A48421AD8757004C30D2 /* EarningsCollectionViewCell.xib */,
+				A316A48521AD8757004C30D2 /* EarningsCollectionViewCell.swift */,
+			);
+			path = EarningsCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		A316A48621AD8757004C30D2 /* EarningsSeeAllCell */ = {
+			isa = PBXGroup;
+			children = (
+				A316A48721AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.xib */,
+				A316A48821AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.swift */,
+			);
+			path = EarningsSeeAllCell;
+			sourceTree = "<group>";
+		};
+		A316A49121AD8850004C30D2 /* OrdersTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A316A49221AD8899004C30D2 /* OngoingTableViewCell.swift */,
+				A316A49321AD8899004C30D2 /* OngoingTableViewCell.xib */,
+			);
+			path = OrdersTableViewCells;
 			sourceTree = "<group>";
 		};
 		A3BEF59C218ADE5E00192E7E = {
@@ -211,10 +240,11 @@
 		A3BEF5BB218AE01600192E7E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A316A49121AD8850004C30D2 /* OrdersTableViewCells */,
+				A316A48321AD8757004C30D2 /* EarningsCollectionViewCell */,
+				A316A48621AD8757004C30D2 /* EarningsSeeAllCell */,
 				A3BEF681218DADD800192E7E /* MoreTableViewCell */,
-				A3BEF67C218DACDF00192E7E /* MultiOrderTableViewCell */,
 				A3BEF666218DACA900192E7E /* OrderInfoTableViewCell */,
-				A3BEF65D218DAC9A00192E7E /* OngoingOrderTableViewCell */,
 				A3BEF65A218DAC8200192E7E /* NotificationTableViewCell */,
 				A3BEF657218DAC6900192E7E /* Help&SupportTableviewCell */,
 				A3BEF652218DAC4F00192E7E /* YourEarningsTableViewCell */,
@@ -438,17 +468,6 @@
 			path = NotificationTableViewCell;
 			sourceTree = "<group>";
 		};
-		A3BEF65D218DAC9A00192E7E /* OngoingOrderTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				A3BEF660218DACA200192E7E /* AcceptedTableViewCell.swift */,
-				A3BEF65E218DACA200192E7E /* AcceptedTableViewCell.xib */,
-				A3BEF65F218DACA200192E7E /* OngoingTableViewCell.swift */,
-				A3BEF661218DACA200192E7E /* OngoingTableViewCell.xib */,
-			);
-			path = OngoingOrderTableViewCell;
-			sourceTree = "<group>";
-		};
 		A3BEF666218DACA900192E7E /* OrderInfoTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,15 +493,6 @@
 			path = OrderdsCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		A3BEF67C218DACDF00192E7E /* MultiOrderTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				A3BEF67E218DACE600192E7E /* MultiOrderTableViewCell.swift */,
-				A3BEF67D218DACE600192E7E /* MultiOrderTableViewCell.xib */,
-			);
-			path = MultiOrderTableViewCell;
-			sourceTree = "<group>";
-		};
 		A3BEF681218DADD800192E7E /* MoreTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,9 +504,10 @@
 		A3BEF6BD21902C6B00192E7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A316A47D21AD5E6F004C30D2 /* SingleTonClass.swift */,
+				A3BEF6C121902CF000192E7E /* GlobalModel.swift */,
 				A3BEF6BE21902CB800192E7E /* DriverModel.swift */,
 				A3BEF6C021902CEF00192E7E /* EarningModel.swift */,
-				A3BEF6C121902CF000192E7E /* GlobalModel.swift */,
 				A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */,
 			);
 			path = Model;
@@ -593,19 +604,19 @@
 			files = (
 				A3BEF676218DACBF00192E7E /* OrderInfoTableViewCell3.xib in Resources */,
 				A3BEF5CA218AE17A00192E7E /* Roboto-Medium.ttf in Resources */,
-				A3BEF665218DACA200192E7E /* OngoingTableViewCell.xib in Resources */,
 				A3BEF5B3218ADE5F00192E7E /* LaunchScreen.storyboard in Resources */,
 				A3BEF5D4218AE1FF00192E7E /* Media.xcassets in Resources */,
 				A3BEF5CC218AE17A00192E7E /* Roboto-Light.ttf in Resources */,
-				A3BEF67F218DACE600192E7E /* MultiOrderTableViewCell.xib in Resources */,
 				A3BEF6D421919D8E00192E7E /* HDInputView.xib in Resources */,
 				A3BEF655218DAC5800192E7E /* EarningsTableViewCell.xib in Resources */,
-				A3BEF662218DACA200192E7E /* AcceptedTableViewCell.xib in Resources */,
 				A3BEF5CB218AE17A00192E7E /* Roboto-Regular.ttf in Resources */,
 				A3BEF672218DACBF00192E7E /* OrderInfoTableViewCell1.xib in Resources */,
 				A3BEF6CE2191786100192E7E /* NewAssets.xcassets in Resources */,
 				A3BEF66F218DACBF00192E7E /* OrderInfoTableViewCell4.xib in Resources */,
+				A316A48D21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.xib in Resources */,
 				A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */,
+				A316A49521AD8899004C30D2 /* OngoingTableViewCell.xib in Resources */,
+				A316A48B21AD8758004C30D2 /* EarningsCollectionViewCell.xib in Resources */,
 				A3BEF674218DACBF00192E7E /* OrderInfoTableViewCell2.xib in Resources */,
 				A3BEF67A218DACD300192E7E /* OrderCollectionViewCell.xib in Resources */,
 			);
@@ -660,9 +671,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UrbanEaterDriver/Pods-UrbanEaterDriver-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/HTHorizontalSelectionList/HTHorizontalSelectionList.framework",
 				"${BUILT_PRODUCTS_DIR}/JSSAlertView/JSSAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/M13BadgeView/M13BadgeView.framework",
 				"${BUILT_PRODUCTS_DIR}/MMMaterialDesignSpinner/MMMaterialDesignSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -676,9 +690,12 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTHorizontalSelectionList.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSSAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13BadgeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMMaterialDesignSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -714,7 +731,7 @@
 				A3BEF650218DA96500192E7E /* OrderInfoViewController.swift in Sources */,
 				A3BEF64E218DA96500192E7E /* ChangePasswordViewController.swift in Sources */,
 				A3BEF5D2218AE1A900192E7E /* SignUpViewController.swift in Sources */,
-				A3BEF664218DACA200192E7E /* AcceptedTableViewCell.swift in Sources */,
+				A316A49421AD8899004C30D2 /* OngoingTableViewCell.swift in Sources */,
 				A3BEF673218DACBF00192E7E /* OrderInfoTableViewCell4.swift in Sources */,
 				A3BEF5C4218AE15400192E7E /* LoginViewController.swift in Sources */,
 				A3BEF651218DA96500192E7E /* YourEarningsViewController.swift in Sources */,
@@ -724,16 +741,17 @@
 				A3BEF659218DAC7300192E7E /* HelpSupportTableViewCell.swift in Sources */,
 				A3BEF6C321902CF000192E7E /* GlobalModel.swift in Sources */,
 				A3BEF6D521919D8E00192E7E /* HDInputView.m in Sources */,
+				A316A48C21AD8758004C30D2 /* EarningsCollectionViewCell.swift in Sources */,
 				A3BEF6BF21902CB800192E7E /* DriverModel.swift in Sources */,
 				A3BEF6DB21996D1D00192E7E /* ExtensionClass.swift in Sources */,
+				A316A47E21AD5E6F004C30D2 /* SingleTonClass.swift in Sources */,
 				A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */,
-				A3BEF663218DACA200192E7E /* OngoingTableViewCell.swift in Sources */,
-				A3BEF680218DACE600192E7E /* MultiOrderTableViewCell.swift in Sources */,
 				A3BEF5D6218AE31600192E7E /* Utilities.swift in Sources */,
 				A3BEF5CF218AE19300192E7E /* ForgotPasswordViewController.swift in Sources */,
 				A3BEF671218DACBF00192E7E /* OrderInfoTableViewCell1.swift in Sources */,
 				A3BEF5E0218AE90F00192E7E /* OrdersViewController.swift in Sources */,
 				A3BEF5DD218AE90500192E7E /* HomeViewController.swift in Sources */,
+				A316A48E21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.swift in Sources */,
 				A3BEF5C1218AE06D00192E7E /* Theme.swift in Sources */,
 				A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */,
 				A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */,

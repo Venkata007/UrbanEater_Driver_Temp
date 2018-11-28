@@ -10,7 +10,7 @@ import UIKit
 
 class ShadowView: UIView {
 	/// The corner radius of the `ShadowView`, inspectable in Interface Builder
-	@IBInspectable var cornerRadius: CGFloat = 2.0 {
+	@IBInspectable var cornerRadius: CGFloat = 8.0 {
 		didSet {
 			self.updateProperties()
 		}

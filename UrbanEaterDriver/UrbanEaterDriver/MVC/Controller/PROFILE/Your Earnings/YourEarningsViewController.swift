@@ -44,8 +44,8 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
          datePicker.addTarget(self, action: #selector(self.datePickerValueChanged), for: UIControlEvents.valueChanged)
         dateFormatter.dateFormat = "dd/MM/yyyy"
         
-        totalOrdersLbl.text = GlobalClass.earningModel.totalOrders
-        totalEarningsLbl.text = GlobalClass.earningModel.totalEarnings
+        totalOrdersLbl.text = TheGlobalPoolManager.earningModel.totalOrders
+        totalEarningsLbl.text = TheGlobalPoolManager.earningModel.totalEarnings
     }
     
     
@@ -95,7 +95,7 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
             ] as [String:Any]
         
         let response = JSON(dictionary)
-        GlobalClass.earningModel = EarningModel(response)
+        TheGlobalPoolManager.earningModel = EarningModel(response)
     }
     
     func getEarningsAPIcall(){
@@ -113,7 +113,7 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
             print("Response login ----->>> ", dataResponse.json)
             Theme.sharedInstance.removeActivityView(View: self.view)
             if dataResponse.json.exists(){
-                GlobalClass.earningModel = EarningModel(dataResponse.json)
+                TheGlobalPoolManager.earningModel = EarningModel(dataResponse.json)
             }
         }
     }
@@ -165,13 +165,13 @@ class YourEarningsViewController: UIViewController,UITableViewDataSource,UITable
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return GlobalClass.earningModel.Orders.count
+        return TheGlobalPoolManager.earningModel.Orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell : EarningsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EarningsTableViewCell") as! EarningsTableViewCell
-        let order = GlobalClass.earningModel.Orders[indexPath.row]
+        let order = TheGlobalPoolManager.earningModel.Orders[indexPath.row]
         
         cell.orderID_Lbl.text = order.orderId
         cell.restaurantname_Lbl.text = order.rest_name

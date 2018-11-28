@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         UITabBar.appearance().isTranslucent = false
         
-        self.setInitialViewController(from: "")
+        //self.setInitialViewController(from: "")
         
         return true
     }
