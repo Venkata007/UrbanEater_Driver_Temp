@@ -26,11 +26,17 @@ class HomeViewController: UIViewController,GMSMapViewDelegate{
     var getLatLong_Add:String = String()
     var myLocation: CLLocation?
     
+    var past7Dates = [String]()
+    var past7Days = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "EarningsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EarningsCollectionViewCell")
         collectionView.register(UINib(nibName: "EarningsSeeAllACollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EarningsSeeAllACollectionViewCell")
         self.setupMapView()
+        past7Dates = Date.getDates(forLastNDays: 7).0 as [String]
+        past7Days  =  Date.getDates(forLastNDays: 7).1 as [String]
+        print(past7Dates,past7Days)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -107,6 +113,7 @@ extension HomeViewController : UICollectionViewDataSource,UICollectionViewDelega
         if indexPath.row % 2 == 0 {
             cell.paidStatusLbl.backgroundColor = .greenColor
         }
+        cell.dateLbl.text =  " \(past7Days[indexPath.row])\n\(past7Dates[indexPath.row])"
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

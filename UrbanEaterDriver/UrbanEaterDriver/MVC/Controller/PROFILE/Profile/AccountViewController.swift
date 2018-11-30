@@ -26,7 +26,6 @@ class AccountViewController:UIViewController{
     }
     //MARK:- Update UI
     func updateUI(){
-        TheGlobalPoolManager.cornerAndBorder(self.profileImgView, cornerRadius: self.profileImgView.bounds.h/2, borderWidth: 0, borderColor: .clear)
         tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
@@ -87,7 +86,7 @@ extension AccountViewController : UITableViewDelegate, UITableViewDataSource{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             switch indexPath.row{
             case 0:
-                let controller : EditProfileViewController = storyboard.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
+                let controller : EditProfileVC = storyboard.instantiateViewController(withIdentifier: "EditProfileVC") as! EditProfileVC
                 self.navigationController?.pushViewController(controller, animated: true)
                 break
             case 1:

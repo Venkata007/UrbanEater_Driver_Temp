@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3695A456DEA031AA132678A7 /* Pods_UrbanEaterDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43C6A73EBA83729D01849AE /* Pods_UrbanEaterDriver.framework */; };
+		A31607DC21B1273E00068524 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31607DB21B1273E00068524 /* OrderDetailsViewController.swift */; };
+		A31607DE21B1483A00068524 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31607DD21B1483A00068524 /* EditProfileVC.swift */; };
 		A316A47E21AD5E6F004C30D2 /* SingleTonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A47D21AD5E6F004C30D2 /* SingleTonClass.swift */; };
 		A316A48B21AD8758004C30D2 /* EarningsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A48421AD8757004C30D2 /* EarningsCollectionViewCell.xib */; };
 		A316A48C21AD8758004C30D2 /* EarningsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A48521AD8757004C30D2 /* EarningsCollectionViewCell.swift */; };
@@ -84,6 +86,8 @@
 /* Begin PBXFileReference section */
 		37FC2D7AE19638D58E69C0D1 /* Pods-UrbanEaterDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanEaterDriver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanEaterDriver/Pods-UrbanEaterDriver.debug.xcconfig"; sourceTree = "<group>"; };
 		4993143DF2CBA5904E9FEBF2 /* Pods-UrbanEaterDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrbanEaterDriver.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrbanEaterDriver/Pods-UrbanEaterDriver.release.xcconfig"; sourceTree = "<group>"; };
+		A31607DB21B1273E00068524 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		A31607DD21B1483A00068524 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		A316A47D21AD5E6F004C30D2 /* SingleTonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTonClass.swift; sourceTree = "<group>"; };
 		A316A48421AD8757004C30D2 /* EarningsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarningsCollectionViewCell.xib; sourceTree = "<group>"; };
 		A316A48521AD8757004C30D2 /* EarningsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -457,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				A3BEF642218DA96500192E7E /* EditProfileViewController.swift */,
+				A31607DD21B1483A00068524 /* EditProfileVC.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -488,8 +493,9 @@
 		A3BEF649218DA96500192E7E /* Your Earnings */ = {
 			isa = PBXGroup;
 			children = (
-				A3BEF64A218DA96500192E7E /* OrderInfoViewController.swift */,
 				A3BEF64B218DA96500192E7E /* YourEarningsViewController.swift */,
+				A3BEF64A218DA96500192E7E /* OrderInfoViewController.swift */,
+				A31607DB21B1273E00068524 /* OrderDetailsViewController.swift */,
 			);
 			path = "Your Earnings";
 			sourceTree = "<group>";
@@ -788,6 +794,7 @@
 				A3BEF670218DACBF00192E7E /* OrderInfoTableViewCell2.swift in Sources */,
 				A3BEF650218DA96500192E7E /* OrderInfoViewController.swift in Sources */,
 				A3BEF64E218DA96500192E7E /* ChangePasswordViewController.swift in Sources */,
+				A31607DC21B1273E00068524 /* OrderDetailsViewController.swift in Sources */,
 				A3BEF5D2218AE1A900192E7E /* SignUpViewController.swift in Sources */,
 				A316A49421AD8899004C30D2 /* OngoingTableViewCell.swift in Sources */,
 				A3BEF673218DACBF00192E7E /* OrderInfoTableViewCell4.swift in Sources */,
@@ -811,6 +818,7 @@
 				A3BEF671218DACBF00192E7E /* OrderInfoTableViewCell1.swift in Sources */,
 				A3BEF5E0218AE90F00192E7E /* OrdersViewController.swift in Sources */,
 				A316A49821AE66C8004C30D2 /* OnGoingDishesCell.swift in Sources */,
+				A31607DE21B1483A00068524 /* EditProfileVC.swift in Sources */,
 				A3BEF5DD218AE90500192E7E /* HomeViewController.swift in Sources */,
 				A316A48E21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.swift in Sources */,
 				A3BEF5C1218AE06D00192E7E /* Theme.swift in Sources */,
@@ -979,7 +987,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hexadots/projects/UrbanEater_Driver_Temp/UrbanEaterDriver/UrbanEaterDriver/UrbanEaterDriver-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1002,7 +1010,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hexadots/projects/UrbanEater_Driver_Temp/UrbanEaterDriver/UrbanEaterDriver/UrbanEaterDriver-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

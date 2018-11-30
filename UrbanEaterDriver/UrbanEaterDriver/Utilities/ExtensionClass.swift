@@ -196,6 +196,7 @@ extension UIViewController{
         self.view.endEditing(true)
     }
 }
+//MARK:- Set Border for UITextField
 extension UITextField {
     func setBottomBorder() {
         self.borderStyle = .none
@@ -205,5 +206,30 @@ extension UITextField {
         self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
+    }
+}
+//MARK:- Getting Past 7 days
+extension Date {
+    static func getDates(forLastNDays nDays: Int) -> ([String],[String]) {
+        let cal = NSCalendar.current
+        var date = cal.startOfDay(for: Date())
+        var day = cal.startOfDay(for: Date())
+        var datesArray = [String]()
+        var daysArray = [String]()
+        var value = 0
+        for val in 0 ... nDays {
+            if val != 0{
+                value = 1
+            }
+            date = cal.date(byAdding: Calendar.Component.day, value: -value, to: date)!
+            day = cal.date(byAdding: Calendar.Component.weekday, value: -value, to: day)!
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            let dateString = dateFormatter.string(from: date)
+            let dayString = day.isToday ? "Today" : day.weekday
+            datesArray.append(dateString)
+            daysArray.append(dayString)
+        }
+        return (datesArray, daysArray)
     }
 }

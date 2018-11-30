@@ -168,7 +168,8 @@ extension OrdersViewController : UITableViewDelegate,UITableViewDataSource{
         if selectionView.selectedButtonIndex == 0{
             print(indexPath.row)
         }else{
-            self.showCompletedOrderDetailsXib()
+            let orederInfo = self.storyboard?.instantiateViewController(withIdentifier: "OrderDetailsViewController") as! OrderDetailsViewController
+            self.navigationController?.pushViewController(orederInfo, animated: true)
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -71,6 +71,12 @@ class GlobalModel:NSObject {
             UIApplication.shared.unregisterForRemoteNotifications()
         }
     }
+    //MARK: - Text Field Frame and Corner radius
+    func textFieldFrame(_ tf: UITextField, placeHolder placeStr: String) {
+        let color = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1).cgColor
+        tf.attributedPlaceholder = NSAttributedString(string: placeStr, attributes: [NSAttributedStringKey.foregroundColor: color])
+        tf.layer.masksToBounds = true
+    }
 }
 class UILabelPadded: UILabel {
     override func drawText(in rect: CGRect) {
