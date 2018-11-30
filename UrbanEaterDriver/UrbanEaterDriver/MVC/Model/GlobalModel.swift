@@ -8,6 +8,7 @@
 
 import Foundation
 import EZSwiftExtensions
+import Toast_Swift
 
 let TheGlobalPoolManager = GlobalModel.sharedInstance
 
@@ -63,6 +64,13 @@ class GlobalModel:NSObject {
             self.vc.presentVC(alertController)
         }
     }
+    //MARK : - Logout Method
+    func logout(){
+        if let bundle = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundle)
+            UIApplication.shared.unregisterForRemoteNotifications()
+        }
+    }
 }
 class UILabelPadded: UILabel {
     override func drawText(in rect: CGRect) {
@@ -83,4 +91,15 @@ class UITextFieldPadded: UITextField {
         return UIEdgeInsetsInsetRect(bounds, padding)
     }
 }
-
+class ButtonWithShadow: UIButton {
+    override func draw(_ rect: CGRect) {
+        updateLayerProperties()
+    }
+    func updateLayerProperties() {
+        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 3.0
+        self.layer.masksToBounds = false
+    }
+}

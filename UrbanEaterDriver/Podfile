@@ -23,6 +23,8 @@ target 'UrbanEaterDriver' do
   pod 'SwiftLocation', '~> 3.2.3'
   pod 'EZSwiftExtensions'
   pod 'HTHorizontalSelectionList', '~> 0.7.4'
+  pod 'IQKeyboardManagerSwift'
+
 
 
 end

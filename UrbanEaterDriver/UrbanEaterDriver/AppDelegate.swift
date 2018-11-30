@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 import GoogleMaps
 import GooglePlaces
@@ -16,11 +17,9 @@ extension String {
     struct NumFormatter {
         static let instance = NumberFormatter()
     }
-    
     var doubleValue: Double? {
         return NumFormatter.instance.number(from: self)?.doubleValue
     }
-    
     var integerValue: Int? {
         return NumFormatter.instance.number(from: self)?.intValue
     }
@@ -38,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSPlacesClient.provideAPIKey(googleApiKey)
         GMSServices.provideAPIKey(googleApiKey)
-        
+        IQKeyboardManager.shared.enable = true
         UITabBar.appearance().tintColor = .themeColor
         UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

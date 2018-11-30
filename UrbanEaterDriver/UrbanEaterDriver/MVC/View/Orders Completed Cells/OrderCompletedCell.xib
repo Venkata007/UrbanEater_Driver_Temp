@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderCompletedCell" id="KGk-i7-Jjw" customClass="OrderCompletedCell" customModule="UrbanEaterDriver" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKw-H1-HQQ" customClass="ShadowView" customModule="UrbanEaterDriver" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="310" height="69.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-Nh-zfF">
+                                <rect key="frame" x="0.0" y="5" width="310" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order ID:1AB23456C789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zec-7Z-yml" customClass="UILabelPadded" customModule="UrbanEaterDriver" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="253.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ₹500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK0-FO-46C" customClass="UILabelPadded" customModule="UrbanEaterDriver" customModuleProvider="target">
+                                        <rect key="frame" x="253.5" y="0.0" width="56.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="XZx-S5-8uj"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name 01 - 0801  Restaurant Name 02 - 0701" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYk-dQ-ODI" customClass="UILabelPadded" customModule="UrbanEaterDriver" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="45.5" width="200" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.2901960784" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivered" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-dz-GhE" customClass="UILabelPadded" customModule="UrbanEaterDriver" customModuleProvider="target">
+                                <rect key="frame" x="210" y="45" width="100" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6cD-vi-ld3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FOV-Nh-zfF" firstAttribute="top" secondItem="FKw-H1-HQQ" secondAttribute="top" constant="5" id="0Ef-wQ-ir3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ib5-dz-GhE" secondAttribute="trailing" id="5kn-UU-jMs"/>
+                            <constraint firstItem="Ib5-dz-GhE" firstAttribute="bottom" secondItem="sYk-dQ-ODI" secondAttribute="bottom" id="Our-gh-fSr"/>
+                            <constraint firstItem="sYk-dQ-ODI" firstAttribute="leading" secondItem="FKw-H1-HQQ" secondAttribute="leading" id="USM-lJ-pAy"/>
+                            <constraint firstAttribute="trailing" secondItem="FOV-Nh-zfF" secondAttribute="trailing" id="YVl-ee-cfX"/>
+                            <constraint firstAttribute="bottom" secondItem="sYk-dQ-ODI" secondAttribute="bottom" constant="8" id="b98-LI-H4Y"/>
+                            <constraint firstItem="Ib5-dz-GhE" firstAttribute="leading" secondItem="sYk-dQ-ODI" secondAttribute="trailing" constant="10" id="rnZ-fS-CXA"/>
+                            <constraint firstItem="sYk-dQ-ODI" firstAttribute="top" secondItem="FOV-Nh-zfF" secondAttribute="bottom" constant="15" id="rsb-5F-fab"/>
+                            <constraint firstItem="FOV-Nh-zfF" firstAttribute="leading" secondItem="FKw-H1-HQQ" secondAttribute="leading" id="wXF-xh-dbj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="FKw-H1-HQQ" secondAttribute="trailing" constant="5" id="CFF-hX-Wpq"/>
+                    <constraint firstItem="FKw-H1-HQQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="CdW-tu-H9M"/>
+                    <constraint firstAttribute="bottom" secondItem="FKw-H1-HQQ" secondAttribute="bottom" constant="5" id="LzJ-IF-b28"/>
+                    <constraint firstItem="FKw-H1-HQQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="aYO-4x-1sV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLbl" destination="gK0-FO-46C" id="T5g-qK-iUp"/>
+                <outlet property="orderIDLbl" destination="zec-7Z-yml" id="wxx-ad-skh"/>
+                <outlet property="restaurantName" destination="sYk-dQ-ODI" id="TSz-aF-bhM"/>
+                <outlet property="statusLbl" destination="Ib5-dz-GhE" id="vRy-K4-Ohi"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

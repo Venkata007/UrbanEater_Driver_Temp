@@ -14,7 +14,7 @@ import EZSwiftExtensions
 class HomeViewController: UIViewController,GMSMapViewDelegate{
     
     //After Designed Changed Outlets
-    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var lastPaidEarningsLbl: UILabel!
     @IBOutlet weak var supportBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!

@@ -26,6 +26,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - HTHorizontalSelectionList (0.7.4):
     - M13BadgeView (~> 1.0.4)
+  - IQKeyboardManagerSwift (6.2.0)
   - JSSAlertView (4.2.0)
   - libwebp (0.6.1):
     - libwebp/core (= 0.6.1)
@@ -75,6 +76,7 @@ DEPENDENCIES:
   - GooglePlaces
   - GooglePlacesSearchController
   - HTHorizontalSelectionList (~> 0.7.4)
+  - IQKeyboardManagerSwift
   - JSSAlertView
   - MMMaterialDesignSpinner
   - ReachabilitySwift
@@ -98,6 +100,7 @@ SPEC REPOS:
     - GooglePlacesSearchController
     - GoogleToolboxForMac
     - HTHorizontalSelectionList
+    - IQKeyboardManagerSwift
     - JSSAlertView
     - libwebp
     - M13BadgeView
@@ -122,6 +125,7 @@ SPEC CHECKSUMS:
   GooglePlacesSearchController: e53b61b7497cf40cb18ec296b1d3314c11c0a1c0
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   HTHorizontalSelectionList: c38792f4bc87f941ab6c07b02a40abf111c68249
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   JSSAlertView: 84ec53a0cbcfaa25a09293751356afed09484023
   libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
   M13BadgeView: 700dd0714fdc837c0cf1c8c004454963ec22441f
@@ -134,6 +138,6 @@ SPEC CHECKSUMS:
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
-PODFILE CHECKSUM: 4b6c0db6aa482eb048eb6f638c7066473dd9a0c0
+PODFILE CHECKSUM: 3e964b38d46beeb793a47789770a3d997481b2f6
 
 COCOAPODS: 1.5.3

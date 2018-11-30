@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F2C526A9AEE8E4B42BF19D53F47A287"
+               BlueprintIdentifier = "8F444EFE459507418E1697FBCCAC0EF8"
                BuildableName = "SwiftMessages.bundle"
                BlueprintName = "SwiftMessages-SwiftMessages"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F2C526A9AEE8E4B42BF19D53F47A287"
+            BlueprintIdentifier = "8F444EFE459507418E1697FBCCAC0EF8"
             BuildableName = "SwiftMessages.bundle"
             BlueprintName = "SwiftMessages-SwiftMessages"
             ReferencedContainer = "container:Pods.xcodeproj">

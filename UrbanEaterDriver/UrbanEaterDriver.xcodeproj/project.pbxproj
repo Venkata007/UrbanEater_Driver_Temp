@@ -15,6 +15,16 @@
 		A316A48E21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A48821AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.swift */; };
 		A316A49421AD8899004C30D2 /* OngoingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A49221AD8899004C30D2 /* OngoingTableViewCell.swift */; };
 		A316A49521AD8899004C30D2 /* OngoingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A49321AD8899004C30D2 /* OngoingTableViewCell.xib */; };
+		A316A49821AE66C8004C30D2 /* OnGoingDishesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A49621AE66C8004C30D2 /* OnGoingDishesCell.swift */; };
+		A316A49921AE66C8004C30D2 /* OnGoingDishesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A49721AE66C8004C30D2 /* OnGoingDishesCell.xib */; };
+		A316A49C21AFB953004C30D2 /* OngoingHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A49A21AFB953004C30D2 /* OngoingHeaderCell.swift */; };
+		A316A49D21AFB953004C30D2 /* OngoingHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A49B21AFB953004C30D2 /* OngoingHeaderCell.xib */; };
+		A316A4A121AFBCF6004C30D2 /* OrderCompletedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A49F21AFBCF6004C30D2 /* OrderCompletedCell.swift */; };
+		A316A4A221AFBCF6004C30D2 /* OrderCompletedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A4A021AFBCF6004C30D2 /* OrderCompletedCell.xib */; };
+		A316A4A521AFC418004C30D2 /* OrderCompletedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316A4A321AFC418004C30D2 /* OrderCompletedDetailsView.swift */; };
+		A316A4A621AFC418004C30D2 /* OrderCompletedDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A4A421AFC418004C30D2 /* OrderCompletedDetailsView.xib */; };
+		A316A4AC21AFC748004C30D2 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A316A4AA21AFC747004C30D2 /* UIViewController+MJPopupViewController.m */; };
+		A316A4AD21AFC748004C30D2 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = A316A4AB21AFC747004C30D2 /* MJPopupBackgroundView.m */; };
 		A31F687321AC01060054DF6D /* SliderToOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F687221AC01060054DF6D /* SliderToOpenView.swift */; };
 		A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */; };
 		A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5AA218ADE5E00192E7E /* ViewController.swift */; };
@@ -81,6 +91,18 @@
 		A316A48821AD8757004C30D2 /* EarningsSeeAllACollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsSeeAllACollectionViewCell.swift; sourceTree = "<group>"; };
 		A316A49221AD8899004C30D2 /* OngoingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingTableViewCell.swift; sourceTree = "<group>"; };
 		A316A49321AD8899004C30D2 /* OngoingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OngoingTableViewCell.xib; sourceTree = "<group>"; };
+		A316A49621AE66C8004C30D2 /* OnGoingDishesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGoingDishesCell.swift; sourceTree = "<group>"; };
+		A316A49721AE66C8004C30D2 /* OnGoingDishesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnGoingDishesCell.xib; sourceTree = "<group>"; };
+		A316A49A21AFB953004C30D2 /* OngoingHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingHeaderCell.swift; sourceTree = "<group>"; };
+		A316A49B21AFB953004C30D2 /* OngoingHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OngoingHeaderCell.xib; sourceTree = "<group>"; };
+		A316A49F21AFBCF6004C30D2 /* OrderCompletedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletedCell.swift; sourceTree = "<group>"; };
+		A316A4A021AFBCF6004C30D2 /* OrderCompletedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCompletedCell.xib; sourceTree = "<group>"; };
+		A316A4A321AFC418004C30D2 /* OrderCompletedDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletedDetailsView.swift; sourceTree = "<group>"; };
+		A316A4A421AFC418004C30D2 /* OrderCompletedDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCompletedDetailsView.xib; sourceTree = "<group>"; };
+		A316A4A821AFC747004C30D2 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		A316A4A921AFC747004C30D2 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
+		A316A4AA21AFC747004C30D2 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		A316A4AB21AFC747004C30D2 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		A31F687221AC01060054DF6D /* SliderToOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderToOpenView.swift; sourceTree = "<group>"; };
 		A3BEF5A5218ADE5E00192E7E /* UrbanEaterDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanEaterDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,10 +206,36 @@
 		A316A49121AD8850004C30D2 /* OrdersTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				A316A49A21AFB953004C30D2 /* OngoingHeaderCell.swift */,
+				A316A49B21AFB953004C30D2 /* OngoingHeaderCell.xib */,
 				A316A49221AD8899004C30D2 /* OngoingTableViewCell.swift */,
 				A316A49321AD8899004C30D2 /* OngoingTableViewCell.xib */,
+				A316A49621AE66C8004C30D2 /* OnGoingDishesCell.swift */,
+				A316A49721AE66C8004C30D2 /* OnGoingDishesCell.xib */,
 			);
 			path = OrdersTableViewCells;
+			sourceTree = "<group>";
+		};
+		A316A49E21AFBC4E004C30D2 /* Orders Completed Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A316A49F21AFBCF6004C30D2 /* OrderCompletedCell.swift */,
+				A316A4A021AFBCF6004C30D2 /* OrderCompletedCell.xib */,
+				A316A4A321AFC418004C30D2 /* OrderCompletedDetailsView.swift */,
+				A316A4A421AFC418004C30D2 /* OrderCompletedDetailsView.xib */,
+			);
+			path = "Orders Completed Cells";
+			sourceTree = "<group>";
+		};
+		A316A4A721AFC747004C30D2 /* MJPOPUP */ = {
+			isa = PBXGroup;
+			children = (
+				A316A4A821AFC747004C30D2 /* UIViewController+MJPopupViewController.h */,
+				A316A4A921AFC747004C30D2 /* MJPopupBackgroundView.h */,
+				A316A4AA21AFC747004C30D2 /* UIViewController+MJPopupViewController.m */,
+				A316A4AB21AFC747004C30D2 /* MJPopupBackgroundView.m */,
+			);
+			path = MJPOPUP;
 			sourceTree = "<group>";
 		};
 		A3BEF59C218ADE5E00192E7E = {
@@ -219,10 +267,11 @@
 				A3BEF5BD218AE03800192E7E /* Constants */,
 				A3BEF5BA218AE00900192E7E /* MVC */,
 				A3BEF5AC218ADE5E00192E7E /* Main.storyboard */,
+				A3BEF5B1218ADE5F00192E7E /* LaunchScreen.storyboard */,
 				A3BEF5D3218AE1FE00192E7E /* Media.xcassets */,
 				A3BEF6CD2191786100192E7E /* NewAssets.xcassets */,
-				A3BEF5B1218ADE5F00192E7E /* LaunchScreen.storyboard */,
 				A3BEF5B4218ADE5F00192E7E /* Info.plist */,
+				A3BEF6D021919D8C00192E7E /* UrbanEaterDriver-Bridging-Header.h */,
 			);
 			path = UrbanEaterDriver;
 			sourceTree = "<group>";
@@ -240,6 +289,7 @@
 		A3BEF5BB218AE01600192E7E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A316A49E21AFBC4E004C30D2 /* Orders Completed Cells */,
 				A316A49121AD8850004C30D2 /* OrdersTableViewCells */,
 				A316A48321AD8757004C30D2 /* EarningsCollectionViewCell */,
 				A316A48621AD8757004C30D2 /* EarningsSeeAllCell */,
@@ -290,6 +340,7 @@
 		A3BEF5BF218AE05200192E7E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A316A4A721AFC747004C30D2 /* MJPOPUP */,
 				A3BEF6CF21919D7F00192E7E /* OTPview */,
 				A3BEF6C421902E1E00192E7E /* ShadowView.swift */,
 				A31F687221AC01060054DF6D /* SliderToOpenView.swift */,
@@ -527,7 +578,6 @@
 				A3BEF6D221919D8E00192E7E /* HDInputView.h */,
 				A3BEF6D321919D8E00192E7E /* HDInputView.m */,
 				A3BEF6D121919D8E00192E7E /* HDInputView.xib */,
-				A3BEF6D021919D8C00192E7E /* UrbanEaterDriver-Bridging-Header.h */,
 			);
 			path = OTPview;
 			sourceTree = "<group>";
@@ -603,19 +653,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BEF676218DACBF00192E7E /* OrderInfoTableViewCell3.xib in Resources */,
+				A316A4A621AFC418004C30D2 /* OrderCompletedDetailsView.xib in Resources */,
 				A3BEF5CA218AE17A00192E7E /* Roboto-Medium.ttf in Resources */,
 				A3BEF5B3218ADE5F00192E7E /* LaunchScreen.storyboard in Resources */,
 				A3BEF5D4218AE1FF00192E7E /* Media.xcassets in Resources */,
 				A3BEF5CC218AE17A00192E7E /* Roboto-Light.ttf in Resources */,
 				A3BEF6D421919D8E00192E7E /* HDInputView.xib in Resources */,
 				A3BEF655218DAC5800192E7E /* EarningsTableViewCell.xib in Resources */,
+				A316A49D21AFB953004C30D2 /* OngoingHeaderCell.xib in Resources */,
 				A3BEF5CB218AE17A00192E7E /* Roboto-Regular.ttf in Resources */,
 				A3BEF672218DACBF00192E7E /* OrderInfoTableViewCell1.xib in Resources */,
 				A3BEF6CE2191786100192E7E /* NewAssets.xcassets in Resources */,
 				A3BEF66F218DACBF00192E7E /* OrderInfoTableViewCell4.xib in Resources */,
+				A316A49921AE66C8004C30D2 /* OnGoingDishesCell.xib in Resources */,
 				A316A48D21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.xib in Resources */,
 				A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */,
 				A316A49521AD8899004C30D2 /* OngoingTableViewCell.xib in Resources */,
+				A316A4A221AFBCF6004C30D2 /* OrderCompletedCell.xib in Resources */,
 				A316A48B21AD8758004C30D2 /* EarningsCollectionViewCell.xib in Resources */,
 				A3BEF674218DACBF00192E7E /* OrderInfoTableViewCell2.xib in Resources */,
 				A3BEF67A218DACD300192E7E /* OrderCollectionViewCell.xib in Resources */,
@@ -675,6 +729,7 @@
 				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HTHorizontalSelectionList/HTHorizontalSelectionList.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/JSSAlertView/JSSAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/M13BadgeView/M13BadgeView.framework",
 				"${BUILT_PRODUCTS_DIR}/MMMaterialDesignSpinner/MMMaterialDesignSpinner.framework",
@@ -694,6 +749,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTHorizontalSelectionList.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSSAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13BadgeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMMaterialDesignSpinner.framework",
@@ -718,6 +774,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A316A49C21AFB953004C30D2 /* OngoingHeaderCell.swift in Sources */,
+				A316A4A121AFBCF6004C30D2 /* OrderCompletedCell.swift in Sources */,
 				A3BEF65C218DAC9100192E7E /* NotificationTableViewCell.swift in Sources */,
 				A3BEF6BA2190276200192E7E /* Constants.swift in Sources */,
 				A3BEF64C218DA96500192E7E /* EditProfileViewController.swift in Sources */,
@@ -736,6 +794,7 @@
 				A3BEF5C4218AE15400192E7E /* LoginViewController.swift in Sources */,
 				A3BEF651218DA96500192E7E /* YourEarningsViewController.swift in Sources */,
 				A3BEF6C221902CF000192E7E /* EarningModel.swift in Sources */,
+				A316A4A521AFC418004C30D2 /* OrderCompletedDetailsView.swift in Sources */,
 				A3BEF675218DACBF00192E7E /* OrderInfoTableViewCell3.swift in Sources */,
 				A3BEF683218DADE000192E7E /* MoreTableViewCell.swift in Sources */,
 				A3BEF659218DAC7300192E7E /* HelpSupportTableViewCell.swift in Sources */,
@@ -746,10 +805,12 @@
 				A3BEF6DB21996D1D00192E7E /* ExtensionClass.swift in Sources */,
 				A316A47E21AD5E6F004C30D2 /* SingleTonClass.swift in Sources */,
 				A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */,
+				A316A4AC21AFC748004C30D2 /* UIViewController+MJPopupViewController.m in Sources */,
 				A3BEF5D6218AE31600192E7E /* Utilities.swift in Sources */,
 				A3BEF5CF218AE19300192E7E /* ForgotPasswordViewController.swift in Sources */,
 				A3BEF671218DACBF00192E7E /* OrderInfoTableViewCell1.swift in Sources */,
 				A3BEF5E0218AE90F00192E7E /* OrdersViewController.swift in Sources */,
+				A316A49821AE66C8004C30D2 /* OnGoingDishesCell.swift in Sources */,
 				A3BEF5DD218AE90500192E7E /* HomeViewController.swift in Sources */,
 				A316A48E21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.swift in Sources */,
 				A3BEF5C1218AE06D00192E7E /* Theme.swift in Sources */,
@@ -757,6 +818,7 @@
 				A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */,
 				A3BEF6BC219027B700192E7E /* URLhandler.swift in Sources */,
 				A31F687321AC01060054DF6D /* SliderToOpenView.swift in Sources */,
+				A316A4AD21AFC748004C30D2 /* MJPopupBackgroundView.m in Sources */,
 				A3BEF6CA2190697200192E7E /* NotificationViewController.swift in Sources */,
 				A3BEF6C521902E1E00192E7E /* ShadowView.swift in Sources */,
 				A3BEF64F218DA96500192E7E /* HelpSupportViewController.swift in Sources */,
@@ -917,7 +979,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UrbanEaterDriver/ThirdParty/OTPview/UrbanEaterDriver-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hexadots/UrbanEater_Driver_Temp/UrbanEaterDriver/UrbanEaterDriver/UrbanEaterDriver-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -940,7 +1002,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UrbanEaterDriver/ThirdParty/OTPview/UrbanEaterDriver-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hexadots/UrbanEater_Driver_Temp/UrbanEaterDriver/UrbanEaterDriver/UrbanEaterDriver-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

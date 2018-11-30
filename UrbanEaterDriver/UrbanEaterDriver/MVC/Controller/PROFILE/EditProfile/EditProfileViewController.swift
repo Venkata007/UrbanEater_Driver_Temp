@@ -8,145 +8,114 @@
 //
 
 import UIKit
+import EZSwiftExtensions
 
+class EditProfileViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
-class EditProfileViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPopoverControllerDelegate {
-
-    @IBOutlet weak var scrollviewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var scrollView : UIScrollView!
-    @IBOutlet weak var arrow : UIImageView!
-    @IBOutlet weak var bankInfoBtn: UIButton!
-    @IBOutlet var profileImg_View: UIImageView!
-    @IBOutlet weak var profileImageBtn: UIButton!
-    let commonUtlity : Utilities = Utilities()
-    var driver_id = ""
-    var picker = UIImagePickerController()
-    var popover:UIPopoverController?=nil
-    var imagedata: Data = Data()
+    @IBOutlet weak var uploadImgBtn: UIButton!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var phoneNumberTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var cityTF: UITextField!
+    @IBOutlet weak var vehicleNoTF: UITextField!
+    @IBOutlet weak var licenceTF: UITextField!
+    @IBOutlet weak var sumbitBtn: UIButton!
     
-    var iSbankInfoEnabled = false
+    var selectedImage :UIImage!
+    var selectedImageBase64String : String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        profileImg_View.layer.cornerRadius = 40.0
-        profileImg_View.layer.masksToBounds = true
-        self.profileImg_View.image = #imageLiteral(resourceName: "iconProfile")
-                
-        // Do any additional setup after loading the view.
-        bankInfoBtn.layer.borderWidth = 1.0
-        bankInfoBtn.layer.cornerRadius = 2.0
-        bankInfoBtn.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        bankInfoBtn.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.7350973887)
-        
+        self.updateUI()
     }
-    
-    @IBAction func bankInfoBtnClicked(_ sender: Any) {
-        if iSbankInfoEnabled {
-            scrollviewHeightConstraint.constant = 530
-            iSbankInfoEnabled = false
-            self.arrow.transform = CGAffineTransform.identity
-        }else{
-            scrollviewHeightConstraint.constant = 850//930 //1044
-            iSbankInfoEnabled = true
-            _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.goNext(timer:)), userInfo: nil, repeats: false)
-        }
+    //MARK:- Update UI
+    func updateUI(){
+        self.nameTF.setBottomBorder()
+        self.phoneNumberTF.setBottomBorder()
+        self.emailTF.setBottomBorder()
+        self.cityTF.setBottomBorder()
+        self.vehicleNoTF.setBottomBorder()
+        self.licenceTF.setBottomBorder()
+        TheGlobalPoolManager.cornerAndBorder(uploadImgBtn, cornerRadius: uploadImgBtn.layer.bounds.h / 2, borderWidth: 0, borderColor: .clear)
+        TheGlobalPoolManager.cornerAndBorder(imgView, cornerRadius: imgView.layer.bounds.h / 2, borderWidth: 0, borderColor: .clear)
     }
-    
-    @objc func goNext(timer:Timer){
-        self.arrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
-        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
-        scrollView.setContentOffset(bottomOffset, animated: true)
-    }
-    
-    @IBAction func editProfileImgBtn_Action(_ sender: UIButton)
-    {
-        
-        let alert:UIAlertController=UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        
-        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.default)
-        {
+    //MARK: - Image Picking
+    func imagePicking(_ title:String){
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            print("IPAD")
+        }
+        else if UIDevice.current.userInterfaceIdiom == .phone{
+            let actionSheetController = UIAlertController(title: title, message: "", preferredStyle: .actionSheet)
             
-            UIAlertAction in
-            self.openCamera()
-        }
-        
-        let gallaryAction = UIAlertAction(title: "Gallary", style: UIAlertActionStyle.default)
-        {
-            UIAlertAction in
-            self.openGallary()
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
-        {
-            UIAlertAction in
-            
-            
-        }
-        // Add the actions
-        picker.delegate = self
-        alert.addAction(cameraAction)
-        alert.addAction(gallaryAction)
-        alert.addAction(cancelAction)
-        // Present the controller
-        if UIDevice.current.userInterfaceIdiom == .phone
-        {
-            self.present(alert, animated: true, completion: nil)
-        }
-        else
-        {
-            popover=UIPopoverController(contentViewController: alert)
-            popover!.present(from: profileImg_View.frame, in: self.view, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
-        }
-        //
-    }
-    
-    
-    func openCamera()
-    {
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
-        {
-            picker.sourceType = UIImagePickerControllerSourceType.camera
-            
-            if (self.navigationController?.visibleViewController) != nil{
-                
-                self.present(picker, animated: true, completion: nil)
+            let cameraActionButton = UIAlertAction(title: "Take a picture", style: .default) { action -> Void in
+                self.imagePicker(clickedButtonat: 0)
             }
+            let photoAlbumActionButton = UIAlertAction(title: "Camera roll", style: .default) { action -> Void in
+                self.imagePicker(clickedButtonat: 1)
+            }
+            let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+            }
+            actionSheetController.addAction(cameraActionButton)
+            actionSheetController.addAction(photoAlbumActionButton)
+            actionSheetController.addAction(cancelActionButton)
+            self.present(actionSheetController, animated: true, completion: nil)
         }
-        else
-        {
-            openGallary()
+    }
+    // MARK: - Image picker from gallery and camera
+    private func imagePicker(clickedButtonat buttonIndex: Int) {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        switch buttonIndex {
+        case 0:
+            if UIImagePickerController.isSourceTypeAvailable(.camera){
+                picker.sourceType = .camera
+                present(picker, animated: true, completion: nil)
+            }
+            else{
+                print("Camera not available....")
+            }
+        case 1:
+            picker.sourceType = .photoLibrary
+            present(picker, animated: true, completion:nil)
+        default:
+            break
         }
     }
-    
-    func openGallary()
-    {
-        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        
-        self.present(picker, animated: false, completion: nil)
-        
-
-        
+    // MARK: - UIImagePickerController delegate methods
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            selectedImage = image
+        }
+        else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            selectedImage = image
+        } else{
+            print("Something went wrong")
+        }
+        convertImage(image: selectedImage)
+        print(selectedImage)
+        imgView.image = selectedImage
+        self.dismiss(animated: true, completion: nil)
     }
-  
-    
-    @IBAction func backBtnClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func convertImage(image: UIImage) {
+        let imageData = UIImageJPEGRepresentation(image, 0.1)! as NSData
+        let dataString = imageData.base64EncodedString()
+        selectedImageBase64String = dataString
+        print(" *************** Base 64 String =========\(selectedImageBase64String)")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK:- IB Action Outlets
+    @IBAction func uploadImgBtn(_ sender: UIButton) {
+        self.imagePicking("Upload Photo")
     }
-    */
-
+    @IBAction func sumbitBtn(_ sender: UIButton) {
+    }
+    @IBAction func backBtn(_ sender: UIButton) {
+        ez.topMostVC?.popVC()
+    }
 }
