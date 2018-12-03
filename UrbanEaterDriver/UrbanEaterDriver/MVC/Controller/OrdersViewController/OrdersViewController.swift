@@ -48,6 +48,12 @@ class OrdersViewController: UIViewController,HTHorizontalSelectionListDelegate,H
         ordersTable.delegate = self
         ordersTable.dataSource = self
     }
+    //MARK : - Pushing To Direction View Controller
+    @objc func pushingToDirectionVC(_ sender: UIButton) {
+        if let viewCon = self.storyboard?.instantiateViewController(withIdentifier: "DirectionViewController") as? DirectionViewController{
+            self.navigationController?.pushViewController(viewCon, animated: true)
+        }
+    }
     //MARK : - HTHorizontalSelectionList Delegates
     func numberOfItems(in selectionList: HTHorizontalSelectionList) -> Int {
         return settings.count
@@ -79,18 +85,6 @@ class OrdersViewController: UIViewController,HTHorizontalSelectionListDelegate,H
             if dataResponse.json.exists(){
                 TheGlobalPoolManager.earningModel = EarningModel(dataResponse.json)
             }
-        }
-    }
-    //MARK : - Direction Button Method
-    @objc func directionBtnMethod(_ btn : UIButton){
-        let latitude = "17.437462"
-        let longitude = "78.448288"
-        if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(latitude),\(longitude)&directionsmode=driving") {
-            UIApplication.shared.open(url, options: [:])
-        }else if let url = URL(string: "https://www.google.co.in/maps/dir/?saddr=&daddr=\(String(describing: latitude)),\(String(describing: longitude))") {
-            UIApplication.shared.open(url, options: [:])
-        }else{
-            print("Can't use comgooglemaps://")
         }
     }
     //MARK : - Call Button Method
@@ -153,7 +147,7 @@ extension OrdersViewController : UITableViewDelegate,UITableViewDataSource{
             }
             cell.directionBtn.tag = indexPath.row
             cell.callBtn.tag = indexPath.row
-            cell.directionBtn.addTarget(self, action: #selector(directionBtnMethod(_:)), for: .touchUpInside)
+            cell.directionBtn.addTarget(self, action: #selector(pushingToDirectionVC(_:)), for: .touchUpInside)
             cell.callBtn.addTarget(self, action: #selector(callBtnMethod(_:)), for: .touchUpInside)
             return cell
         case 1:

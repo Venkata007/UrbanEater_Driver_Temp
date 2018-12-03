@@ -73,10 +73,21 @@ class HomeViewController: UIViewController,GMSMapViewDelegate{
         mapView.animate(to: camera)
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
-        //mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 90, right: 5)
+    }
+    //MARK : - Support Button Method
+    func supportBtnMethod(){
+        let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpSupportViewControllerID") as! HelpSupportViewController
+        self.navigationController?.pushViewController(helpVC, animated: true)
+    }
+    //MARK : - Pushing To Your  Earnings View Controller
+    func pushingToYourEarningsVC() {
+        if let viewCon = self.storyboard?.instantiateViewController(withIdentifier: "YourEarningsViewControllerID") as? YourEarningsViewController{
+            self.navigationController?.pushViewController(viewCon, animated: true)
+        }
     }
     //MARK:- IB Action Outlets
     @IBAction func supportBtn(_ sender: UIButton) {
+        self.supportBtnMethod()
     }
 }
 extension UIImage {
@@ -102,10 +113,10 @@ extension HomeViewController : ModelClassManagerDelegate{
 }
 extension HomeViewController : UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 7{
+        if indexPath.row == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EarningsSeeAllACollectionViewCell", for: indexPath as IndexPath) as! EarningsSeeAllACollectionViewCell
             return cell
         }
@@ -118,15 +129,9 @@ extension HomeViewController : UICollectionViewDataSource,UICollectionViewDelega
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.item)!")
+        if indexPath.row == 2{
+            self.pushingToYourEarningsVC()
+        }
     }
 }
 
-
-//@IBAction func earningsBtnClicked(_ sender: Any) {
-//    let earningsVC = self.storyboard?.instantiateViewController(withIdentifier: "YourEarningsViewControllerID") as! YourEarningsViewController
-//    self.navigationController?.pushViewController(earningsVC, animated: true)
-//}
-//@IBAction func supportBtnClicked(_ sender: Any) {
-//    let helpVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpSupportViewControllerID") as! HelpSupportViewController
-//    self.navigationController?.pushViewController(helpVC, animated: true)
-//}
