@@ -27,7 +27,9 @@
 		A316A4A621AFC418004C30D2 /* OrderCompletedDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A316A4A421AFC418004C30D2 /* OrderCompletedDetailsView.xib */; };
 		A316A4AC21AFC748004C30D2 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A316A4AA21AFC747004C30D2 /* UIViewController+MJPopupViewController.m */; };
 		A316A4AD21AFC748004C30D2 /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = A316A4AB21AFC747004C30D2 /* MJPopupBackgroundView.m */; };
-		A31F687321AC01060054DF6D /* SliderToOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F687221AC01060054DF6D /* SliderToOpenView.swift */; };
+		A365B5F621CA6C76007A5B11 /* DriverOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A365B5F521CA6C76007A5B11 /* DriverOrderModel.swift */; };
+		A365B5FA21CA8437007A5B11 /* DriverHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A365B5F921CA8436007A5B11 /* DriverHomeModel.swift */; };
+		A395734521CB94A700A92CA0 /* EarningsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A395734421CB94A600A92CA0 /* EarningsDataModel.swift */; };
 		A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */; };
 		A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5AA218ADE5E00192E7E /* ViewController.swift */; };
 		A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5AC218ADE5E00192E7E /* Main.storyboard */; };
@@ -37,15 +39,12 @@
 		A3BEF5CA218AE17A00192E7E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5C7218AE17900192E7E /* Roboto-Medium.ttf */; };
 		A3BEF5CB218AE17A00192E7E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5C8218AE17900192E7E /* Roboto-Regular.ttf */; };
 		A3BEF5CC218AE17A00192E7E /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5C9218AE17A00192E7E /* Roboto-Light.ttf */; };
-		A3BEF5CF218AE19300192E7E /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5CE218AE19300192E7E /* ForgotPasswordViewController.swift */; };
-		A3BEF5D2218AE1A900192E7E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5D1218AE1A900192E7E /* SignUpViewController.swift */; };
 		A3BEF5D4218AE1FF00192E7E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5D3218AE1FE00192E7E /* Media.xcassets */; };
 		A3BEF5D6218AE31600192E7E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5D5218AE31600192E7E /* Utilities.swift */; };
 		A3BEF5DA218AE3C700192E7E /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5D9218AE3C600192E7E /* HRToast+UIView.swift */; };
 		A3BEF5DD218AE90500192E7E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5DC218AE90500192E7E /* HomeViewController.swift */; };
 		A3BEF5E0218AE90F00192E7E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5DF218AE90F00192E7E /* OrdersViewController.swift */; };
 		A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF617218DA89400192E7E /* DirectionViewController.swift */; };
-		A3BEF64C218DA96500192E7E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF642218DA96500192E7E /* EditProfileViewController.swift */; };
 		A3BEF64D218DA96500192E7E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF644218DA96500192E7E /* AccountViewController.swift */; };
 		A3BEF64E218DA96500192E7E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF646218DA96500192E7E /* ChangePasswordViewController.swift */; };
 		A3BEF64F218DA96500192E7E /* HelpSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF648218DA96500192E7E /* HelpSupportViewController.swift */; };
@@ -71,16 +70,18 @@
 		A3BEF6B8218DCA4900192E7E /* LocationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6B7218DCA4900192E7E /* LocationRecord.swift */; };
 		A3BEF6BA2190276200192E7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6B92190276200192E7E /* Constants.swift */; };
 		A3BEF6BC219027B700192E7E /* URLhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6BB219027B700192E7E /* URLhandler.swift */; };
-		A3BEF6BF21902CB800192E7E /* DriverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6BE21902CB800192E7E /* DriverModel.swift */; };
-		A3BEF6C221902CF000192E7E /* EarningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C021902CEF00192E7E /* EarningModel.swift */; };
+		A3BEF6BF21902CB800192E7E /* DriverLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6BE21902CB800192E7E /* DriverLoginModel.swift */; };
 		A3BEF6C321902CF000192E7E /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C121902CF000192E7E /* GlobalModel.swift */; };
 		A3BEF6C521902E1E00192E7E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C421902E1E00192E7E /* ShadowView.swift */; };
 		A3BEF6CA2190697200192E7E /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6C92190697200192E7E /* NotificationViewController.swift */; };
-		A3BEF6CC219069EE00192E7E /* NotofocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */; };
 		A3BEF6CE2191786100192E7E /* NewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF6CD2191786100192E7E /* NewAssets.xcassets */; };
 		A3BEF6D421919D8E00192E7E /* HDInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF6D121919D8E00192E7E /* HDInputView.xib */; };
 		A3BEF6D521919D8E00192E7E /* HDInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6D321919D8E00192E7E /* HDInputView.m */; };
 		A3BEF6DB21996D1D00192E7E /* ExtensionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF6DA21996D1D00192E7E /* ExtensionClass.swift */; };
+		A3EFE23421C91F6700F676FE /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EFE23221C91F6700F676FE /* OTPViewController.swift */; };
+		A3EFE23521C91F6700F676FE /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EFE23321C91F6700F676FE /* ForgotPasswordVC.swift */; };
+		A3EFE23721C922C100F676FE /* UpdatePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EFE23621C922C100F676FE /* UpdatePasswordModel.swift */; };
+		A3F59C8721C8FB5200932E8E /* SliderToOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F59C8621C8FB5200932E8E /* SliderToOpenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,7 +108,9 @@
 		A316A4A921AFC747004C30D2 /* MJPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPopupBackgroundView.h; sourceTree = "<group>"; };
 		A316A4AA21AFC747004C30D2 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		A316A4AB21AFC747004C30D2 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
-		A31F687221AC01060054DF6D /* SliderToOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderToOpenView.swift; sourceTree = "<group>"; };
+		A365B5F521CA6C76007A5B11 /* DriverOrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderModel.swift; sourceTree = "<group>"; };
+		A365B5F921CA8436007A5B11 /* DriverHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverHomeModel.swift; sourceTree = "<group>"; };
+		A395734421CB94A600A92CA0 /* EarningsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsDataModel.swift; sourceTree = "<group>"; };
 		A3BEF5A5218ADE5E00192E7E /* UrbanEaterDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanEaterDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BEF5AA218ADE5E00192E7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,15 +122,12 @@
 		A3BEF5C7218AE17900192E7E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		A3BEF5C8218AE17900192E7E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		A3BEF5C9218AE17A00192E7E /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		A3BEF5CE218AE19300192E7E /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		A3BEF5D1218AE1A900192E7E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A3BEF5D3218AE1FE00192E7E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		A3BEF5D5218AE31600192E7E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A3BEF5D9218AE3C600192E7E /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
 		A3BEF5DC218AE90500192E7E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3BEF5DF218AE90F00192E7E /* OrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		A3BEF617218DA89400192E7E /* DirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewController.swift; sourceTree = "<group>"; };
-		A3BEF642218DA96500192E7E /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		A3BEF644218DA96500192E7E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A3BEF646218DA96500192E7E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		A3BEF648218DA96500192E7E /* HelpSupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpSupportViewController.swift; sourceTree = "<group>"; };
@@ -153,18 +153,20 @@
 		A3BEF6B7218DCA4900192E7E /* LocationRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRecord.swift; sourceTree = "<group>"; };
 		A3BEF6B92190276200192E7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A3BEF6BB219027B700192E7E /* URLhandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLhandler.swift; sourceTree = "<group>"; };
-		A3BEF6BE21902CB800192E7E /* DriverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverModel.swift; sourceTree = "<group>"; };
-		A3BEF6C021902CEF00192E7E /* EarningModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningModel.swift; sourceTree = "<group>"; };
+		A3BEF6BE21902CB800192E7E /* DriverLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLoginModel.swift; sourceTree = "<group>"; };
 		A3BEF6C121902CF000192E7E /* GlobalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
 		A3BEF6C421902E1E00192E7E /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A3BEF6C92190697200192E7E /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
-		A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotofocationModel.swift; sourceTree = "<group>"; };
 		A3BEF6CD2191786100192E7E /* NewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = NewAssets.xcassets; sourceTree = "<group>"; };
 		A3BEF6D021919D8C00192E7E /* UrbanEaterDriver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UrbanEaterDriver-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3BEF6D121919D8E00192E7E /* HDInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HDInputView.xib; sourceTree = "<group>"; };
 		A3BEF6D221919D8E00192E7E /* HDInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDInputView.h; sourceTree = "<group>"; };
 		A3BEF6D321919D8E00192E7E /* HDInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDInputView.m; sourceTree = "<group>"; };
 		A3BEF6DA21996D1D00192E7E /* ExtensionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionClass.swift; sourceTree = "<group>"; };
+		A3EFE23221C91F6700F676FE /* OTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		A3EFE23321C91F6700F676FE /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		A3EFE23621C922C100F676FE /* UpdatePasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePasswordModel.swift; sourceTree = "<group>"; };
+		A3F59C8621C8FB5200932E8E /* SliderToOpenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderToOpenView.swift; sourceTree = "<group>"; };
 		C43C6A73EBA83729D01849AE /* Pods_UrbanEaterDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrbanEaterDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -347,7 +349,7 @@
 				A316A4A721AFC747004C30D2 /* MJPOPUP */,
 				A3BEF6CF21919D7F00192E7E /* OTPview */,
 				A3BEF6C421902E1E00192E7E /* ShadowView.swift */,
-				A31F687221AC01060054DF6D /* SliderToOpenView.swift */,
+				A3F59C8621C8FB5200932E8E /* SliderToOpenView.swift */,
 				A3BEF5D7218AE3C600192E7E /* Toast */,
 			);
 			path = ThirdParty;
@@ -382,17 +384,10 @@
 		A3BEF5CD218AE19300192E7E /* ForgotPasswordViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A3BEF5CE218AE19300192E7E /* ForgotPasswordViewController.swift */,
+				A3EFE23321C91F6700F676FE /* ForgotPasswordVC.swift */,
+				A3EFE23221C91F6700F676FE /* OTPViewController.swift */,
 			);
 			path = ForgotPasswordViewController;
-			sourceTree = "<group>";
-		};
-		A3BEF5D0218AE1A900192E7E /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				A3BEF5D1218AE1A900192E7E /* SignUpViewController.swift */,
-			);
-			path = SignUp;
 			sourceTree = "<group>";
 		};
 		A3BEF5D7218AE3C600192E7E /* Toast */ = {
@@ -430,9 +425,8 @@
 		A3BEF615218DA78700192E7E /* LOGIN */ = {
 			isa = PBXGroup;
 			children = (
-				A3BEF5D0218AE1A900192E7E /* SignUp */,
-				A3BEF5CD218AE19300192E7E /* ForgotPasswordViewController */,
 				A3BEF5C2218AE15300192E7E /* LoginViewController */,
+				A3BEF5CD218AE19300192E7E /* ForgotPasswordViewController */,
 			);
 			path = LOGIN;
 			sourceTree = "<group>";
@@ -448,8 +442,8 @@
 		A3BEF640218DA96500192E7E /* PROFILE */ = {
 			isa = PBXGroup;
 			children = (
+				A3BEF643218DA96500192E7E /* Account */,
 				A3BEF641218DA96500192E7E /* EditProfile */,
-				A3BEF643218DA96500192E7E /* Profile */,
 				A3BEF645218DA96500192E7E /* ResetPasswordViewController */,
 				A3BEF647218DA96500192E7E /* Help&Support */,
 				A3BEF649218DA96500192E7E /* Your Earnings */,
@@ -460,18 +454,17 @@
 		A3BEF641218DA96500192E7E /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
-				A3BEF642218DA96500192E7E /* EditProfileViewController.swift */,
 				A31607DD21B1483A00068524 /* EditProfileVC.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
 		};
-		A3BEF643218DA96500192E7E /* Profile */ = {
+		A3BEF643218DA96500192E7E /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				A3BEF644218DA96500192E7E /* AccountViewController.swift */,
 			);
-			path = Profile;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		A3BEF645218DA96500192E7E /* ResetPasswordViewController */ = {
@@ -494,8 +487,8 @@
 			isa = PBXGroup;
 			children = (
 				A3BEF64B218DA96500192E7E /* YourEarningsViewController.swift */,
-				A3BEF64A218DA96500192E7E /* OrderInfoViewController.swift */,
 				A31607DB21B1273E00068524 /* OrderDetailsViewController.swift */,
+				A3BEF64A218DA96500192E7E /* OrderInfoViewController.swift */,
 			);
 			path = "Your Earnings";
 			sourceTree = "<group>";
@@ -563,9 +556,11 @@
 			children = (
 				A316A47D21AD5E6F004C30D2 /* SingleTonClass.swift */,
 				A3BEF6C121902CF000192E7E /* GlobalModel.swift */,
-				A3BEF6BE21902CB800192E7E /* DriverModel.swift */,
-				A3BEF6C021902CEF00192E7E /* EarningModel.swift */,
-				A3BEF6CB219069EE00192E7E /* NotofocationModel.swift */,
+				A3BEF6BE21902CB800192E7E /* DriverLoginModel.swift */,
+				A3EFE23621C922C100F676FE /* UpdatePasswordModel.swift */,
+				A365B5F921CA8436007A5B11 /* DriverHomeModel.swift */,
+				A365B5F521CA6C76007A5B11 /* DriverOrderModel.swift */,
+				A395734421CB94A600A92CA0 /* EarningsDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -736,7 +731,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HTHorizontalSelectionList/HTHorizontalSelectionList.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/JSSAlertView/JSSAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/M13BadgeView/M13BadgeView.framework",
 				"${BUILT_PRODUCTS_DIR}/MMMaterialDesignSpinner/MMMaterialDesignSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
@@ -744,7 +738,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
@@ -756,7 +749,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTHorizontalSelectionList.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSSAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13BadgeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMMaterialDesignSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
@@ -764,7 +756,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
@@ -780,57 +771,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F59C8721C8FB5200932E8E /* SliderToOpenView.swift in Sources */,
 				A316A49C21AFB953004C30D2 /* OngoingHeaderCell.swift in Sources */,
 				A316A4A121AFBCF6004C30D2 /* OrderCompletedCell.swift in Sources */,
 				A3BEF65C218DAC9100192E7E /* NotificationTableViewCell.swift in Sources */,
 				A3BEF6BA2190276200192E7E /* Constants.swift in Sources */,
-				A3BEF64C218DA96500192E7E /* EditProfileViewController.swift in Sources */,
 				A3BEF5DA218AE3C700192E7E /* HRToast+UIView.swift in Sources */,
 				A3BEF67B218DACD300192E7E /* OrderCollectionViewCell.swift in Sources */,
 				A3BEF693218DB20E00192E7E /* LocManager.swift in Sources */,
 				A3BEF656218DAC5800192E7E /* EarningsTableViewCell.swift in Sources */,
 				A3BEF6B8218DCA4900192E7E /* LocationRecord.swift in Sources */,
+				A3EFE23421C91F6700F676FE /* OTPViewController.swift in Sources */,
 				A3BEF64D218DA96500192E7E /* AccountViewController.swift in Sources */,
 				A3BEF670218DACBF00192E7E /* OrderInfoTableViewCell2.swift in Sources */,
 				A3BEF650218DA96500192E7E /* OrderInfoViewController.swift in Sources */,
+				A365B5F621CA6C76007A5B11 /* DriverOrderModel.swift in Sources */,
 				A3BEF64E218DA96500192E7E /* ChangePasswordViewController.swift in Sources */,
 				A31607DC21B1273E00068524 /* OrderDetailsViewController.swift in Sources */,
-				A3BEF5D2218AE1A900192E7E /* SignUpViewController.swift in Sources */,
+				A395734521CB94A700A92CA0 /* EarningsDataModel.swift in Sources */,
 				A316A49421AD8899004C30D2 /* OngoingTableViewCell.swift in Sources */,
 				A3BEF673218DACBF00192E7E /* OrderInfoTableViewCell4.swift in Sources */,
 				A3BEF5C4218AE15400192E7E /* LoginViewController.swift in Sources */,
 				A3BEF651218DA96500192E7E /* YourEarningsViewController.swift in Sources */,
-				A3BEF6C221902CF000192E7E /* EarningModel.swift in Sources */,
 				A316A4A521AFC418004C30D2 /* OrderCompletedDetailsView.swift in Sources */,
 				A3BEF675218DACBF00192E7E /* OrderInfoTableViewCell3.swift in Sources */,
+				A3EFE23521C91F6700F676FE /* ForgotPasswordVC.swift in Sources */,
 				A3BEF683218DADE000192E7E /* MoreTableViewCell.swift in Sources */,
 				A3BEF659218DAC7300192E7E /* HelpSupportTableViewCell.swift in Sources */,
 				A3BEF6C321902CF000192E7E /* GlobalModel.swift in Sources */,
 				A3BEF6D521919D8E00192E7E /* HDInputView.m in Sources */,
 				A316A48C21AD8758004C30D2 /* EarningsCollectionViewCell.swift in Sources */,
-				A3BEF6BF21902CB800192E7E /* DriverModel.swift in Sources */,
+				A3BEF6BF21902CB800192E7E /* DriverLoginModel.swift in Sources */,
 				A3BEF6DB21996D1D00192E7E /* ExtensionClass.swift in Sources */,
 				A316A47E21AD5E6F004C30D2 /* SingleTonClass.swift in Sources */,
 				A3BEF618218DA89400192E7E /* DirectionViewController.swift in Sources */,
 				A316A4AC21AFC748004C30D2 /* UIViewController+MJPopupViewController.m in Sources */,
 				A3BEF5D6218AE31600192E7E /* Utilities.swift in Sources */,
-				A3BEF5CF218AE19300192E7E /* ForgotPasswordViewController.swift in Sources */,
 				A3BEF671218DACBF00192E7E /* OrderInfoTableViewCell1.swift in Sources */,
 				A3BEF5E0218AE90F00192E7E /* OrdersViewController.swift in Sources */,
 				A316A49821AE66C8004C30D2 /* OnGoingDishesCell.swift in Sources */,
 				A31607DE21B1483A00068524 /* EditProfileVC.swift in Sources */,
+				A3EFE23721C922C100F676FE /* UpdatePasswordModel.swift in Sources */,
 				A3BEF5DD218AE90500192E7E /* HomeViewController.swift in Sources */,
 				A316A48E21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.swift in Sources */,
 				A3BEF5C1218AE06D00192E7E /* Theme.swift in Sources */,
 				A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */,
 				A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */,
 				A3BEF6BC219027B700192E7E /* URLhandler.swift in Sources */,
-				A31F687321AC01060054DF6D /* SliderToOpenView.swift in Sources */,
 				A316A4AD21AFC748004C30D2 /* MJPopupBackgroundView.m in Sources */,
 				A3BEF6CA2190697200192E7E /* NotificationViewController.swift in Sources */,
 				A3BEF6C521902E1E00192E7E /* ShadowView.swift in Sources */,
 				A3BEF64F218DA96500192E7E /* HelpSupportViewController.swift in Sources */,
-				A3BEF6CC219069EE00192E7E /* NotofocationModel.swift in Sources */,
+				A365B5FA21CA8437007A5B11 /* DriverHomeModel.swift in Sources */,
 				A3BEF692218DB20E00192E7E /* LocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

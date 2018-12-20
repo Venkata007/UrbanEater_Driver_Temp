@@ -23,14 +23,14 @@ class URLhandler: NSObject {
     
     // MARK : - Get Api hitting Model
     class func getUrlSession(urlString: String, params: [String : AnyObject]? ,header : [String : String] ,  completion completionHandler:@escaping (_ response: DataResponse<Any>) -> ()) {
-        Alamofire.request(urlString,method: .get, parameters: params, headers: header).responseJSON { (response) in
+        Alamofire.request(urlString,method: .get, parameters: params,encoding : JSONEncoding.default, headers: header).responseJSON { (response) in
             switch(response.result) {
             case .success(_):
                 if response.result.value != nil{
                     let dic = response.result.value as! [String : AnyObject]
                     let stautsCode = dic["statusCode"] as! NSNumber
                     let message     = dic["message"] as! String
-                    if stautsCode == 200{
+                    if stautsCode == 200 || stautsCode == 202{
                         completionHandler(response)
                     }else{
                         URLhandler.sharedInstance.topMostVC()?.view.makeToast(message:message)
@@ -47,18 +47,15 @@ class URLhandler: NSObject {
     }
     // MARK : - Post Api hitting Model
     class func postUrlSession(urlString: String, params: [String : AnyObject] ,header : [String : String] ,  completion completionHandler:@escaping (_ response: DataResponse<Any>) -> ()) {
-       // Theme.sharedInstance.activityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
-        Alamofire.request(urlString,method: .post, parameters: params, headers: header).responseJSON { (response) in
-           //  Theme.sharedInstance.removeActivityView(View: (URLhandler.sharedInstance.topMostVC()?.view)!)
+        Alamofire.request(urlString,method: .post, parameters: params,encoding : JSONEncoding.default, headers: header).responseJSON { (response) in
             switch(response.result) {
             case .success(_):
                 if response.result.value != nil{
                     let dic = response.result.value as! [String : AnyObject]
                     print("dic ----->>> \(dic)")
-                    
                     let stautsCode = dic["statusCode"] as! NSNumber
                     let message     = dic["message"] as! String
-                    if stautsCode == 200{
+                    if stautsCode == 200 || stautsCode == 202{
                         completionHandler(response)
                     }else{
                         URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: message)
@@ -75,14 +72,14 @@ class URLhandler: NSObject {
     }
     // MARK : - Delete Api hitting Model
     class func deleteUrlSession(urlString: String, params: [String : AnyObject]? ,header : [String : String] ,  completion completionHandler:@escaping (_ response: DataResponse<Any>) -> ()) {
-        Alamofire.request(urlString,method: .delete, parameters: params, headers: header).responseJSON { (response) in
+        Alamofire.request(urlString,method: .delete, parameters: params,encoding : JSONEncoding.default, headers: header).responseJSON { (response) in
             switch(response.result) {
             case .success(_):
                 if response.result.value != nil{
                     let dic = response.result.value as! [String : AnyObject]
                     let stautsCode = dic["statusCode"] as! NSNumber
                     let message     = dic["message"] as! String
-                    if stautsCode == 200{
+                    if stautsCode == 200 || stautsCode == 202{
                         completionHandler(response)
                     }else{
                         URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: message)
@@ -99,14 +96,14 @@ class URLhandler: NSObject {
     }
     // MARK : - Put Api hitting Model
     class func putUrlSession(urlString: String, params: [String : AnyObject] ,header : [String : String] ,  completion completionHandler:@escaping (_ response: DataResponse<Any>) -> ()) {
-        Alamofire.request(urlString,method: .put, parameters: params, headers: header).responseJSON { (response) in
+        Alamofire.request(urlString,method: .put, parameters: params,encoding : JSONEncoding.default, headers: header).responseJSON { (response) in
             switch(response.result) {
             case .success(_):
                 if response.result.value != nil{
                     let dic = response.result.value as! [String : AnyObject]
-                    let stautsCode = dic["statusCode"] as! String
+                    let stautsCode = dic["statusCode"] as! NSNumber
                     let message     = dic["message"] as! String
-                    if stautsCode.toInt == 200{
+                    if stautsCode == 200 || stautsCode == 202{
                         completionHandler(response)
                     }else{
                         URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: message)

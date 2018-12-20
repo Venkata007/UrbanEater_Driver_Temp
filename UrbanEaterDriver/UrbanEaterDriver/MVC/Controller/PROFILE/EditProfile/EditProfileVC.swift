@@ -8,6 +8,7 @@
 
 import UIKit
 import EZSwiftExtensions
+import SDWebImage
 
 class EditProfileVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
@@ -19,7 +20,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate,UINavigati
     var selectedImageBase64String : String = ""
     
     let itemsHeaderArray = ["Name *","MobileNumber *","Email *","City *","Vehicle Type *","Driving Licence *"]
-    let itemsArray = ["Vamsi","+91 9533565007","vamsi007@gmail.com","Hydrebad","Two weeler - Hero Glamour","TN75 2013 0007700"]
+    var itemsArray = [String]()
     
     @IBOutlet weak var submitBtn: UIButton!
     override func viewDidLoad() {
@@ -33,6 +34,102 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate,UINavigati
         tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
+        if TheGlobalPoolManager.driverHomeModel != nil{
+            let data = TheGlobalPoolManager.driverHomeModel.data
+            itemsArray = [data?.name!,data?.mobileId!,data?.emailId!,data?.cityName!,data?.vehicleType!,data?.licence.number] as! [String]
+            let url = URL.init(string: Constants.BASEURL_IMAGE + (data?.avatar!)!)
+            imgView.sd_setImage(with: url ,placeholderImage:  #imageLiteral(resourceName: "Head")) { (image, error, cache, url) in
+                if error != nil{
+                }else{
+                    self.imgView.image = image
+                }
+            }
+        }
+    }
+    //MARK: - Pushing to Login
+    func pushToLoginViewController(){
+        if let viewCon = self.storyboard?.instantiateViewController(withIdentifier: "CustomLoginNavigationVCID"){
+            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+            appdelegate.window!.rootViewController = viewCon
+        }
+    }
+    func LogOut(){
+        TheGlobalPoolManager.showAlertWith(title: "Are you sure", message: "Do you want to logout?", singleAction: false, okTitle:"Confirm") { (sucess) in
+            if sucess!{
+                TheGlobalPoolManager.logout()
+                self.pushToLoginViewController()
+            }
+        }
+    }
+    //MARK:- Update Profile Details API Hitting
+    func updateProfileDetailsAPIcall(){
+        if TheGlobalPoolManager.driverLoginModel == nil{
+            self.LogOut()
+            return
+        }
+        Theme.sharedInstance.activityView(View: self.view)
+        var param = [
+            "id": TheGlobalPoolManager.driverLoginModel.data.subId!,
+            "licence": ["number": "123123"]
+            ] as [String : Any]
+        
+        for index in 0..<self.itemsArray.count{
+            if let cell = self.tableView.cellForRow(at: IndexPath.init(row: index, section: 0)) as? ItemsCell{
+                switch index {
+                case 0:
+                    if cell.itemTF.text != nil{
+                        param["name"] = cell.itemTF.text! as AnyObject
+                    }else{
+                        URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: "Invalid Name")
+                        return
+                    }
+                case 2:
+                    if cell.itemTF.text != nil{
+                        param["emailId"] = cell.itemTF.text! as AnyObject
+                    }else{
+                        URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: "Invalid Email")
+                        return
+                    }
+                case 4:
+                    if cell.itemTF.text != nil{
+                        param["vehicleType"] = cell.itemTF.text! as AnyObject
+                    }else{
+                        URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: "Invalid Vehicle Type")
+                        return
+                    }
+                case 5:
+                    if cell.itemTF.text != nil{
+                        param["licence"] = ["number" : cell.itemTF.text!] as AnyObject
+                    }else{
+                        URLhandler.sharedInstance.topMostVC()?.view.makeToast(message: "Invalid Licence Number")
+                        return
+                    }
+                default:
+                    break
+                }
+            }
+        }
+        print(param)
+        URLhandler.postUrlSession(urlString: Constants.urls.DriverUpdateByID, params: param as [String : AnyObject], header: [:]) { (dataResponse) in
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                let dict = dataResponse.dictionaryFromJson! as NSDictionary
+                Theme.sharedInstance.showErrorpopup(Msg: dict.object(forKey: "message") as! String)
+                self.drivingHomeApiHitting()
+            }
+        }
+    }
+    //MARK : - Driver By ID Api Hitting
+    func drivingHomeApiHitting() {
+        Theme.sharedInstance.activityView(View: self.view)
+        let param = ["id": TheGlobalPoolManager.driverLoginModel.data.subId!]
+        URLhandler.postUrlSession(urlString: Constants.urls.DriverByID, params: param as [String : AnyObject], header: [:]) { (dataResponse) in
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                TheGlobalPoolManager.driverHomeModel = DriverHomeModel(fromJson: dataResponse.json)
+                self.updateUI()
+            }
+        }
     }
     //MARK: - Image Picking
     func imagePicking(_ title:String){
@@ -106,6 +203,7 @@ class EditProfileVC: UIViewController,UIImagePickerControllerDelegate,UINavigati
         ez.topMostVC?.popVC()
     }
     @IBAction func submitBtn(_ sender: UIButton) {
+        self.updateProfileDetailsAPIcall()
     }
     @IBAction func uploadImgBtn(_ sender: UIButton) {
         self.imagePicking("Upload Photo")

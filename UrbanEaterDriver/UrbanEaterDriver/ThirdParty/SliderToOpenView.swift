@@ -7,7 +7,7 @@
 //
 
 @objc public protocol SlideToOpenDelegate {
-    func SlideToOpenDelegateDidFinish(_ sender: SlideToOpenView)
+    func SlideToOpenDelegateDidFinish(_ slider:SlideToOpenView, switchStatus: Bool)
 }
 
 public class SlideToOpenView: UIView {
@@ -68,7 +68,7 @@ public class SlideToOpenView: UIView {
             draggedView.layer.cornerRadius = sliderCornerRadious
         }
     }
-    public var defaultSliderBackgroundColor: UIColor = UIColor(red:0.1, green:0.61, blue:0.84, alpha:0.1) {
+    public var defaultSliderBackgroundColor: UIColor = .restBGColor {
         didSet {
             sliderHolderView.backgroundColor = defaultSliderBackgroundColor
         }
@@ -89,13 +89,18 @@ public class SlideToOpenView: UIView {
             textLabel.text = defaultLabelText
         }
     }
+    public var defaultLabelAttributeText: NSAttributedString = NSAttributedString(string: "Swipe to open") {
+        didSet {
+            textLabel.attributedText = defaultLabelAttributeText
+        }
+    }
     // MARK: Private Properties
     private var leadingThumbnailViewConstraint: NSLayoutConstraint?
     private var leadingTextLabelConstraint: NSLayoutConstraint?
     private var topSliderConstraint: NSLayoutConstraint?
     private var xPositionInThumbnailView: CGFloat = 0
-    private var xEndingPoint: CGFloat = 0
-    private var isFinished: Bool = false
+    public var xEndingPoint: CGFloat = 0
+    public var isFinished: Bool = false
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -163,7 +168,7 @@ public class SlideToOpenView: UIView {
         thumnailImageView.backgroundColor = defaultThumbnailColor
         textLabel.text = defaultLabelText
         textLabel.font = UIFont.systemFont(ofSize: 15.0)
-        textLabel.textColor = UIColor(red:0.1, green:0.61, blue:0.84, alpha:1)
+        textLabel.textColor = .black
         textLabel.textAlignment = .center
         sliderHolderView.backgroundColor = defaultSliderBackgroundColor
         sliderHolderView.layer.cornerRadius = sliderCornerRadious
@@ -176,7 +181,7 @@ public class SlideToOpenView: UIView {
         return self.thumnailImageView.frame.contains(point)
     }
     
-    private func updateThumbnailViewLeadingPosition(_ x: CGFloat) {
+    public func updateThumbnailViewLeadingPosition(_ x: CGFloat) {
         leadingThumbnailViewConstraint?.constant = x
         layoutIfNeeded()
     }
@@ -203,9 +208,9 @@ public class SlideToOpenView: UIView {
         self.swipeRight(sender)
     }
     
-    func swipeLeft(_ sender: UIPanGestureRecognizer){
+    public func swipeLeft(_ sender: UIPanGestureRecognizer){
         let translatedPoint = xEndingPoint + sender.translation(in: view).x
-        print("Left",translatedPoint,xEndingPoint,thumbnailViewLeadingDistance)
+      //  print("Left",translatedPoint,xEndingPoint,thumbnailViewLeadingDistance)
         switch sender.state {
         case .began:
             break
@@ -215,37 +220,38 @@ public class SlideToOpenView: UIView {
                 return
             }
             if translatedPoint <= thumbnailViewLeadingDistance {
-                textLabel.alpha = 1
+                //textLabel.alpha = 1
                 updateThumbnailViewLeadingPosition(thumbnailViewLeadingDistance)
                 return
             }
             updateThumbnailViewLeadingPosition(translatedPoint)
-            textLabel.alpha = (xEndingPoint - translatedPoint) / xEndingPoint
+            //textLabel.alpha = (xEndingPoint - translatedPoint) / xEndingPoint
             break
         case .ended:
             if translatedPoint >= xEndingPoint {
-                textLabel.alpha = 0
+                //textLabel.alpha = 0
                 updateThumbnailViewLeadingPosition(xEndingPoint)
                 // Finish action
                 isFinished = false
-                //delegate?.SlideToOpenDelegateDidFinish(self)
                 return
             }
             if translatedPoint <= thumbnailViewLeadingDistance {
-                textLabel.alpha = 1
+                //textLabel.alpha = 1
                 isFinished = false
+                print("left --->>>")
+                delegate?.SlideToOpenDelegateDidFinish(self, switchStatus: false)
                 updateThumbnailViewLeadingPosition(thumbnailViewLeadingDistance)
                 return
             }
             if translatedPoint > thumbnailViewLeadingDistance && translatedPoint < xEndingPoint{
-                textLabel.alpha = 0
+                //textLabel.alpha = 0
                 isFinished = true
                 updateThumbnailViewLeadingPosition(xEndingPoint)
                 return
             }
             UIView.animate(withDuration: animationVelocity) {
                 self.leadingThumbnailViewConstraint?.constant = self.thumbnailViewLeadingDistance
-                self.textLabel.alpha = 1
+                //self.textLabel.alpha = 1
                 self.layoutIfNeeded()
             }
             break
@@ -254,9 +260,9 @@ public class SlideToOpenView: UIView {
         }
     }
     
-    func swipeRight(_ sender: UIPanGestureRecognizer){
+    public func swipeRight(_ sender: UIPanGestureRecognizer){
         let translatedPoint = sender.translation(in: view).x
-        print("Right",translatedPoint,xEndingPoint,thumbnailViewLeadingDistance)
+       // print("Right",translatedPoint,xEndingPoint,thumbnailViewLeadingDistance)
         switch sender.state {
         case .began:
             break
@@ -266,30 +272,31 @@ public class SlideToOpenView: UIView {
                 return
             }
             if translatedPoint <= thumbnailViewLeadingDistance {
-                textLabel.alpha = 1
+                //textLabel.alpha = 1
                 updateThumbnailViewLeadingPosition(thumbnailViewLeadingDistance)
                 return
             }
             updateThumbnailViewLeadingPosition(translatedPoint)
-            textLabel.alpha = (xEndingPoint - translatedPoint) / xEndingPoint
+            //textLabel.alpha = (xEndingPoint - translatedPoint) / xEndingPoint
             break
         case .ended:
             if translatedPoint >= xEndingPoint {
-                textLabel.alpha = 0
+                //textLabel.alpha = 0
                 updateThumbnailViewLeadingPosition(xEndingPoint)
                 // Finish action
                 isFinished = true
-                //delegate?.SlideToOpenDelegateDidFinish(self)
+                print("right --->>>")
+                delegate?.SlideToOpenDelegateDidFinish(self, switchStatus: isEnabled)
                 return
             }
             if translatedPoint <= thumbnailViewLeadingDistance {
-                textLabel.alpha = 1
+                //textLabel.alpha = 1
                 updateThumbnailViewLeadingPosition(thumbnailViewLeadingDistance)
                 return
             }
             UIView.animate(withDuration: animationVelocity) {
                 self.leadingThumbnailViewConstraint?.constant = self.thumbnailViewLeadingDistance
-                self.textLabel.alpha = 1
+                //self.textLabel.alpha = 1
                 self.layoutIfNeeded()
             }
             break

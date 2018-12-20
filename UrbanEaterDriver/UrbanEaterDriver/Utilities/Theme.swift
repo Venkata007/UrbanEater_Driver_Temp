@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import JSSAlertView
 import SwiftMessages
 import MMMaterialDesignSpinner
 
@@ -51,14 +50,12 @@ class Theme: NSObject {
     func activityView(View:UIView)
     {
         Theme.sharedInstance.topMostVC()?.view.isUserInteractionEnabled = false;
-        spinnerView.frame=CGRect(x: View.center.x-25, y: View.center.y, width: 50, height: 50)
+        spinnerView.frame=CGRect(x: View.center.x-25, y: View.center.y, width: 30, height: 30)
         spinnerView.lineWidth = 3.0;
-        spinnerView.tintColor = #colorLiteral(red: 0.9529411765, green: 0.7529411765, blue: 0.1843137255, alpha: 1)
-        //spinnerView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2040881849)
+        spinnerView.tintColor = #colorLiteral(red: 0.2823529412, green: 0.7058823529, blue: 0.2549019608, alpha: 1)
         Theme.sharedInstance.topMostVC()?.view.addSubview(spinnerView)
         spinnerView.startAnimating()
     }
-    
     func removeActivityView(View:UIView)
     {
         Theme.sharedInstance.topMostVC()?.view.isUserInteractionEnabled = true;

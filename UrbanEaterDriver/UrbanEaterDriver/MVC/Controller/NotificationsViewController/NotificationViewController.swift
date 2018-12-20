@@ -25,12 +25,12 @@ class NotificationViewController: UIViewController{
     //MARK:- IB Action Outlets
     func getNotificationsAPIcall(){
         Theme.sharedInstance.activityView(View: self.view)
-        print("urlStr ----->>> ", Constants.urls.notificationsURL)
-        URLhandler.getUrlSession(urlString: Constants.urls.notificationsURL, params: [:], header: [:]) { (dataResponse) in
+        print("urlStr ----->>> ", Constants.urls.loginURL)
+        URLhandler.getUrlSession(urlString: Constants.urls.loginURL, params: [:], header: [:]) { (dataResponse) in
             print("Response ----->>> ", dataResponse.json)
             Theme.sharedInstance.removeActivityView(View: self.view)
             if dataResponse.json.exists(){
-                TheGlobalPoolManager.earningModel = EarningModel(dataResponse.json)
+                //TheGlobalPoolManager.earningModel = EarningModel(dataResponse.json)
             }
         }
     }

@@ -11,8 +11,8 @@ import UIKit
 class Constants: NSObject {
     
     static let sharedInstance = Constants()
+    static let BASEURL_IMAGE = "http://13.233.109.143:1234"
     static let  BaseUrl = "http://13.233.109.143:1234/api/v1/"
-    //static let  BaseUrl = "http://192.168.100.88:1234/api/v1/"
 
     //MARK:- Fonts
     public struct FontName {
@@ -20,21 +20,24 @@ class Constants: NSObject {
         static let Medium             = "Roboto-Medium"
         static let Regular            = "Roboto-Regular"
     }
-    
     public struct urls {
-        static let loginURL = "\(BaseUrl)customer/login"
-        static let notificationsURL = ""
-        static let earningsURL = ""
+        static let loginURL                                                       = "\(BaseUrl)driver/login"
+        static let ForgotPassword                                          = "\(BaseUrl)driver/forgot-password"
+        static let UpdateNewPassword                                = "\(BaseUrl)driver/change-password"
+        static let DriverByID                                                   = "\(BaseUrl)driver/by-id"
+        static let DriverUpdateByID                                      = "\(BaseUrl)driver/update/by-id"
+        static let DriverOrders                                               = "\(BaseUrl)order/by-driver"
+        static let ChangePassword                                        = "\(BaseUrl)driver/update-password"
+        static let EarningsHistory                                           = "\(BaseUrl)order/earnings/by-driver"
+        static let UpdatingAddress                                       = "\(BaseUrl)address/upsert/driver/current"
+        static let DriverLogout                                               = "\(BaseUrl)driver/logout/by-id"
     }
-
 }
 
 // MARK : - Toast Messages
 public struct ToastMessages {
     static let mobile_number_empty = "Mobile number can't be empty"
     static let password_empty = "Password can't be empty"
-    
-    
     
     static let  Unable_To_Sign_UP                   =  "Unable to register now, Please try again...😞"
     static let Check_Internet_Connection            =  "Please check internet connection"
@@ -55,5 +58,4 @@ public struct ToastMessages {
     static let Invalid_SelectedAddressType          =  "Please choose address type"
     static let Invalid_OTP                          =  "Invalid OTP"
     static let Invalid_Strong_Password              =  "Password should be at least 6 characters, which Contain At least 1 uppercase, 1 lower case, 1 Numeric digit."
-    
 }

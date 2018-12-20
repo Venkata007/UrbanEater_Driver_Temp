@@ -64,4 +64,13 @@ class Utilities: NSObject {
             return list as! Array
         }
     }
+    func isValidEmail(testStr:String) -> Bool
+    {
+        print("validate emailId: \(testStr)")
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluate(with: testStr)
+        return result
+    }
 }

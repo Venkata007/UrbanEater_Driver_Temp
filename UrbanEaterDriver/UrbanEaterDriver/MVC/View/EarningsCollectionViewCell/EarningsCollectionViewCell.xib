@@ -33,8 +33,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="83.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-ws-VBy">
-                                                <rect key="frame" x="27" y="33.5" width="37.5" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                                <rect key="frame" x="28.5" y="34" width="35" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -61,8 +61,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-f4-rly">
                                         <rect key="frame" x="0.0" y="83.5" width="90" height="83"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-aC-y9u">
-                                                <rect key="frame" x="36.5" y="32" width="18.5" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-aC-y9u">
+                                                <rect key="frame" x="8" y="32" width="74" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -70,14 +70,16 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0Ax-aC-y9u" secondAttribute="trailing" constant="8" id="7Lf-FV-e2Y"/>
                                             <constraint firstItem="0Ax-aC-y9u" firstAttribute="centerY" secondItem="6SM-f4-rly" secondAttribute="centerY" id="QOo-RJ-LvC"/>
+                                            <constraint firstItem="0Ax-aC-y9u" firstAttribute="leading" secondItem="6SM-f4-rly" secondAttribute="leading" constant="8" id="d0D-XI-6ci"/>
                                             <constraint firstItem="0Ax-aC-y9u" firstAttribute="centerX" secondItem="6SM-f4-rly" secondAttribute="centerX" id="s0i-V6-XQ4"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2z-DD-43Z">
                                         <rect key="frame" x="0.0" y="166.5" width="90" height="83.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹ 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYd-Kh-cmd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹ 2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYd-Kh-cmd">
                                                 <rect key="frame" x="21" y="32.5" width="49" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,7 +116,7 @@
             <connections>
                 <outlet property="amountLbl" destination="MYd-Kh-cmd" id="FhX-MM-WsC"/>
                 <outlet property="dateLbl" destination="aYk-ws-VBy" id="emC-uH-dwe"/>
-                <outlet property="ordersLbl" destination="6SM-f4-rly" id="vLn-Ia-N4x"/>
+                <outlet property="ordersLbl" destination="0Ax-aC-y9u" id="WbU-M9-jZm"/>
                 <outlet property="paidStatusLbl" destination="ZGa-WS-6rG" id="5zF-6G-ii8"/>
             </connections>
         </collectionViewCell>

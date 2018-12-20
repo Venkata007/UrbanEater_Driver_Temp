@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import SwiftyJSON
 
 import GoogleMaps
 import GooglePlaces
@@ -32,9 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var IsInternetconnected:Bool=Bool()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
          self.ReachabilityListener()
-        
         GMSPlacesClient.provideAPIKey(googleApiKey)
         GMSServices.provideAPIKey(googleApiKey)
         IQKeyboardManager.shared.enable = true
@@ -42,41 +41,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         UITabBar.appearance().isTranslucent = false
-        
-        //self.setInitialViewController(from: "")
-        
+        self.setInitialViewController(from: "")
         return true
     }
-    
     func setInitialViewController(from:String) {
-        if  from ==  "SignUp"
-        {
-            
+        if  from ==  "SignUp" {
             let storyboard = UIStoryboard( name: "Main", bundle: nil)
             let rootView: UINavigationController = storyboard.instantiateViewController(withIdentifier: "ProfileNavID") as! UINavigationController
             (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = rootView
             (UIApplication.shared.delegate as! AppDelegate).window?.makeKeyAndVisible()
-        }
-            
-        else{
-            if UserDefaults.standard.value(forKey: "driverInfo") != nil
-            {
+        }else{
+            if UserDefaults.standard.value(forKey: "driverInfo") != nil {
+                let dic = TheGlobalPoolManager.retrieveFromDefaultsFor("driverInfo") as! NSDictionary
+                let  driverDetails = JSON(dic)
+                TheGlobalPoolManager.driverLoginModel = DriverLoginModel.init(fromJson: driverDetails)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let rootView: UINavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationID") as! UINavigationController
                 (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = rootView
                 (UIApplication.shared.delegate as! AppDelegate).window?.makeKeyAndVisible()
-            }
-            else
-            {
+            }else{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let controller : UIViewController = storyboard.instantiateViewController(withIdentifier: "CustomLoginNavigationVCID")
                 (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController = controller
                 (UIApplication.shared.delegate as! AppDelegate).window?.makeKeyAndVisible()
             }
-            
         }
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -98,40 +88,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-    func ReachabilityListener()
-    {
+    
+    func ReachabilityListener(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged),name: Notification.Name.reachabilityChanged,object: Reachability())
         do{
             let reachability = Reachability()!
-            
             try reachability.startNotifier()
         }catch{
             print("could not start reachability notifier")
         }
     }
-    
-    @objc func reachabilityChanged(note: NSNotification)
-    {
+    @objc func reachabilityChanged(note: NSNotification){
         let reachability = note.object as! Reachability
-        
-        if reachability.connection != .none //reachability.isReachable
-        {
+        if reachability.connection != .none{
             IsInternetconnected=true
-            
-            if reachability.connection == .wifi //reachability.isReachableViaWiFi
-            {
+            if reachability.connection == .wifi{
                 print("Reachable via WiFi")
-            } else {
+            }else {
                 print("Reachable via Cellular")
             }
-        }
-        else
-        {
+        }else{
             IsInternetconnected=false
             print("Network not reachable")
         }
     }
-
 }
 

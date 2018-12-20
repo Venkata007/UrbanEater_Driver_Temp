@@ -32,7 +32,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panner butter masala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mj-8y-OKD">
-                        <rect key="frame" x="28" y="12.5" width="134" height="16.5"/>
+                        <rect key="frame" x="28" y="12.5" width="152" height="16.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,6 +56,7 @@
                 <constraint firstItem="7mj-8y-OKD" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="Tez-3n-1MV"/>
                 <constraint firstAttribute="trailing" secondItem="SJr-2q-pGw" secondAttribute="trailing" constant="10" id="WYT-Lb-rIk"/>
                 <constraint firstItem="SJr-2q-pGw" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="fo8-fk-0Xb"/>
+                <constraint firstItem="SJr-2q-pGw" firstAttribute="leading" secondItem="7mj-8y-OKD" secondAttribute="trailing" constant="10" id="khn-Mr-tYE"/>
                 <constraint firstItem="jd6-2W-CLm" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="ohf-Ri-53p"/>
                 <constraint firstItem="jd6-2W-CLm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xd5-az-qAh"/>
             </constraints>

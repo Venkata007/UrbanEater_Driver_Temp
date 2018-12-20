@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DFB581CBF0700D69C26A2262DFA6E44D"
+               BlueprintIdentifier = "3895B56B4D1D2CC1753A1960EE31E918"
                BuildableName = "Pods_UrbanEaterDriver.framework"
                BlueprintName = "Pods-UrbanEaterDriver"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DFB581CBF0700D69C26A2262DFA6E44D"
+            BlueprintIdentifier = "3895B56B4D1D2CC1753A1960EE31E918"
             BuildableName = "Pods_UrbanEaterDriver.framework"
             BlueprintName = "Pods-UrbanEaterDriver"
             ReferencedContainer = "container:Pods.xcodeproj">

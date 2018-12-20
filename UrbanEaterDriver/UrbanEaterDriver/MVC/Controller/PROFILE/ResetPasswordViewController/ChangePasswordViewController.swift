@@ -55,11 +55,27 @@ class ChangePasswordViewController: UIViewController{
         }
         return true
     }
+    //MARK: - Change Password Api Hitting
+    func changePasswordApiHitting() {
+        Theme.sharedInstance.activityView(View: self.view)
+        let param = ["id": TheGlobalPoolManager.driverLoginModel.data.subId!,
+                                "currentPassword": oldpassword.text!,
+                                "newPassword": self.password.text!]
+        
+        URLhandler.postUrlSession(urlString: Constants.urls.ChangePassword, params: param as [String : AnyObject], header: [:]) { (dataResponse) in
+            Theme.sharedInstance.removeActivityView(View: self.view)
+            if dataResponse.json.exists(){
+                let dict = dataResponse.dictionaryFromJson! as NSDictionary
+                Theme.sharedInstance.showErrorpopup(Msg: dict.object(forKey: "message") as! String)
+                 _ = self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
     //MARK:- IB Action Outlets
     @IBAction func ActionSubmit(_ sender: Any){
         print("ActionSubmit")
         if validate(){
-            
+            self.changePasswordApiHitting()
         }
     }
     @IBAction func ActionBack(_ sender: Any){

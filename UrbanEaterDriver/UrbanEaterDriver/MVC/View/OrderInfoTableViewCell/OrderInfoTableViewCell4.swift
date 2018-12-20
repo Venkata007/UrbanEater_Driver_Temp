@@ -10,6 +10,14 @@ import UIKit
 
 class OrderInfoTableViewCell4: UITableViewCell {
 
+    @IBOutlet weak var subTotal: UILabel!
+    @IBOutlet weak var restautarantOfferLbl: UILabel!
+    @IBOutlet weak var deliveryFeeLbl: UILabel!
+    @IBOutlet weak var packageLbl: UILabel!
+    @IBOutlet weak var nightFeeLbl: UILabel!
+    @IBOutlet weak var taxLbl: UILabel!
+    @IBOutlet weak var yourEarningsLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -13,18 +13,32 @@ import Toast_Swift
 let TheGlobalPoolManager = GlobalModel.sharedInstance
 
 class GlobalModel:NSObject {
-    
-    typealias AlertCallback = (Bool?) -> ()
-    static let sharedInstance = GlobalModel()
-    var driverModel:DriverModel!
-    var earningModel: EarningModel!
-    var notificationModel: NotofocationModel!
+    let device_id = UIDevice.current.identifierForVendor!.uuidString
     var view:UIView{return (ez.topMostVC?.view)!}
     var vc:UIViewController{return ez.topMostVC!}
-    
+    typealias AlertCallback = (Bool?) -> ()
+    static let sharedInstance = GlobalModel()
+    let DELIVERED             = "DELIVERED"
+    let ON_GOING            = "ON_GOING"
+    var driverLoginModel:DriverLoginModel!
+    var updatePasswordModel : UpdatePasswordModel!
+    var driverHomeModel : DriverHomeModel!
+    var driverOrderModel : DriverOrderModel!
+    var earningsDataModel : EarningsDataModel!
     
     override init() {
         super.init()
+    }
+    func showToastView(_ title: String) {
+        topMostVC()?.view.makeToast(title, duration: 2.0, position: .bottom)
+    }
+    //MARK:- Store in Userdefaults
+    func storeInDefaults(_ value:AnyObject, key:String){
+        UserDefaults.standard.set(value, forKey: key)
+    }
+    //MARK: Retrieve from userdefaults
+    func retrieveFromDefaultsFor(_ key:String) -> AnyObject?{
+        return UserDefaults.standard.object(forKey: key) as AnyObject
     }
     func cornerRadius(_ object:AnyObject, cornerRad:CGFloat){
         object.layer.cornerRadius = cornerRad
@@ -46,6 +60,15 @@ class GlobalModel:NSObject {
         maskLayer.path = path.cgPath
         object.layer.mask = maskLayer
     }
+    //MARK:- NS Attributed Text With Color and Font
+    func attributedTextWithTwoDifferentTextsWithFont(_ attr1Text : String , attr2Text : String , attr1Color : UIColor , attr2Color : UIColor , attr1Font : Int , attr2Font : Int , attr1FontName : AppFonts , attr2FontName : AppFonts) -> NSAttributedString{
+        let attrs1 = [NSAttributedStringKey.font : UIFont.init(name: attr1FontName.fonts, size: CGFloat(attr1Font))!, NSAttributedStringKey.foregroundColor : attr1Color] as [NSAttributedStringKey : Any]
+        let attrs2 = [NSAttributedStringKey.font : UIFont.init(name: attr2FontName.fonts, size: CGFloat(attr2Font))!, NSAttributedStringKey.foregroundColor : attr2Color] as [NSAttributedStringKey : Any]
+        let attributedString1 = NSMutableAttributedString(string:attr1Text, attributes:attrs1)
+        let attributedString2 = NSMutableAttributedString(string:attr2Text, attributes:attrs2)
+        attributedString1.append(attributedString2)
+        return attributedString1
+    }
     //MARK:- UIAlertController
     func showAlertWith(title:String = "", message:String, singleAction:Bool,  okTitle:String = "Ok", cancelTitle:String = "Cancel", callback:@escaping AlertCallback) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -53,7 +76,7 @@ class GlobalModel:NSObject {
             callback(true)
         }
         if !singleAction{
-            let cancelAction: UIAlertAction = UIAlertAction(title: cancelTitle, style: .cancel) { action -> Void in
+            let cancelAction: UIAlertAction = UIAlertAction(title: cancelTitle, style: .default) { action -> Void in
                 //Just dismiss the action sheet
                 callback(false)
             }
@@ -76,6 +99,23 @@ class GlobalModel:NSObject {
         let color = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1).cgColor
         tf.attributedPlaceholder = NSAttributedString(string: placeStr, attributes: [NSAttributedStringKey.foregroundColor: color])
         tf.layer.masksToBounds = true
+    }
+    //MARK: - Change the Date Formatter
+    func convertDateFormater(_ date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        return  dateFormatter.string(from: date!)
+    }
+    func topMostVC() -> UIViewController?{
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            return topController
+        }
+        return nil
     }
 }
 class UILabelPadded: UILabel {
