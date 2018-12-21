@@ -82,6 +82,7 @@ class HomeViewController: UIViewController,GMSMapViewDelegate{
         ModelClassManager.myLocation()
         ModelClassManager.delegate = self
         mapView.delegate = self
+        
         self.updateUI()
     }
     func setMap_View(lat:String,long:String){

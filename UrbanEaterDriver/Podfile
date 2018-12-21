@@ -22,6 +22,9 @@ target 'UrbanEaterDriver' do
   pod 'EZSwiftExtensions'
   pod 'HTHorizontalSelectionList', '~> 0.7.4'
   pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Database'
+  pod 'Firebase/Core'
 
 
 

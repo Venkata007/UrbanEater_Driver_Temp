@@ -13,27 +13,23 @@ import SwiftyJSON
 import GoogleMaps
 import GooglePlaces
 import Reachability
+import Firebase
+import FirebaseMessaging
+import UserNotifications
 
-extension String {
-    struct NumFormatter {
-        static let instance = NumberFormatter()
-    }
-    var doubleValue: Double? {
-        return NumFormatter.instance.number(from: self)?.doubleValue
-    }
-    var integerValue: Int? {
-        return NumFormatter.instance.number(from: self)?.intValue
-    }
-}
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     let googleApiKey = "AIzaSyAufQUMZP7qdjtOcGIuNFRSL-8uU6uuvGY"
     var IsInternetconnected:Bool=Bool()
+    var gcmMessageIDKey = "gcm.message_id"
+    var gcmNotificationIDKey = "gcm.notification.payload"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
          self.ReachabilityListener()
+        FIRApp.configure()
         GMSPlacesClient.provideAPIKey(googleApiKey)
         GMSServices.provideAPIKey(googleApiKey)
         IQKeyboardManager.shared.enable = true
@@ -42,6 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         UITabBar.appearance().isTranslucent = false
         self.setInitialViewController(from: "")
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        application.registerForRemoteNotifications()
+        UIApplication.shared.applicationIconBadgeNumber = 0
         return true
     }
     func setInitialViewController(from:String) {
@@ -67,27 +76,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
+    func applicationWillResignActive(_ application: UIApplication) {}
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
+    func applicationDidEnterBackground(_ application: UIApplication) {}
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
+    func applicationWillEnterForeground(_ application: UIApplication) {}
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
+    func applicationDidBecomeActive(_ application: UIApplication) { }
 
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
+    func applicationWillTerminate(_ application: UIApplication) { }
     
     func ReachabilityListener(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged),name: Notification.Name.reachabilityChanged,object: Reachability())

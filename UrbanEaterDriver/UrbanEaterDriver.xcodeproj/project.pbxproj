@@ -30,6 +30,8 @@
 		A365B5F621CA6C76007A5B11 /* DriverOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A365B5F521CA6C76007A5B11 /* DriverOrderModel.swift */; };
 		A365B5FA21CA8437007A5B11 /* DriverHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A365B5F921CA8436007A5B11 /* DriverHomeModel.swift */; };
 		A395734521CB94A700A92CA0 /* EarningsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A395734421CB94A600A92CA0 /* EarningsDataModel.swift */; };
+		A395734A21CBC71A00A92CA0 /* AGPushNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A395734821CBC71A00A92CA0 /* AGPushNoteView.xib */; };
+		A395734B21CBC71A00A92CA0 /* AGPushNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = A395734921CBC71A00A92CA0 /* AGPushNoteView.m */; };
 		A3BEF5A9218ADE5E00192E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */; };
 		A3BEF5AB218ADE5E00192E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEF5AA218ADE5E00192E7E /* ViewController.swift */; };
 		A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BEF5AC218ADE5E00192E7E /* Main.storyboard */; };
@@ -111,6 +113,9 @@
 		A365B5F521CA6C76007A5B11 /* DriverOrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderModel.swift; sourceTree = "<group>"; };
 		A365B5F921CA8436007A5B11 /* DriverHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverHomeModel.swift; sourceTree = "<group>"; };
 		A395734421CB94A600A92CA0 /* EarningsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsDataModel.swift; sourceTree = "<group>"; };
+		A395734721CBC71A00A92CA0 /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushNoteView.h; sourceTree = "<group>"; };
+		A395734821CBC71A00A92CA0 /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPushNoteView.xib; sourceTree = "<group>"; };
+		A395734921CBC71A00A92CA0 /* AGPushNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushNoteView.m; sourceTree = "<group>"; };
 		A3BEF5A5218ADE5E00192E7E /* UrbanEaterDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanEaterDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BEF5AA218ADE5E00192E7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +249,16 @@
 			path = MJPOPUP;
 			sourceTree = "<group>";
 		};
+		A395734621CBC71A00A92CA0 /* AGPushNote */ = {
+			isa = PBXGroup;
+			children = (
+				A395734721CBC71A00A92CA0 /* AGPushNoteView.h */,
+				A395734821CBC71A00A92CA0 /* AGPushNoteView.xib */,
+				A395734921CBC71A00A92CA0 /* AGPushNoteView.m */,
+			);
+			path = AGPushNote;
+			sourceTree = "<group>";
+		};
 		A3BEF59C218ADE5E00192E7E = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +361,7 @@
 		A3BEF5BF218AE05200192E7E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A395734621CBC71A00A92CA0 /* AGPushNote */,
 				A316A4A721AFC747004C30D2 /* MJPOPUP */,
 				A3BEF6CF21919D7F00192E7E /* OTPview */,
 				A3BEF6C421902E1E00192E7E /* ShadowView.swift */,
@@ -667,6 +683,7 @@
 				A3BEF6CE2191786100192E7E /* NewAssets.xcassets in Resources */,
 				A3BEF66F218DACBF00192E7E /* OrderInfoTableViewCell4.xib in Resources */,
 				A316A49921AE66C8004C30D2 /* OnGoingDishesCell.xib in Resources */,
+				A395734A21CBC71A00A92CA0 /* AGPushNoteView.xib in Resources */,
 				A316A48D21AD8758004C30D2 /* EarningsSeeAllACollectionViewCell.xib in Resources */,
 				A3BEF5AE218ADE5E00192E7E /* Main.storyboard in Resources */,
 				A316A49521AD8899004C30D2 /* OngoingTableViewCell.xib in Resources */,
@@ -733,6 +750,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/M13BadgeView/M13BadgeView.framework",
 				"${BUILT_PRODUCTS_DIR}/MMMaterialDesignSpinner/MMMaterialDesignSpinner.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
@@ -751,6 +769,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13BadgeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMMaterialDesignSpinner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
@@ -783,6 +802,7 @@
 				A3BEF6B8218DCA4900192E7E /* LocationRecord.swift in Sources */,
 				A3EFE23421C91F6700F676FE /* OTPViewController.swift in Sources */,
 				A3BEF64D218DA96500192E7E /* AccountViewController.swift in Sources */,
+				A395734B21CBC71A00A92CA0 /* AGPushNoteView.m in Sources */,
 				A3BEF670218DACBF00192E7E /* OrderInfoTableViewCell2.swift in Sources */,
 				A3BEF650218DA96500192E7E /* OrderInfoViewController.swift in Sources */,
 				A365B5F621CA6C76007A5B11 /* DriverOrderModel.swift in Sources */,

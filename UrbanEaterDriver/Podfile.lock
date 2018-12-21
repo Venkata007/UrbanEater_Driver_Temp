@@ -1,14 +1,30 @@
 PODS:
   - Alamofire (4.7.3)
   - EZSwiftExtensions (2.0)
+  - Firebase/Core (3.17.0):
+    - FirebaseAnalytics (= 3.9.0)
+    - FirebaseCore (= 3.6.0)
+  - Firebase/Database (3.17.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 3.1.2)
+  - Firebase/Messaging (3.17.0):
+    - Firebase/Core
+    - FirebaseMessaging (= 1.2.3)
   - FirebaseAnalytics (3.9.0):
     - FirebaseCore (~> 3.6)
     - FirebaseInstanceID (~> 1.0)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseCore (3.6.0):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseDatabase (3.1.2):
+    - FirebaseAnalytics (~> 3.7)
   - FirebaseInstanceID (1.0.10):
     - FirebaseCore (~> 3.6)
+  - FirebaseMessaging (1.2.3):
+    - FirebaseAnalytics (~> 3.8)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
   - Google (3.1.0):
     - Google/Core (= 3.1.0)
   - Google/Core (3.1.0):
@@ -22,6 +38,8 @@ PODS:
     - GoogleMaps/Base (= 2.7.0)
   - GooglePlacesSearchController (0.2.1)
   - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - HTHorizontalSelectionList (0.7.4):
@@ -53,6 +71,7 @@ PODS:
   - libwebp/webp (0.6.1)
   - M13BadgeView (1.0.4)
   - MMMaterialDesignSpinner (0.2.5)
+  - Protobuf (3.6.1)
   - ReachabilitySwift (4.3.0)
   - SDWebImage/Core (4.4.2)
   - SDWebImage/WebP (4.4.2):
@@ -69,6 +88,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - EZSwiftExtensions
+  - Firebase/Core
+  - Firebase/Database
+  - Firebase/Messaging
   - Google
   - GoogleMaps
   - GooglePlaces
@@ -87,9 +109,12 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - EZSwiftExtensions
+    - Firebase
     - FirebaseAnalytics
     - FirebaseCore
+    - FirebaseDatabase
     - FirebaseInstanceID
+    - FirebaseMessaging
     - Google
     - GoogleMaps
     - GooglePlaces
@@ -100,6 +125,7 @@ SPEC REPOS:
     - libwebp
     - M13BadgeView
     - MMMaterialDesignSpinner
+    - Protobuf
     - ReachabilitySwift
     - SDWebImage
     - SwiftLocation
@@ -110,9 +136,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   EZSwiftExtensions: f73648a591e529a1dbd83c22b19fd3e57df6fb7d
+  Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
+  FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
+  FirebaseMessaging: 753d05a925e9eb8eadd09a0ffc9b808578b72fac
   Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
@@ -123,6 +152,7 @@ SPEC CHECKSUMS:
   libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
   M13BadgeView: 700dd0714fdc837c0cf1c8c004454963ec22441f
   MMMaterialDesignSpinner: a548042720c2e5f04212048483085d7942ac3e81
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
@@ -130,6 +160,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: debc0988da681ba166e90fc127003ef9fe82fe39
+PODFILE CHECKSUM: 8e17dd5af67ba37781187c44e30a85e756d96772
 
 COCOAPODS: 1.5.3
