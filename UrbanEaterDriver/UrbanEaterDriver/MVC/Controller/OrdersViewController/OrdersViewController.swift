@@ -87,9 +87,7 @@ class OrdersViewController: UIViewController,HTHorizontalSelectionListDelegate,H
                 TheGlobalPoolManager.driverOrderModel = DriverOrderModel(fromJson: dataResponse.json)
                 if TheGlobalPoolManager.driverOrderModel.data.count == 0{
                     self.ordersTable.isHidden = true
-                    TheGlobalPoolManager.showAlertWith(message: "No data available", singleAction: true, callback: { (success) in
-                        if success!{ }
-                    })
+                    TheGlobalPoolManager.showToastView(ToastMessages.No_Data_Available)
                 }else{
                     self.ordersTable.isHidden = false
                     self.ordersTable.reloadData()

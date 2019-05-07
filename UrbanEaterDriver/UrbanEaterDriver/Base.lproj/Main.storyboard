@@ -270,10 +270,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpY-jd-Bdm" customClass="ShadowView" customModule="UrbanEaterDriver" customModuleProvider="target">
-                                <rect key="frame" x="38" y="54" width="300" height="50"/>
+                                <rect key="frame" x="38" y="54" width="300" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4hQ-DU-lQf"/>
+                                    <constraint firstAttribute="height" constant="60" id="4hQ-DU-lQf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULf-Fa-WrT">

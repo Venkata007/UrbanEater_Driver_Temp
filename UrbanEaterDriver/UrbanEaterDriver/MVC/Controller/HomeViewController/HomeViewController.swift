@@ -40,7 +40,7 @@ class HomeViewController: UIViewController,GMSMapViewDelegate{
     }
     
     lazy var slideToOpen: SlideToOpenView = {
-        let slide = SlideToOpenView(frame: CGRect(x: 0, y: 0, width: ez.screenWidth * 0.8, height: 50))
+        let slide = SlideToOpenView(frame: CGRect(x: 0, y: 0, width: ez.screenWidth * 0.8, height: self.slidetoOpenView.frame.size.height))
         slide.sliderViewTopDistance = 0
         slide.textLabelLeadingDistance = 40
         slide.sliderCornerRadious = self.slidetoOpenView.frame.size.height/2.0
@@ -82,7 +82,6 @@ class HomeViewController: UIViewController,GMSMapViewDelegate{
         ModelClassManager.myLocation()
         ModelClassManager.delegate = self
         mapView.delegate = self
-        
         self.updateUI()
     }
     func setMap_View(lat:String,long:String){
@@ -116,6 +115,7 @@ class HomeViewController: UIViewController,GMSMapViewDelegate{
                     self.bottomView.isHidden = false
                     self.supportBtn.isHidden = false
                     self.lastPaidEarningsLbl.isHidden = false
+                    ModelClassManager.locationManager.stopUpdatingLocation()
                 }else{
                     self.slideToOpen.isFinished = true
                     self.slideToOpen.updateThumbnailViewLeadingPosition(self.slideToOpen.xEndingPoint)
@@ -174,6 +174,8 @@ extension HomeViewController : ModelClassManagerDelegate{
         if current_Lat == nil && current_Long == nil{
             current_Lat = "\(location.coordinate.latitude)"
             current_Long = "\(location.coordinate.longitude)"
+            
+            print(current_Lat,current_Long,ModelClassManager.locationManager.desiredAccuracy)
         }
         self.setMap_View(lat: (current_Lat as NSString) as String, long: (current_Long as NSString) as String)
     }

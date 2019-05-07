@@ -112,6 +112,7 @@
 		A316A4AB21AFC747004C30D2 /* MJPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPopupBackgroundView.m; sourceTree = "<group>"; };
 		A365B5F521CA6C76007A5B11 /* DriverOrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderModel.swift; sourceTree = "<group>"; };
 		A365B5F921CA8436007A5B11 /* DriverHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverHomeModel.swift; sourceTree = "<group>"; };
+		A38A2B5421DE139D0084A5B2 /* UrbanEaterDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UrbanEaterDriver.entitlements; sourceTree = "<group>"; };
 		A395734421CB94A600A92CA0 /* EarningsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsDataModel.swift; sourceTree = "<group>"; };
 		A395734721CBC71A00A92CA0 /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushNoteView.h; sourceTree = "<group>"; };
 		A395734821CBC71A00A92CA0 /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPushNoteView.xib; sourceTree = "<group>"; };
@@ -280,6 +281,7 @@
 		A3BEF5A7218ADE5E00192E7E /* UrbanEaterDriver */ = {
 			isa = PBXGroup;
 			children = (
+				A38A2B5421DE139D0084A5B2 /* UrbanEaterDriver.entitlements */,
 				A3BEF5A8218ADE5E00192E7E /* AppDelegate.swift */,
 				A3BEF5AA218ADE5E00192E7E /* ViewController.swift */,
 				A3BEF5C5218AE15A00192E7E /* Resources */,
@@ -643,6 +645,11 @@
 					A3BEF5A4218ADE5E00192E7E = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -989,6 +996,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = UrbanEaterDriver/UrbanEaterDriver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTL7D867WK;
 				INFOPLIST_FILE = UrbanEaterDriver/Info.plist;
@@ -997,7 +1005,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbaneater.idriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1012,6 +1020,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = UrbanEaterDriver/UrbanEaterDriver.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTL7D867WK;
 				INFOPLIST_FILE = UrbanEaterDriver/Info.plist;
@@ -1020,7 +1029,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hexdots.UrbanEaterDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbaneater.idriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
